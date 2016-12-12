@@ -1,0 +1,8 @@
+I"³(function() {
+  'use strict';
+  angular.module('App', ['ngRoute', 'ngResource']).constant('Config', {
+    websocket_url: 'dispatch.trekmedics.org/websocket'
+  });
+
+}).call(this);
+:ET

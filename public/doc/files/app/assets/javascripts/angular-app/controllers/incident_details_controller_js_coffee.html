@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>incident_details_controller.js.coffee</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            incident_details_controller.js.coffee
+        </h1>
+        <ul class="files">
+            <li>app/assets/javascripts/angular-app/controllers/incident_details_controller.js.coffee</li>
+            <li>Last modified: 2015-10-08 10:53:22 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>angular</p>
+
+<pre><code>.module(&#39;App&#39;)
+.controller(&#39;IncidentDetailsCtrl&#39;, [&#39;$scope&#39;, &#39;$location&#39;, &#39;Incident&#39;, &#39;FirstResponder&#39;, &#39;Config&#39;, ($scope, $location, Incident, FirstResponder, Config) -&gt;
+  incidentId = $location.absUrl().match(/(?:incidents\/)(\d+)/)[1]
+  $scope.incident = Incident.get({ id: incidentId },
+    (data) -&gt;
+      processMessageLog(data.formatted_message_log)
+  )
+
+  dispatcher = new WebSocketRails(Config.websocket_url)
+
+  dispatcher.on_open = (data) -&gt;
+    console.log(&#39;Connection has been established (IncidentDetailsCtrl): &#39;, data)
+
+  channel = dispatcher.subscribe(&#39;incident&#39;)
+
+  channel.bind(&#39;update&#39;, (data) -&gt;
+    if $scope.incident.id == data.id
+      $scope.$apply -&gt;
+        $scope.incident.state = data.state
+        $scope.incident.state_string = data.state_string
+        $scope.incident.help_message = data.help_message
+        $scope.incident.location = data.location
+        $scope.incident.reporting_party = data.reporting_party
+        $scope.incident.incident_commander = data.incident_commander
+        $scope.incident.created_at_string = data.created_at_string
+        $scope.incident.updated_at_string = data.updated_at_string
+        $scope.incident.comment = data.comment
+  )
+
+  channel.bind(&#39;message_log&#39;, (data) -&gt;
+    if $scope.incident.id == data.incident_id
+      $scope.$apply -&gt;
+        addMessageLogItem(data)
+  )
+
+  processMessageLog = (messageLog) -&gt;
+    $scope.requestedFirstResponders = []
+    $scope.incidentActors = []
+    $scope.messageLog = []
+    for logItem in messageLog
+      addMessageLogItem(logItem)
+
+  addMessageLogItem = (logItem) -&gt;
+    switch logItem.message_type
+      when &#39;request_for_assistance&#39;
+        $scope.requestedFirstResponders.push({ hash_key: logItem.hash_key, id: logItem.resource_id, name: logItem.resource_name, phone_number: logItem.resource_phone_number, request_message: logItem[logItem.hash_key], canSimulate: true, request_time: logItem.time })
+      when &#39;request_for_assistance_reply&#39;
+        for requestFirstResponder in $scope.requestedFirstResponders
+          if requestFirstResponder.hash_key == logItem.hash_key
+            requestFirstResponder.response = logItem[logItem.hash_key]
+            requestFirstResponder.canSimulate = false
+            requestFirstResponder.reply_time = logItem.time
+
+      when &#39;fr_not_needed&#39;
+        for requestFirstResponder in $scope.requestedFirstResponders
+          if requestFirstResponder.hash_key == logItem.hash_key
+            requestFirstResponder.fr_not_needed = logItem[logItem.hash_key]
+            requestFirstResponder.not_needed_time = logItem.time
+      else
+        addIncidentActorIfNecessary(logItem)
+        $scope.messageLog.push(logItem)
+
+  addIncidentActorIfNecessary = (data) -&gt;
+    addIncidentActor = true
+    for incidentActor in $scope.incidentActors
+      if incidentActor.hash_key == data.hash_key
+        addIncidentActor = false
+    if addIncidentActor
+      $scope.incidentActors.push({ hash_key: data.hash_key, id: data.resource_id, type: data.resource_type, name: data.resource_name, phone_number: data.resource_phone_number })
+
+  $scope.messageIncidentActor = (actor) -&gt;
+    if actor.phone_number == &#39;Admin&#39;
+      $scope.incident.send_admin_reporting_party_message(actor.message)
+    else
+      $scope.incident.send_message(actor.phone_number, actor.message)
+    actor.message = null
+
+  $scope.canSimulateForIncidentActor = (actor) -&gt;
+    return actor.type == &#39;first_responder&#39; || actor.type == &#39;reporting_party&#39;
+
+  $scope.assistanceResponseCount = (requestedFirstResponders) -&gt;
+    return 0 if !requestedFirstResponders?
+    requestedFirstResponders.filter((x) -&gt;
+      return x.response?
+    ).length
+
+  $scope.toggleShowRequestsForAssistance = () -&gt;
+    $scope.isRequestsForAssistanceExpanded = false if !$scope.isRequestsForAssistanceExpanded?
+    $scope.isRequestsForAssistanceExpanded = !$scope.isRequestsForAssistanceExpanded
+
+  $scope.showRequestsForAssistance = () -&gt;
+    return $scope.isRequestsForAssistanceExpanded
+
+  $scope.editComment = (incident) -&gt;
+    newComment = prompt(&#39;Enter a comment&#39;, incident.comment)
+    $scope.incident.editComment(newComment)
+
+  $scope.tableBodyClass = () -&gt;
+    if $scope.incident.canSimulate()
+      return &#39;with_simulator&#39;
+    else
+      return &#39;without_simulator&#39;
+
+])</code></pre>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+              </div>
+
+    </div>
+  </body>
+</html>

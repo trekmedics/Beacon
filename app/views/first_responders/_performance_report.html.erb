@@ -1,0 +1,159 @@
+<div class="performance_report">
+  <h2>Performance Report</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Metric</th>
+        <th>Value</th>
+        <th>Percentage</th>
+        <th class="description">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Initial Alerts Sent</td>
+        <td><%= @first_responder_report.number_of_original_requests %></td>
+        <td><%= @first_responder_report.percentage_of_original_requests %></td>
+        <td class="description"># Initial Incident Alerts sent to FR while Available<br />[% of total Alerts sent]</td>
+      </tr>
+      <tr>
+        <td>Initial Alert Replies</td>
+        <td><%= @first_responder_report.number_of_original_request_replies %></td>
+        <td><%= display_float(@first_responder_report.percentage_of_original_request_replies) %></td>
+        <td class="description"># Initial Incident Alerts replied to by FR<br />[% of Initial Alerts received by FR]</td>
+      </tr>
+      <tr>
+        <td>Initial Alert No Replies</td>
+        <td><%= @first_responder_report.number_of_original_request_no_replies %></td>
+        <td><%= display_float(@first_responder_report.percentage_of_original_request_no_replies) %></td>
+        <td class="description"># Initial Incident Alerts that did not receive a reply from FR<br />[% of Initial Alerts received by FR]</td>
+      </tr>
+      <tr>
+        <td>Initial Alerts Average Confirm Time (seconds)</td>
+        <td><%= display_float(@first_responder_report.average_original_confirm_time) %></td>
+        <td></td>
+        <td class="description">Average time between "Initial Alert" sent and "Confirm ETA" received</td>
+      </tr>
+      <tr>
+        <td>Additional Alerts Sent</td>
+        <td><%= @first_responder_report.number_of_additional_requests %></td>
+        <td></td>
+        <td class="description"># Additional Incident Alerts sent to FR while Available</td>
+      </tr>
+      <tr>
+        <td>Additional Alert Replies</td>
+        <td><%= @first_responder_report.number_of_additional_request_replies %></td>
+        <td><%= display_float(@first_responder_report.percentage_of_additional_request_replies) %></td>
+        <td class="description"># Additional Incident Alerts replied to by FR<br />[% of Additional Alerts received by FR]</td>
+      </tr>
+      <tr>
+        <td>Additional Alert No Replies</td>
+        <td><%= @first_responder_report.number_of_additional_request_no_replies %></td>
+        <td><%= display_float(@first_responder_report.percentage_of_additional_request_no_replies) %></td>
+        <td class="description"># Additional Incident Alerts that did not receive a reply from FR<br />[% of Additional Alerts received by FR]</td>
+      </tr>
+      <tr>
+        <td>Additional Alerts Average Confirm Time (seconds)</td>
+        <td><%= display_float(@first_responder_report.average_additional_confirm_time) %></td>
+        <td></td>
+        <td class="description">Average time between Additional "Request for Assistance" sent and "Confirm ETA" received</td>
+      </tr>
+      <tr>
+        <td>Incidents Assigned</td>
+        <td><%= @first_responder_report.number_of_assigned_incidents %></td>
+        <td><%= display_float(@first_responder_report.percentage_of_assigned_incidents) %></td>
+        <td class="description"># Alert Replies from FR that were assigned to an incident - i.e., # of times FR receives "Proceed to location"<br />[% of total Alert Replies]</td>
+      </tr>
+      <tr>
+        <td>Confirmed On-Scene</td>
+        <td><%= @first_responder_report.number_of_times_confirmed_on_scene %></td>
+        <td><%= display_float(@first_responder_report.percentage_of_confirmed_on_scene) %></td>
+        <td class="description">Total # times FR confirms Arriving On-Scene<br />[% of total Incidents Assigned]</td>
+      </tr>
+      <tr>
+        <td>Incident Commander Count</td>
+        <td><%= @first_responder_report.number_of_times_incident_commander %></td>
+        <td><%= display_float(@first_responder_report.percentage_of_times_incident_commander) %></td>
+        <td class="description">Total # times FR confirms Arriving On-Scene<br />[% of total Incidents Assigned]</td>
+      </tr>
+      <tr>
+        <td>Cancel Message Count</td>
+        <td><%= @first_responder_report.number_of_cancel_messages %></td>
+        <td><%= display_float(@first_responder_report.percentage_of_cancel_messages) %></td>
+        <td class="description">Total # times FR replies "Cancel"<br />[% of total Incidents Assigned]</td>
+      </tr>
+      <tr>
+        <td>Unable to Locate Message Count</td>
+        <td><%= @first_responder_report.number_of_unable_to_locate_messages %></td>
+        <td><%= display_float(@first_responder_report.percentage_of_unable_to_locate_messages) %></td>
+        <td class="description">Total # times FR replies "Unable to Locate"<br />[% of total Incidents Assigned]</td>
+      </tr>
+      <tr>
+        <td>Incidents Requested Additional Resources</td>
+        <td><%= @first_responder_report.number_of_times_resources_requested %></td>
+        <td><%= display_float(@first_responder_report.percentage_of_times_resources_requested) %></td>
+        <td class="description">Total # of Incidents when FR requests Additional Resources<br />[% of total Incidents marked as IC]</td>
+      </tr>
+      <tr>
+        <td>Total Number of Vehicles Requested</td>
+        <td><%= @first_responder_report.total_number_of_vehicles_requested %></td>
+        <td></td>
+        <td class="description">Total # Vehicles requested</td>
+      </tr>
+      <tr>
+        <td>Average Number of Vehicles Requested</td>
+        <td><%= display_float(@first_responder_report.average_number_of_vehicles_requested) %></td>
+        <td></td>
+        <td class="description">Average # Vehicles requested per Incident as IC</td>
+      </tr>
+      <tr>
+        <td>Confirmed Transport to Hospital</td>
+        <td><%= @first_responder_report.number_of_times_transport_confirmed %></td>
+        <td><%= display_float(@first_responder_report.percentage_of_times_transport_confirmed) %></td>
+        <td class="description">Total # Incidents when FR confirms transport<br />[% of total Incidents where FR confirmed "Arrive On-Scene"]</td>
+      </tr>
+      <tr>
+        <td>Total Number of Patients Transported</td>
+        <td><%= @first_responder_report.total_number_of_patients_transported %></td>
+        <td></td>
+        <td class="description">Total # Patients transported by FR</td>
+      </tr>
+      <tr>
+        <td>Average Number of Patients Transported</td>
+        <td><%= display_float(@first_responder_report.average_number_of_patients_transported) %></td>
+        <td></td>
+        <td class="description">Average # of patients per Transport</td>
+      </tr>
+      <tr>
+        <td>Cancelled After On-Scene</td>
+        <td><%= @first_responder_report.number_of_times_cancelled_after_on_scene %></td>
+        <td><%= display_float(@first_responder_report.percentage_of_times_cancelled_after_on_scene) %></td>
+        <td class="description">Total # Incidents when FR cancels involvement after arriving on-scene<br />[% of total Incidents FR confirms on-scene]</td>
+      </tr>
+      <tr>
+        <td>Arrived at Hospital</td>
+        <td><%= @first_responder_report.number_of_times_arrival_at_hospital_confirmed %></td>
+        <td><%= display_float(@first_responder_report.percentage_of_times_arrival_at_hospital_confirmed) %></td>
+        <td class="description">Total # Incidents that FR confirms Arrival at Hospital<br />[% of total Incidents Confirmed Transporting]</td>
+      </tr>
+      <tr>
+        <td>Average Transport Time (seconds)</td>
+        <td><%= display_float(@first_responder_report.average_transport_time) %></td>
+        <td></td>
+        <td class="description">Average time between Beacon sending Confirm Hospital Arrival and receiving Confirmation</td>
+      </tr>
+      <tr>
+        <td>Completed Incidents</td>
+        <td><%= @first_responder_report.number_of_incidents_completed %></td>
+        <td><%= display_float(@first_responder_report.percentage_of_incidents_completed) %></td>
+        <td class="description">Total # Incidents run to completion by FR<br />[% total Incidents Assigned]</td>
+      </tr>
+      <tr>
+        <td>Average Completion Time (seconds)</td>
+        <td><%= display_float(@first_responder_report.average_completion_time) %></td>
+        <td></td>
+        <td class="description">Average length of Completed Incident</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

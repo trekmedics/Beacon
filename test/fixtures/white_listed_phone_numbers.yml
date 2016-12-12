@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data_center_id: 
+  phone_number: MyString
+  name: MyString
+
+two:
+  data_center_id: 
+  phone_number: MyString
+  name: MyString

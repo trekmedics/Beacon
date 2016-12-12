@@ -1,0 +1,6 @@
+heartbeat:
+  cron: "0 * * * *"
+  queue: Heartbeat
+  class: HeartbeatService
+  description: Send heartbeat
+  rails_envs: development, production, staging

@@ -1,0 +1,40 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="first_responders">
+    <%= f.label :data_center %>
+    <%= f.text_field :data_center, { class: :text_field, disabled: true } %>
+    <%= f.label :username %>
+    <%= f.text_field :username, { class: :text_field } %>
+    <%= f.label :locale %>:
+    <% I18n.available_locales.each do |locale_option| %>
+      <%= f.radio_button :locale, locale_option, { class: 'radio_button' } %>
+      <%= f.label :locale, locale_option %>
+    <% end %>
+    <div class="clear"></div>
+    <%= f.label :user_role %>
+    <% UserRole.all.each do |role| %>
+      <%= f.radio_button :user_role_id, role.id, { class: 'radio_button' } %>
+      <%= f.label :user_role_id, role %>
+    <% end %>
+    <div class="clear"></div>
+    <%= f.label :password %>
+    <%= f.password_field :password, { class: :text_field } %>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, { class: :text_field } %>
+    <div class="clear"></div>
+    <div class="clear"></div>
+    <%= f.submit %>
+    </div>
+  </div>
+<% end %>

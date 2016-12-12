@@ -1,0 +1,59 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+
+ht:
+  devise:
+    confirmations:
+      confirmed: "Nou reyisi kreye kont ou a."
+      send_instructions: "TalÃ¨, ou pral resevwa yon mesaj k ap esplike w kouman pou konfime kont ou a."
+      send_paranoid_instructions: "Si nou deja genyen adrÃ¨s kouryÃ¨l ou, talÃ¨ w ap resevwa yon mesaj k ap esplike w kouman pou konfime kont ou."
+    failure:
+      already_authenticated: "Ou deja konekte."
+      inactive: "Kont ou a poko ap mache."
+      invalid: "AdrÃ¨s kouryÃ¨l oubyen modpas la pa bon."
+      locked: "Kont ou a bloke."
+      last_attempt: "Rete w yon sÃ¨l eseyaj anvan kont lan bloke."
+      not_found_in_database: "AdrÃ¨s kouryÃ¨l oubyen modpas la pa bon."
+      timeout: "Sesyon an boutÂ ; tounen siyen si w vle kontinye"
+      unauthenticated: "Ou dwe siyen anvan ou kontinye."
+      unconfirmed: "Ou dwe konfime kont lan anvan ou kontinye."
+    mailer:
+      confirmation_instructions:
+        subject: "Men kouman pou w konfime."
+      reset_password_instructions:
+        subject: "Men kouman pou w chanje modpas."
+      unlock_instructions:
+        subject: "Men kouman pou debloke."
+    omniauth_callbacks:
+      failure: "Nou pa ka idantifye w depi  %{kind} paske \"%{reason}\"."
+      success: "Nou reyisi identifye w depi  %{kind} kont."
+    passwords:
+      no_token: "Ou pa ka louvri paj sa a si ou pa itilize kouryÃ¨l pou chanje modpas nou voye ba ou a. Si se kouryÃ¨l pou chanje modpas la ou itilize, ou dwe sÃ¨vi avÃ¨k tout adrÃ¨s URL ke nou voye ba ou a."
+      send_instructions: "TalÃ¨ w pral resevwa yon kouryÃ¨l k ap esplike ou kouman pou w chanje modpas ou."
+      send_paranoid_instructions: "Si nou deja genyen adrÃ¨s ou, talÃ¨ konsa w pral resevwa yon kouryÃ¨l ki genyen lyen pou tounen jwenn modpas la."
+      updated: "Modpas ou a byen chanje. Ou konekte kounye a."
+      updated_not_active: "Modpas ou a byen chanje."
+    registrations:
+      destroyed: "Orevwa! Kont ou a pa egziste ankÃ². Nou espere wÃ¨ ou anvan lontan."
+      signed_up: "OnÃ¨ respÃ¨ ! Ou byen konekte."
+      signed_up_but_inactive: "Ou reyisi siyen. Men, nou pa kapab branche w, paske kont ou an poko kÃ²manse mache."
+      signed_up_but_locked: "Ou reyisi siyen. Men, nou pa kapab branche w, paske kont ou a bloke."
+      signed_up_but_unconfirmed: "Nou sot voye yon mesaj nan adrÃ¨s kouryÃ¨l ou ki gen yon lyen konfimasyon. Ouvri lyen an dekwa pou kont ou a kÃ²manse mache."
+      update_needs_confirmation: "Mizajou kont lan byen fÃ¨t, men nou bezwen verifye nouvo adrÃ¨s kouryÃ¨l la. Tanpri, tcheke mesaj ou, epi klike sou lyen konfimasyon an pou w konfime nouvo adrÃ¨s kouryÃ¨l lan."
+      updated: "Ou byen rive fÃ¨ mizajou kont lan."
+    sessions:
+      signed_in: "Ou byen konekte."
+      signed_out: "Ou byen dekonekte."
+    unlocks:
+      send_instructions: "Nan kÃ¨k minit, ou pral resevwa yon kouryÃ¨l k ap esplike w kouman pou w debloke kont ou a."
+      send_paranoid_instructions: "Si kont ou a egziste, talÃ¨ w pral resevwa yon kouryÃ¨l k ap esplike w kouman pou w debloke l."
+      unlocked: "Kont lan debloke. Tanpri, siyen pou w kontinye travay."
+  errors:
+    messages:
+      already_confirmed: "kont lan te deja konfime, tanpri, eseye siyen."
+      confirmation_period_expired: "li bezwen konfime nan %{period}, tanpri, mande yon lÃ²t"
+      expired: "li fini, tanpri, mande yon lÃ²t"
+      not_found: "nou pa jwenn li"
+      not_locked: "li pat bloke"
+      not_saved:
+        one: "Yon erÃ¨ anpeche n sove %{resource} sa a:"
+        other: "%{count) erÃ¨ anpeche n sove %{resource}g sa a:"

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= I18n.t('views.administrator.listing') %></h1>
+
+<%= link_to I18n.t('views.administrator.new'), new_administrator_path %><br>
+<div class="data_centers_list">
+<table>
+  <thead>
+    <tr>
+        <th><%= I18n.t('activerecord.attributes.administrator.name') %></th>
+        <th><%= I18n.t('activerecord.attributes.administrator.phone_number') %></th>
+        <th><%= I18n.t('activerecord.attributes.administrator.email') %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @administrators.each do |administrator| %>
+      <tr>
+        <td><%= administrator.name %></td>
+        <td><%= administrator.phone_number %></td>
+        <td><%= administrator.email %></td>
+        <td>
+          <%= link_to 'Edit', edit_administrator_path(administrator) %> |
+          <%= link_to 'Remove', administrator, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

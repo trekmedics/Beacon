@@ -1,0 +1,2248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>FirstResponderReport</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            FirstResponderReport 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/first_responder_report_rb.html">app/models/first_responder_report.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-calculate_average_additional_confirm_time">calculate_average_additional_confirm_time</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_average_completion_time">calculate_average_completion_time</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_average_number_of_patients_transported">calculate_average_number_of_patients_transported</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_average_number_of_vehicles_requested">calculate_average_number_of_vehicles_requested</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_average_original_confirm_time">calculate_average_original_confirm_time</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_average_transport_time">calculate_average_transport_time</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_number_of_additional_request_no_replies">calculate_number_of_additional_request_no_replies</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_number_of_additional_request_replies">calculate_number_of_additional_request_replies</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_number_of_additional_requests">calculate_number_of_additional_requests</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_number_of_assigned_incidents">calculate_number_of_assigned_incidents</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_number_of_cancel_messages">calculate_number_of_cancel_messages</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_number_of_incidents_completed">calculate_number_of_incidents_completed</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_number_of_original_request_no_replies">calculate_number_of_original_request_no_replies</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_number_of_original_request_replies">calculate_number_of_original_request_replies</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_number_of_original_requests">calculate_number_of_original_requests</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_number_of_times_arrival_at_hospital_confirmed">calculate_number_of_times_arrival_at_hospital_confirmed</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_number_of_times_cancelled_after_on_scene">calculate_number_of_times_cancelled_after_on_scene</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_number_of_times_confirmed_on_scene">calculate_number_of_times_confirmed_on_scene</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_number_of_times_incident_commander">calculate_number_of_times_incident_commander</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_number_of_times_resources_requested">calculate_number_of_times_resources_requested</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_number_of_times_transport_confirmed">calculate_number_of_times_transport_confirmed</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_number_of_unable_to_locate_messages">calculate_number_of_unable_to_locate_messages</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_percentage_of_additional_request_no_replies">calculate_percentage_of_additional_request_no_replies</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_percentage_of_additional_request_replies">calculate_percentage_of_additional_request_replies</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_percentage_of_assigned_incidents">calculate_percentage_of_assigned_incidents</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_percentage_of_cancel_messages">calculate_percentage_of_cancel_messages</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_percentage_of_confirmed_on_scene">calculate_percentage_of_confirmed_on_scene</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_percentage_of_incidents_completed">calculate_percentage_of_incidents_completed</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_percentage_of_original_request_no_replies">calculate_percentage_of_original_request_no_replies</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_percentage_of_original_request_replies">calculate_percentage_of_original_request_replies</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_percentage_of_original_requests">calculate_percentage_of_original_requests</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_percentage_of_times_arrival_at_hospital_confirmed">calculate_percentage_of_times_arrival_at_hospital_confirmed</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_percentage_of_times_cancelled_after_on_scene">calculate_percentage_of_times_cancelled_after_on_scene</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_percentage_of_times_incident_commander">calculate_percentage_of_times_incident_commander</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_percentage_of_times_resources_requested">calculate_percentage_of_times_resources_requested</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_percentage_of_times_transport_confirmed">calculate_percentage_of_times_transport_confirmed</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_percentage_of_unable_to_locate_messages">calculate_percentage_of_unable_to_locate_messages</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_total_number_of_patients_transported">calculate_total_number_of_patients_transported</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calculate_total_number_of_vehicles_requested">calculate_total_number_of_vehicles_requested</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>average_additional_confirm_time</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>average_completion_time</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>average_number_of_patients_transported</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>average_number_of_vehicles_requested</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>average_original_confirm_time</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>average_transport_time</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>first_responder</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>number_of_additional_request_no_replies</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>number_of_additional_request_replies</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>number_of_additional_requests</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>number_of_assigned_incidents</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>number_of_cancel_messages</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>number_of_incidents_completed</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>number_of_original_request_no_replies</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>number_of_original_request_replies</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>number_of_original_requests</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>number_of_times_arrival_at_hospital_confirmed</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>number_of_times_cancelled_after_on_scene</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>number_of_times_confirmed_on_scene</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>number_of_times_incident_commander</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>number_of_times_resources_requested</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>number_of_times_transport_confirmed</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>number_of_unable_to_locate_messages</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>percentage_of_additional_request_no_replies</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>percentage_of_additional_request_replies</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>percentage_of_assigned_incidents</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>percentage_of_cancel_messages</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>percentage_of_confirmed_on_scene</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>percentage_of_incidents_completed</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>percentage_of_original_request_no_replies</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>percentage_of_original_request_replies</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>percentage_of_original_requests</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>percentage_of_times_arrival_at_hospital_confirmed</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>percentage_of_times_cancelled_after_on_scene</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>percentage_of_times_incident_commander</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>percentage_of_times_resources_requested</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>percentage_of_times_transport_confirmed</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>percentage_of_unable_to_locate_messages</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>total_number_of_patients_transported</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>total_number_of_vehicles_requested</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(first_responder)
+            
+            <a href="../classes/FirstResponderReport.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">first_responder</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span> = <span class="ruby-identifier">first_responder</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_original_requests</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_number_of_original_requests</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">percentage_of_original_requests</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_percentage_of_original_requests</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_original_request_replies</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_number_of_original_request_replies</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_original_request_no_replies</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_number_of_original_request_no_replies</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">percentage_of_original_request_replies</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_percentage_of_original_request_replies</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">percentage_of_original_request_no_replies</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_percentage_of_original_request_no_replies</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">average_original_confirm_time</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_average_original_confirm_time</span>
+
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_additional_requests</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_number_of_additional_requests</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_additional_request_replies</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_number_of_additional_request_replies</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_additional_request_no_replies</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_number_of_additional_request_no_replies</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">percentage_of_additional_request_replies</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_percentage_of_additional_request_replies</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">percentage_of_additional_request_no_replies</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_percentage_of_additional_request_no_replies</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">average_additional_confirm_time</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_average_additional_confirm_time</span>
+
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_assigned_incidents</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_number_of_assigned_incidents</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">percentage_of_assigned_incidents</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_percentage_of_assigned_incidents</span>
+
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_confirmed_on_scene</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_number_of_times_confirmed_on_scene</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">percentage_of_confirmed_on_scene</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_percentage_of_confirmed_on_scene</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_incident_commander</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_number_of_times_incident_commander</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">percentage_of_times_incident_commander</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_percentage_of_times_incident_commander</span>
+
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_cancel_messages</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_number_of_cancel_messages</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">percentage_of_cancel_messages</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_percentage_of_cancel_messages</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_unable_to_locate_messages</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_number_of_unable_to_locate_messages</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">percentage_of_unable_to_locate_messages</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_percentage_of_unable_to_locate_messages</span>
+
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_resources_requested</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_number_of_times_resources_requested</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">percentage_of_times_resources_requested</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_percentage_of_times_resources_requested</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">total_number_of_vehicles_requested</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_total_number_of_vehicles_requested</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">average_number_of_vehicles_requested</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_average_number_of_vehicles_requested</span>
+
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_transport_confirmed</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_number_of_times_transport_confirmed</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">percentage_of_times_transport_confirmed</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_percentage_of_times_transport_confirmed</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">total_number_of_patients_transported</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_total_number_of_patients_transported</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">average_number_of_patients_transported</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_average_number_of_patients_transported</span>
+
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_cancelled_after_on_scene</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_number_of_times_cancelled_after_on_scene</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">percentage_of_times_cancelled_after_on_scene</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_percentage_of_times_cancelled_after_on_scene</span>
+
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_arrival_at_hospital_confirmed</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_number_of_times_arrival_at_hospital_confirmed</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">percentage_of_times_arrival_at_hospital_confirmed</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_percentage_of_times_arrival_at_hospital_confirmed</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">average_transport_time</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_average_transport_time</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_incidents_completed</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_number_of_incidents_completed</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">percentage_of_incidents_completed</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_percentage_of_incidents_completed</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">average_completion_time</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">calculate_average_completion_time</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Protected methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_average_additional_confirm_time">
+            
+              <b>calculate_average_additional_confirm_time</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_average_additional_confirm_time" name="method-i-calculate_average_additional_confirm_time" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_average_additional_confirm_time_source')" id="l_method-i-calculate_average_additional_confirm_time_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_average_additional_confirm_time_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_average_additional_confirm_time</span>
+  <span class="ruby-identifier">first_responder_performance_data</span> = <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                                                   .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">did_reply_additional_request</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">good_data_count</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">sum_of_differences</span> = <span class="ruby-number">0.0</span>
+  <span class="ruby-identifier">first_responder_performance_data</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">datum</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">datum</span>.<span class="ruby-identifier">time_of_additional_request_reply</span>.<span class="ruby-identifier">present?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">datum</span>.<span class="ruby-identifier">time_of_additional_request</span>.<span class="ruby-identifier">present?</span>
+      <span class="ruby-identifier">good_data_count</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+      <span class="ruby-identifier">sum_of_differences</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">datum</span>.<span class="ruby-identifier">time_of_additional_request_reply</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">datum</span>.<span class="ruby-identifier">time_of_additional_request</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">good_data_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">sum_of_differences</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">good_data_count</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_average_completion_time">
+            
+              <b>calculate_average_completion_time</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_average_completion_time" name="method-i-calculate_average_completion_time" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_average_completion_time_source')" id="l_method-i-calculate_average_completion_time_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_average_completion_time_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 334</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_average_completion_time</span>
+  <span class="ruby-identifier">first_responder_performance_data</span> = <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                                                   .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">did_complete</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+                                                                   .<span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-identifier">time_of_original_request</span><span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>)
+                                                                   .<span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-identifier">time_of_incident_complete</span><span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_responder_performance_data</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">sum_of_differences</span> = <span class="ruby-number">0.0</span>
+  <span class="ruby-identifier">first_responder_performance_data</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">datum</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">sum_of_differences</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">datum</span>.<span class="ruby-identifier">time_of_incident_complete</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">datum</span>.<span class="ruby-identifier">time_of_original_request</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">sum_of_differences</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">first_responder_performance_data</span>.<span class="ruby-identifier">length</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_average_number_of_patients_transported">
+            
+              <b>calculate_average_number_of_patients_transported</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_average_number_of_patients_transported" name="method-i-calculate_average_number_of_patients_transported" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_average_number_of_patients_transported_source')" id="l_method-i-calculate_average_number_of_patients_transported_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_average_number_of_patients_transported_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 282</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_average_number_of_patients_transported</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_transport_confirmed</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">total_number_of_patients_transported</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_transport_confirmed</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_average_number_of_vehicles_requested">
+            
+              <b>calculate_average_number_of_vehicles_requested</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_average_number_of_vehicles_requested" name="method-i-calculate_average_number_of_vehicles_requested" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_average_number_of_vehicles_requested_source')" id="l_method-i-calculate_average_number_of_vehicles_requested_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_average_number_of_vehicles_requested_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 259</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_average_number_of_vehicles_requested</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_incident_commander</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">total_number_of_vehicles_requested</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_incident_commander</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_average_original_confirm_time">
+            
+              <b>calculate_average_original_confirm_time</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_average_original_confirm_time" name="method-i-calculate_average_original_confirm_time" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_average_original_confirm_time_source')" id="l_method-i-calculate_average_original_confirm_time_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_average_original_confirm_time_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_average_original_confirm_time</span>
+  <span class="ruby-identifier">first_responder_performance_data</span> = <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                                                   .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">did_reply_original_request</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">good_data_count</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">sum_of_differences</span> = <span class="ruby-number">0.0</span>
+  <span class="ruby-identifier">first_responder_performance_data</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">datum</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">datum</span>.<span class="ruby-identifier">time_of_original_request_reply</span>.<span class="ruby-identifier">present?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">datum</span>.<span class="ruby-identifier">time_of_original_request</span>.<span class="ruby-identifier">present?</span>
+      <span class="ruby-identifier">good_data_count</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+      <span class="ruby-identifier">sum_of_differences</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">datum</span>.<span class="ruby-identifier">time_of_original_request_reply</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">datum</span>.<span class="ruby-identifier">time_of_original_request</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">good_data_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">sum_of_differences</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">good_data_count</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_average_transport_time">
+            
+              <b>calculate_average_transport_time</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_average_transport_time" name="method-i-calculate_average_transport_time" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_average_transport_time_source')" id="l_method-i-calculate_average_transport_time_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_average_transport_time_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 310</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_average_transport_time</span>
+  <span class="ruby-identifier">first_responder_performance_data</span> = <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                                                   .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">did_confirm_arrival</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+                                                                   .<span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-identifier">time_of_confirm_transport</span><span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>)
+                                                                   .<span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-identifier">time_of_confirm_arrival</span><span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_responder_performance_data</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">sum_of_differences</span> = <span class="ruby-number">0.0</span>
+  <span class="ruby-identifier">first_responder_performance_data</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">datum</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">sum_of_differences</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">datum</span>.<span class="ruby-identifier">time_of_confirm_arrival</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">datum</span>.<span class="ruby-identifier">time_of_confirm_transport</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">sum_of_differences</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">first_responder_performance_data</span>.<span class="ruby-identifier">length</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_number_of_additional_request_no_replies">
+            
+              <b>calculate_number_of_additional_request_no_replies</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_number_of_additional_request_no_replies" name="method-i-calculate_number_of_additional_request_no_replies" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_number_of_additional_request_no_replies_source')" id="l_method-i-calculate_number_of_additional_request_no_replies_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_number_of_additional_request_no_replies_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 154</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_number_of_additional_request_no_replies</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                       .<span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-identifier">time_of_additional_request</span><span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>)
+                                       .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">did_reply_additional_request</span><span class="ruby-operator">:</span> [<span class="ruby-keyword">false</span>, <span class="ruby-keyword">nil</span>])
+                                       .<span class="ruby-identifier">count</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_number_of_additional_request_replies">
+            
+              <b>calculate_number_of_additional_request_replies</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_number_of_additional_request_replies" name="method-i-calculate_number_of_additional_request_replies" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_number_of_additional_request_replies_source')" id="l_method-i-calculate_number_of_additional_request_replies_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_number_of_additional_request_replies_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_number_of_additional_request_replies</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                       .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">did_reply_additional_request</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+                                       .<span class="ruby-identifier">count</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_number_of_additional_requests">
+            
+              <b>calculate_number_of_additional_requests</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_number_of_additional_requests" name="method-i-calculate_number_of_additional_requests" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_number_of_additional_requests_source')" id="l_method-i-calculate_number_of_additional_requests_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_number_of_additional_requests_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_number_of_additional_requests</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                       .<span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-identifier">time_of_additional_request</span><span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>)
+                                       .<span class="ruby-identifier">count</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_number_of_assigned_incidents">
+            
+              <b>calculate_number_of_assigned_incidents</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_number_of_assigned_incidents" name="method-i-calculate_number_of_assigned_incidents" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_number_of_assigned_incidents_source')" id="l_method-i-calculate_number_of_assigned_incidents_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_number_of_assigned_incidents_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 185</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_number_of_assigned_incidents</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                       .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">was_assigned</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+                                       .<span class="ruby-identifier">count</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_number_of_cancel_messages">
+            
+              <b>calculate_number_of_cancel_messages</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_number_of_cancel_messages" name="method-i-calculate_number_of_cancel_messages" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_number_of_cancel_messages_source')" id="l_method-i-calculate_number_of_cancel_messages_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_number_of_cancel_messages_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 219</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_number_of_cancel_messages</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                       .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">did_cancel</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+                                       .<span class="ruby-identifier">count</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_number_of_incidents_completed">
+            
+              <b>calculate_number_of_incidents_completed</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_number_of_incidents_completed" name="method-i-calculate_number_of_incidents_completed" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_number_of_incidents_completed_source')" id="l_method-i-calculate_number_of_incidents_completed_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_number_of_incidents_completed_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 323</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_number_of_incidents_completed</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                       .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">did_complete</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+                                       .<span class="ruby-identifier">count</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_number_of_original_request_no_replies">
+            
+              <b>calculate_number_of_original_request_no_replies</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_number_of_original_request_no_replies" name="method-i-calculate_number_of_original_request_no_replies" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_number_of_original_request_no_replies_source')" id="l_method-i-calculate_number_of_original_request_no_replies_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_number_of_original_request_no_replies_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_number_of_original_request_no_replies</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                       .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">did_reply_original_request</span><span class="ruby-operator">:</span> [<span class="ruby-keyword">false</span>, <span class="ruby-keyword">nil</span>])
+                                       .<span class="ruby-identifier">count</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_number_of_original_request_replies">
+            
+              <b>calculate_number_of_original_request_replies</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_number_of_original_request_replies" name="method-i-calculate_number_of_original_request_replies" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_number_of_original_request_replies_source')" id="l_method-i-calculate_number_of_original_request_replies_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_number_of_original_request_replies_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_number_of_original_request_replies</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                       .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">did_reply_original_request</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+                                       .<span class="ruby-identifier">count</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_number_of_original_requests">
+            
+              <b>calculate_number_of_original_requests</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_number_of_original_requests" name="method-i-calculate_number_of_original_requests" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_number_of_original_requests_source')" id="l_method-i-calculate_number_of_original_requests_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_number_of_original_requests_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_number_of_original_requests</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                       .<span class="ruby-identifier">count</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_number_of_times_arrival_at_hospital_confirmed">
+            
+              <b>calculate_number_of_times_arrival_at_hospital_confirmed</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_number_of_times_arrival_at_hospital_confirmed" name="method-i-calculate_number_of_times_arrival_at_hospital_confirmed" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_number_of_times_arrival_at_hospital_confirmed_source')" id="l_method-i-calculate_number_of_times_arrival_at_hospital_confirmed_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_number_of_times_arrival_at_hospital_confirmed_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 299</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_number_of_times_arrival_at_hospital_confirmed</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                       .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">did_confirm_arrival</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+                                       .<span class="ruby-identifier">count</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_number_of_times_cancelled_after_on_scene">
+            
+              <b>calculate_number_of_times_cancelled_after_on_scene</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_number_of_times_cancelled_after_on_scene" name="method-i-calculate_number_of_times_cancelled_after_on_scene" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_number_of_times_cancelled_after_on_scene_source')" id="l_method-i-calculate_number_of_times_cancelled_after_on_scene_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_number_of_times_cancelled_after_on_scene_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 287</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_number_of_times_cancelled_after_on_scene</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                       .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">did_confirm_on_scene</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+                                       .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">did_cancel</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+                                       .<span class="ruby-identifier">count</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_number_of_times_confirmed_on_scene">
+            
+              <b>calculate_number_of_times_confirmed_on_scene</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_number_of_times_confirmed_on_scene" name="method-i-calculate_number_of_times_confirmed_on_scene" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_number_of_times_confirmed_on_scene_source')" id="l_method-i-calculate_number_of_times_confirmed_on_scene_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_number_of_times_confirmed_on_scene_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_number_of_times_confirmed_on_scene</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                       .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">did_confirm_on_scene</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+                                       .<span class="ruby-identifier">count</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_number_of_times_incident_commander">
+            
+              <b>calculate_number_of_times_incident_commander</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_number_of_times_incident_commander" name="method-i-calculate_number_of_times_incident_commander" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_number_of_times_incident_commander_source')" id="l_method-i-calculate_number_of_times_incident_commander_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_number_of_times_incident_commander_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_number_of_times_incident_commander</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                       .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">was_incident_commander</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+                                       .<span class="ruby-identifier">count</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_number_of_times_resources_requested">
+            
+              <b>calculate_number_of_times_resources_requested</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_number_of_times_resources_requested" name="method-i-calculate_number_of_times_resources_requested" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_number_of_times_resources_requested_source')" id="l_method-i-calculate_number_of_times_resources_requested_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_number_of_times_resources_requested_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 241</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_number_of_times_resources_requested</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                       .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">did_request_resources</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+                                       .<span class="ruby-identifier">count</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_number_of_times_transport_confirmed">
+            
+              <b>calculate_number_of_times_transport_confirmed</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_number_of_times_transport_confirmed" name="method-i-calculate_number_of_times_transport_confirmed" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_number_of_times_transport_confirmed_source')" id="l_method-i-calculate_number_of_times_transport_confirmed_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_number_of_times_transport_confirmed_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 264</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_number_of_times_transport_confirmed</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                       .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">did_confirm_transport</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+                                       .<span class="ruby-identifier">count</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_number_of_unable_to_locate_messages">
+            
+              <b>calculate_number_of_unable_to_locate_messages</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_number_of_unable_to_locate_messages" name="method-i-calculate_number_of_unable_to_locate_messages" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_number_of_unable_to_locate_messages_source')" id="l_method-i-calculate_number_of_unable_to_locate_messages_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_number_of_unable_to_locate_messages_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 230</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_number_of_unable_to_locate_messages</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                       .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">was_unable_to_locate</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+                                       .<span class="ruby-identifier">count</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_percentage_of_additional_request_no_replies">
+            
+              <b>calculate_percentage_of_additional_request_no_replies</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_percentage_of_additional_request_no_replies" name="method-i-calculate_percentage_of_additional_request_no_replies" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_percentage_of_additional_request_no_replies_source')" id="l_method-i-calculate_percentage_of_additional_request_no_replies_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_percentage_of_additional_request_no_replies_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_percentage_of_additional_request_no_replies</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_additional_requests</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_additional_request_no_replies</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_additional_requests</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_percentage_of_additional_request_replies">
+            
+              <b>calculate_percentage_of_additional_request_replies</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_percentage_of_additional_request_replies" name="method-i-calculate_percentage_of_additional_request_replies" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_percentage_of_additional_request_replies_source')" id="l_method-i-calculate_percentage_of_additional_request_replies_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_percentage_of_additional_request_replies_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 161</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_percentage_of_additional_request_replies</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_additional_requests</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_additional_request_replies</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_additional_requests</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_percentage_of_assigned_incidents">
+            
+              <b>calculate_percentage_of_assigned_incidents</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_percentage_of_assigned_incidents" name="method-i-calculate_percentage_of_assigned_incidents" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_percentage_of_assigned_incidents_source')" id="l_method-i-calculate_percentage_of_assigned_incidents_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_percentage_of_assigned_incidents_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 191</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_percentage_of_assigned_incidents</span>
+  <span class="ruby-identifier">number_of_replies</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_original_request_replies</span> <span class="ruby-operator">+</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_additional_request_replies</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">number_of_replies</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_assigned_incidents</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">number_of_replies</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_percentage_of_cancel_messages">
+            
+              <b>calculate_percentage_of_cancel_messages</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_percentage_of_cancel_messages" name="method-i-calculate_percentage_of_cancel_messages" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_percentage_of_cancel_messages_source')" id="l_method-i-calculate_percentage_of_cancel_messages_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_percentage_of_cancel_messages_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 225</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_percentage_of_cancel_messages</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_assigned_incidents</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_cancel_messages</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_assigned_incidents</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_percentage_of_confirmed_on_scene">
+            
+              <b>calculate_percentage_of_confirmed_on_scene</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_percentage_of_confirmed_on_scene" name="method-i-calculate_percentage_of_confirmed_on_scene" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_percentage_of_confirmed_on_scene_source')" id="l_method-i-calculate_percentage_of_confirmed_on_scene_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_percentage_of_confirmed_on_scene_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 203</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_percentage_of_confirmed_on_scene</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_assigned_incidents</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_confirmed_on_scene</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_assigned_incidents</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_percentage_of_incidents_completed">
+            
+              <b>calculate_percentage_of_incidents_completed</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_percentage_of_incidents_completed" name="method-i-calculate_percentage_of_incidents_completed" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_percentage_of_incidents_completed_source')" id="l_method-i-calculate_percentage_of_incidents_completed_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_percentage_of_incidents_completed_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 329</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_percentage_of_incidents_completed</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_assigned_incidents</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_incidents_completed</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_assigned_incidents</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_percentage_of_original_request_no_replies">
+            
+              <b>calculate_percentage_of_original_request_no_replies</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_percentage_of_original_request_no_replies" name="method-i-calculate_percentage_of_original_request_no_replies" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_percentage_of_original_request_no_replies_source')" id="l_method-i-calculate_percentage_of_original_request_no_replies_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_percentage_of_original_request_no_replies_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_percentage_of_original_request_no_replies</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_original_requests</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_original_request_no_replies</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_original_requests</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_percentage_of_original_request_replies">
+            
+              <b>calculate_percentage_of_original_request_replies</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_percentage_of_original_request_replies" name="method-i-calculate_percentage_of_original_request_replies" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_percentage_of_original_request_replies_source')" id="l_method-i-calculate_percentage_of_original_request_replies_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_percentage_of_original_request_replies_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_percentage_of_original_request_replies</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_original_requests</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_original_request_replies</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_original_requests</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_percentage_of_original_requests">
+            
+              <b>calculate_percentage_of_original_requests</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_percentage_of_original_requests" name="method-i-calculate_percentage_of_original_requests" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_percentage_of_original_requests_source')" id="l_method-i-calculate_percentage_of_original_requests_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_percentage_of_original_requests_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_percentage_of_original_requests</span>
+  <span class="ruby-identifier">total_count</span> = <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">all</span>.<span class="ruby-identifier">count</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">total_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_original_requests</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">total_count</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_percentage_of_times_arrival_at_hospital_confirmed">
+            
+              <b>calculate_percentage_of_times_arrival_at_hospital_confirmed</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_percentage_of_times_arrival_at_hospital_confirmed" name="method-i-calculate_percentage_of_times_arrival_at_hospital_confirmed" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_percentage_of_times_arrival_at_hospital_confirmed_source')" id="l_method-i-calculate_percentage_of_times_arrival_at_hospital_confirmed_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_percentage_of_times_arrival_at_hospital_confirmed_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 305</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_percentage_of_times_arrival_at_hospital_confirmed</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_transport_confirmed</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_arrival_at_hospital_confirmed</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_transport_confirmed</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_percentage_of_times_cancelled_after_on_scene">
+            
+              <b>calculate_percentage_of_times_cancelled_after_on_scene</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_percentage_of_times_cancelled_after_on_scene" name="method-i-calculate_percentage_of_times_cancelled_after_on_scene" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_percentage_of_times_cancelled_after_on_scene_source')" id="l_method-i-calculate_percentage_of_times_cancelled_after_on_scene_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_percentage_of_times_cancelled_after_on_scene_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 294</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_percentage_of_times_cancelled_after_on_scene</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_confirmed_on_scene</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_cancelled_after_on_scene</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_confirmed_on_scene</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_percentage_of_times_incident_commander">
+            
+              <b>calculate_percentage_of_times_incident_commander</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_percentage_of_times_incident_commander" name="method-i-calculate_percentage_of_times_incident_commander" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_percentage_of_times_incident_commander_source')" id="l_method-i-calculate_percentage_of_times_incident_commander_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_percentage_of_times_incident_commander_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_percentage_of_times_incident_commander</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_assigned_incidents</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_incident_commander</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_assigned_incidents</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_percentage_of_times_resources_requested">
+            
+              <b>calculate_percentage_of_times_resources_requested</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_percentage_of_times_resources_requested" name="method-i-calculate_percentage_of_times_resources_requested" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_percentage_of_times_resources_requested_source')" id="l_method-i-calculate_percentage_of_times_resources_requested_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_percentage_of_times_resources_requested_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 247</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_percentage_of_times_resources_requested</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_incident_commander</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_resources_requested</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_incident_commander</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_percentage_of_times_transport_confirmed">
+            
+              <b>calculate_percentage_of_times_transport_confirmed</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_percentage_of_times_transport_confirmed" name="method-i-calculate_percentage_of_times_transport_confirmed" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_percentage_of_times_transport_confirmed_source')" id="l_method-i-calculate_percentage_of_times_transport_confirmed_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_percentage_of_times_transport_confirmed_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 270</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_percentage_of_times_transport_confirmed</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_confirmed_on_scene</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_transport_confirmed</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_times_confirmed_on_scene</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_percentage_of_unable_to_locate_messages">
+            
+              <b>calculate_percentage_of_unable_to_locate_messages</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_percentage_of_unable_to_locate_messages" name="method-i-calculate_percentage_of_unable_to_locate_messages" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_percentage_of_unable_to_locate_messages_source')" id="l_method-i-calculate_percentage_of_unable_to_locate_messages_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_percentage_of_unable_to_locate_messages_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 236</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_percentage_of_unable_to_locate_messages</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_assigned_incidents</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_unable_to_locate_messages</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">number_of_assigned_incidents</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_total_number_of_patients_transported">
+            
+              <b>calculate_total_number_of_patients_transported</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_total_number_of_patients_transported" name="method-i-calculate_total_number_of_patients_transported" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_total_number_of_patients_transported_source')" id="l_method-i-calculate_total_number_of_patients_transported_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_total_number_of_patients_transported_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 275</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_total_number_of_patients_transported</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                       .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">did_confirm_transport</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+                                       .<span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-identifier">patients_transported</span><span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>)
+                                       .<span class="ruby-identifier">sum</span>(<span class="ruby-value">:patients_transported</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calculate_total_number_of_vehicles_requested">
+            
+              <b>calculate_total_number_of_vehicles_requested</b>()
+            
+            <a href="../classes/FirstResponderReport.html#method-i-calculate_total_number_of_vehicles_requested" name="method-i-calculate_total_number_of_vehicles_requested" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calculate_total_number_of_vehicles_requested_source')" id="l_method-i-calculate_total_number_of_vehicles_requested_source">show</a>
+                
+              </p>
+              <div id="method-i-calculate_total_number_of_vehicles_requested_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_report.rb, line 252</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calculate_total_number_of_vehicles_requested</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">first_responder</span>)
+                                       .<span class="ruby-identifier">where</span>(<span class="ruby-identifier">did_request_resources</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+                                       .<span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-identifier">vehicles_requested</span><span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>)
+                                       .<span class="ruby-identifier">sum</span>(<span class="ruby-value">:vehicles_requested</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

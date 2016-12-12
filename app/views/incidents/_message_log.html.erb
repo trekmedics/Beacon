@@ -1,0 +1,32 @@
+<h4><%= I18n.t('views.incident.incident_messages_table.heading') %></h4>
+<div class="message_log" ng-show="messageLog.length > 0">
+  <table class="fixed_headers">
+    <thead>
+      <tr>
+        <th><div class="time_cell"><%= I18n.t('activerecord.attributes.message_log.created_at') %></div></th>
+        <th ng-repeat="incidentActor in incidentActors"><div class="message_cell">{{incidentActor.name}} ({{incidentActor.phone_number}})</div></th>
+      </tr>
+      <tr ng-show="incident.canSimulate()">
+        <th><div class="time_cell"></div></th>
+        <th ng-repeat="incidentActor in incidentActors">
+          <div class="message_cell_input">
+            <span ng-show="canSimulateForIncidentActor(incidentActor)">
+              <input class="message_box" placeholder="<%= I18n.t('views.placeholders.simulate_message') %>" ng-model="incidentActor.message">
+              <button type="button" class="send_button" ng-click="messageIncidentActor(incidentActor)"><%= I18n.t('views.buttons.send') %></button>
+            </span>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody class="{{tableBodyClass()}}">
+      <tr class="log_item" ng-repeat="logItem in messageLog">
+        <td><div class="time_cell">{{logItem.time | date: 'HH:mm:ss'}}</div></td>
+        <td class="" ng-repeat="incidentActor in incidentActors">
+        <div class="message_cell"><span class="{{logItem[incidentActor.hash_key]+'x' == 'x' ? '' : logItem.resource_type+'_'+logItem.direction}}">{{logItem[incidentActor.hash_key]}}</span></div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p ng-show="messageLog.length == 0">
+  <%= I18n.t('views.incident.incident_messages_table.no_messages') %>
+</p>

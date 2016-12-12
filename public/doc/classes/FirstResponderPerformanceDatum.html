@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>FirstResponderPerformanceDatum</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            FirstResponderPerformanceDatum 
+            
+                <span class="parent">&lt; 
+                    
+                    ActiveRecord::Base
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/first_responder_performance_datum_rb.html">app/models/first_responder_performance_datum.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-assigned_to_incident">assigned_to_incident</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-cancel_message">cancel_message</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-confimed_on_scene">confimed_on_scene</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-confirmed_arrival_at_hospital">confirmed_arrival_at_hospital</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-confirmed_transport">confirmed_transport</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-designated_incident_commander">designated_incident_commander</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-find_by_first_responder_and_incident">find_by_first_responder_and_incident</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-no_transport">no_transport</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-request_for_assistance">request_for_assistance</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-request_for_assistance_reply">request_for_assistance_reply</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-requested_resources">requested_resources</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-unable_to_locate_message">unable_to_locate_message</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-assigned_to_incident">
+            
+              <b>assigned_to_incident</b>(first_responder, incident)
+            
+            <a href="../classes/FirstResponderPerformanceDatum.html#method-c-assigned_to_incident" name="method-c-assigned_to_incident" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-assigned_to_incident_source')" id="l_method-c-assigned_to_incident_source">show</a>
+                
+              </p>
+              <div id="method-c-assigned_to_incident_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_performance_datum.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">assigned_to_incident</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-identifier">first_responder_performance_datum</span> = <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">find_by_first_responder_and_incident</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">blank?</span>
+  <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">was_assigned</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-cancel_message">
+            
+              <b>cancel_message</b>(first_responder, incident)
+            
+            <a href="../classes/FirstResponderPerformanceDatum.html#method-c-cancel_message" name="method-c-cancel_message" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-cancel_message_source')" id="l_method-c-cancel_message_source">show</a>
+                
+              </p>
+              <div id="method-c-cancel_message_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_performance_datum.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">cancel_message</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-identifier">first_responder_performance_datum</span> = <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">find_by_first_responder_and_incident</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">blank?</span>
+  <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">did_cancel</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-confimed_on_scene">
+            
+              <b>confimed_on_scene</b>(first_responder, incident)
+            
+            <a href="../classes/FirstResponderPerformanceDatum.html#method-c-confimed_on_scene" name="method-c-confimed_on_scene" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-confimed_on_scene_source')" id="l_method-c-confimed_on_scene_source">show</a>
+                
+              </p>
+              <div id="method-c-confimed_on_scene_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_performance_datum.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">confimed_on_scene</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-identifier">first_responder_performance_datum</span> = <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">find_by_first_responder_and_incident</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">blank?</span>
+  <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">did_confirm_on_scene</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>, <span class="ruby-identifier">time_of_confirm_on_scene</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">utc</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-confirmed_arrival_at_hospital">
+            
+              <b>confirmed_arrival_at_hospital</b>(first_responder, incident)
+            
+            <a href="../classes/FirstResponderPerformanceDatum.html#method-c-confirmed_arrival_at_hospital" name="method-c-confirmed_arrival_at_hospital" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-confirmed_arrival_at_hospital_source')" id="l_method-c-confirmed_arrival_at_hospital_source">show</a>
+                
+              </p>
+              <div id="method-c-confirmed_arrival_at_hospital_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_performance_datum.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">confirmed_arrival_at_hospital</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-identifier">first_responder_performance_datum</span> = <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">find_by_first_responder_and_incident</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">blank?</span>
+  <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">did_confirm_arrival</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>, <span class="ruby-identifier">time_of_confirm_arrival</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">utc</span>, <span class="ruby-identifier">did_complete</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>, <span class="ruby-identifier">time_of_incident_complete</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">utc</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-confirmed_transport">
+            
+              <b>confirmed_transport</b>(first_responder, incident, hospital, patients_transported, hospital_eta)
+            
+            <a href="../classes/FirstResponderPerformanceDatum.html#method-c-confirmed_transport" name="method-c-confirmed_transport" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-confirmed_transport_source')" id="l_method-c-confirmed_transport_source">show</a>
+                
+              </p>
+              <div id="method-c-confirmed_transport_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_performance_datum.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">confirmed_transport</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>, <span class="ruby-identifier">hospital</span>, <span class="ruby-identifier">patients_transported</span>, <span class="ruby-identifier">hospital_eta</span>)
+  <span class="ruby-identifier">first_responder_performance_datum</span> = <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">find_by_first_responder_and_incident</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">blank?</span>
+  <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">did_confirm_transport</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>, <span class="ruby-identifier">time_of_confirm_transport</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">utc</span>, <span class="ruby-identifier">hospital</span><span class="ruby-operator">:</span> <span class="ruby-identifier">hospital</span>, <span class="ruby-identifier">patients_transported</span><span class="ruby-operator">:</span> <span class="ruby-identifier">patients_transported</span>, <span class="ruby-identifier">hospital_eta</span><span class="ruby-operator">:</span> <span class="ruby-identifier">hospital_eta</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-designated_incident_commander">
+            
+              <b>designated_incident_commander</b>(first_responder, incident)
+            
+            <a href="../classes/FirstResponderPerformanceDatum.html#method-c-designated_incident_commander" name="method-c-designated_incident_commander" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-designated_incident_commander_source')" id="l_method-c-designated_incident_commander_source">show</a>
+                
+              </p>
+              <div id="method-c-designated_incident_commander_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_performance_datum.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">designated_incident_commander</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-identifier">first_responder_performance_datum</span> = <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">find_by_first_responder_and_incident</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">blank?</span>
+  <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">was_incident_commander</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-no_transport">
+            
+              <b>no_transport</b>(first_responder, incident)
+            
+            <a href="../classes/FirstResponderPerformanceDatum.html#method-c-no_transport" name="method-c-no_transport" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-no_transport_source')" id="l_method-c-no_transport_source">show</a>
+                
+              </p>
+              <div id="method-c-no_transport_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_performance_datum.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">no_transport</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-identifier">first_responder_performance_datum</span> = <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">find_by_first_responder_and_incident</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">blank?</span>
+  <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">did_confirm_transport</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>, <span class="ruby-identifier">did_complete</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>, <span class="ruby-identifier">time_of_incident_complete</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">utc</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-request_for_assistance">
+            
+              <b>request_for_assistance</b>(first_responder, incident)
+            
+            <a href="../classes/FirstResponderPerformanceDatum.html#method-c-request_for_assistance" name="method-c-request_for_assistance" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-request_for_assistance_source')" id="l_method-c-request_for_assistance_source">show</a>
+                
+              </p>
+              <div id="method-c-request_for_assistance_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_performance_datum.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">request_for_assistance</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-identifier">first_responder_performance_datum</span> = <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">present?</span>
+    <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">time_of_additional_request</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">utc</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>, <span class="ruby-identifier">time_of_original_request</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">utc</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-request_for_assistance_reply">
+            
+              <b>request_for_assistance_reply</b>(first_responder, incident, eta)
+            
+            <a href="../classes/FirstResponderPerformanceDatum.html#method-c-request_for_assistance_reply" name="method-c-request_for_assistance_reply" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-request_for_assistance_reply_source')" id="l_method-c-request_for_assistance_reply_source">show</a>
+                
+              </p>
+              <div id="method-c-request_for_assistance_reply_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_performance_datum.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">request_for_assistance_reply</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>, <span class="ruby-identifier">eta</span>)
+  <span class="ruby-identifier">first_responder_performance_datum</span> = <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">find_by_first_responder_and_incident</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">blank?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">waiting_for_fr_responses?</span>
+    <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">did_reply_original_request</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>, <span class="ruby-identifier">time_of_original_request_reply</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">utc</span>, <span class="ruby-identifier">eta</span><span class="ruby-operator">:</span> <span class="ruby-identifier">eta</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">waiting_for_additional_resources?</span>
+    <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">did_reply_additional_request</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>, <span class="ruby-identifier">time_of_additional_request_reply</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">utc</span>, <span class="ruby-identifier">eta</span><span class="ruby-operator">:</span> <span class="ruby-identifier">eta</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;#{Time.now.utc.strftime(&#39;%Y-%m-%d %H:%M:%S.%L&#39;)}:#{File.basename(__FILE__)}:#{__LINE__}\n\t&quot;</span> <span class="ruby-operator">+</span>
+      <span class="ruby-node">&quot;Unexpected incident state (#{incident.state}).&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-requested_resources">
+            
+              <b>requested_resources</b>(first_responder, incident, vehicles_requested)
+            
+            <a href="../classes/FirstResponderPerformanceDatum.html#method-c-requested_resources" name="method-c-requested_resources" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-requested_resources_source')" id="l_method-c-requested_resources_source">show</a>
+                
+              </p>
+              <div id="method-c-requested_resources_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_performance_datum.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">requested_resources</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>, <span class="ruby-identifier">vehicles_requested</span>)
+  <span class="ruby-identifier">first_responder_performance_datum</span> = <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">find_by_first_responder_and_incident</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">blank?</span>
+  <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">did_request_resources</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>, <span class="ruby-identifier">vehicles_requested</span><span class="ruby-operator">:</span> <span class="ruby-identifier">vehicles_requested</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-unable_to_locate_message">
+            
+              <b>unable_to_locate_message</b>(first_responder, incident)
+            
+            <a href="../classes/FirstResponderPerformanceDatum.html#method-c-unable_to_locate_message" name="method-c-unable_to_locate_message" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-unable_to_locate_message_source')" id="l_method-c-unable_to_locate_message_source">show</a>
+                
+              </p>
+              <div id="method-c-unable_to_locate_message_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_performance_datum.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">unable_to_locate_message</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-identifier">first_responder_performance_datum</span> = <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">find_by_first_responder_and_incident</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">blank?</span>
+  <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">was_unable_to_locate</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+              
+      <div class="sectiontitle">Class Protected methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-find_by_first_responder_and_incident">
+            
+              <b>find_by_first_responder_and_incident</b>(first_responder, incident)
+            
+            <a href="../classes/FirstResponderPerformanceDatum.html#method-c-find_by_first_responder_and_incident" name="method-c-find_by_first_responder_and_incident" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-find_by_first_responder_and_incident_source')" id="l_method-c-find_by_first_responder_and_incident_source">show</a>
+                
+              </p>
+              <div id="method-c-find_by_first_responder_and_incident_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_performance_datum.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">find_by_first_responder_and_incident</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-identifier">first_responder_performance_datum</span> = <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-identifier">first_responder</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_responder_performance_datum</span>.<span class="ruby-identifier">blank?</span>
+    <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;#{Time.now.utc.strftime(&#39;%Y-%m-%d %H:%M:%S.%L&#39;)}:#{File.basename(__FILE__)}:#{__LINE__}\n\t&quot;</span>   <span class="ruby-operator">+</span>
+      <span class="ruby-node">&quot;Could not find performance data for first responder (#{first_responder.try(:id)}) and incident (#{incident.try(:id)}).&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">first_responder_performance_datum</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

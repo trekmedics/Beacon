@@ -1,0 +1,9 @@
+<h1><%= "#{I18n.t('views.labels.editing')} #{I18n.t('activerecord.models.first_responder.one')}" %></h1>
+
+<% if @first_responder.present? %>
+  <%= render 'form' %>
+  <%= link_to I18n.t('views.labels.show'), @first_responder %> |
+<% else %>
+  <p><%= I18n.t('views.resource.not_found') %></p>
+<% end %>
+<%= link_to I18n.t('views.labels.back'), first_responders_path %>

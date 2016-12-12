@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+reporting_party_one:
+  phone_number: '+18005559000'
+
+reporting_party_two:
+  phone_number: '+18005559001'

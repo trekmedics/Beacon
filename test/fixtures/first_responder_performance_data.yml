@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_responder_id: 
+  incident_id: 
+  did_reply_original_request: false
+  time_to_reply_original_request: 1
+  eta: 1
+  was_assigned: false
+  did_confirm_on_scene: false
+  time_to_confirm_on_scene: 1
+  did_cancel: false
+  was_unable_to_locate: false
+  was_incident_commander: false
+  did_request_resources: false
+  vehicles_requested: 1
+  did_reply_additional_request: false
+  time_to_reply_additional_request: 1
+  did_confirm_transport: false
+  patients_transported: 1
+  hospital_id_id: 
+  did_confirm_arrival: false
+  time_to_confirm_arrival: 1
+  did_complete: false
+  time_of_incident: 1
+
+two:
+  first_responder_id: 
+  incident_id: 
+  did_reply_original_request: false
+  time_to_reply_original_request: 1
+  eta: 1
+  was_assigned: false
+  did_confirm_on_scene: false
+  time_to_confirm_on_scene: 1
+  did_cancel: false
+  was_unable_to_locate: false
+  was_incident_commander: false
+  did_request_resources: false
+  vehicles_requested: 1
+  did_reply_additional_request: false
+  time_to_reply_additional_request: 1
+  did_confirm_transport: false
+  patients_transported: 1
+  hospital_id_id: 
+  did_confirm_arrival: false
+  time_to_confirm_arrival: 1
+  did_complete: false
+  time_of_incident: 1

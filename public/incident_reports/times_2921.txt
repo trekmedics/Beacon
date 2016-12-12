@@ -1,0 +1,136 @@
+incident.id: 2921
+data_center: Simulator
+incident.created_at:                 2016/07/12 02:58:31.816
+  zFR 0005 +18005550005
+    alert_query_sent_at:             2016/07/12 02:58:32.542
+    alert_reply_received_at:         2016/07/12 02:58:35.666
+    proceed_sent_at:                 
+    on_scene_received_at:            
+    need_additional_query_sent_at:   
+    additional_reply_received_at:    
+    transporting_query_sent_at:      
+    transport_info_received_at:      
+    hospital_arrival_request_sent_at:
+    hospital_arrival_received_at:    
+    incident_summary_sent_at:        
+  zFR 0006 +18005550006
+    alert_query_sent_at:             2016/07/12 02:58:32.602
+    alert_reply_received_at:         
+    proceed_sent_at:                 
+    on_scene_received_at:            
+    need_additional_query_sent_at:   
+    additional_reply_received_at:    
+    transporting_query_sent_at:      
+    transport_info_received_at:      
+    hospital_arrival_request_sent_at:
+    hospital_arrival_received_at:    
+    incident_summary_sent_at:        
+  zFR 0000 +18005550000
+    alert_query_sent_at:             2016/07/12 02:58:33.026
+    alert_reply_received_at:         2016/07/12 02:58:33.611
+    proceed_sent_at:                 2016/07/12 02:58:33.641
+    on_scene_received_at:            2016/07/12 02:58:34.020
+    need_additional_query_sent_at:   2016/07/12 02:58:34.236
+    additional_reply_received_at:    2016/07/12 02:58:34.681
+    transporting_query_sent_at:      2016/07/12 02:58:34.681
+    transport_info_received_at:      2016/07/12 02:58:34.721
+    hospital_arrival_request_sent_at:2016/07/12 02:58:34.765
+    hospital_arrival_received_at:    2016/07/12 02:58:35.138
+    incident_summary_sent_at:        2016/07/12 02:58:35.161
+  zFR 0001 +18005550001
+    alert_query_sent_at:             2016/07/12 02:58:33.058
+    alert_reply_received_at:         2016/07/12 02:58:33.945
+    proceed_sent_at:                 2016/07/12 02:58:34.058
+    on_scene_received_at:            2016/07/12 02:58:34.355
+    need_additional_query_sent_at:   
+    additional_reply_received_at:    
+    transporting_query_sent_at:      2016/07/12 02:58:34.371
+    transport_info_received_at:      2016/07/12 02:58:34.867
+    hospital_arrival_request_sent_at:2016/07/12 02:58:34.908
+    hospital_arrival_received_at:    2016/07/12 02:58:35.253
+    incident_summary_sent_at:        2016/07/12 02:58:35.272
+  zFR 0002 +18005550002
+    alert_query_sent_at:             2016/07/12 02:58:33.344
+    alert_reply_received_at:         2016/07/12 02:58:34.145
+    proceed_sent_at:                 2016/07/12 02:58:34.181
+    on_scene_received_at:            2016/07/12 02:58:34.426
+    need_additional_query_sent_at:   
+    additional_reply_received_at:    
+    transporting_query_sent_at:      2016/07/12 02:58:34.445
+    transport_info_received_at:      2016/07/12 02:58:35.030
+    hospital_arrival_request_sent_at:
+    hospital_arrival_received_at:    
+    incident_summary_sent_at:        2016/07/12 02:58:35.062
+  zFR 0003 +18005550003
+    alert_query_sent_at:             2016/07/12 02:58:33.411
+    alert_reply_received_at:         2016/07/12 02:58:35.331
+    proceed_sent_at:                 
+    on_scene_received_at:            
+    need_additional_query_sent_at:   
+    additional_reply_received_at:    
+    transporting_query_sent_at:      
+    transport_info_received_at:      
+    hospital_arrival_request_sent_at:
+    hospital_arrival_received_at:    
+    incident_summary_sent_at:        
+  zFR 0004 +18005550004
+    alert_query_sent_at:             2016/07/12 02:58:33.441
+    alert_reply_received_at:         2016/07/12 02:58:35.452
+    proceed_sent_at:                 
+    on_scene_received_at:            
+    need_additional_query_sent_at:   
+    additional_reply_received_at:    
+    transporting_query_sent_at:      
+    transport_info_received_at:      
+    hospital_arrival_request_sent_at:
+    hospital_arrival_received_at:    
+    incident_summary_sent_at:        
+  zFR 0005 +18005550005
+    alert_query_sent_at:             2016/07/12 02:58:34.524
+    alert_reply_received_at:         2016/07/12 02:58:35.686
+    proceed_sent_at:                 2016/07/12 02:58:35.800
+    on_scene_received_at:            2016/07/12 02:58:35.961
+    need_additional_query_sent_at:   
+    additional_reply_received_at:    
+    transporting_query_sent_at:      2016/07/12 02:58:35.982
+    transport_info_received_at:      2016/07/12 02:58:36.307
+    hospital_arrival_request_sent_at:
+    hospital_arrival_received_at:    
+    incident_summary_sent_at:        2016/07/12 02:58:36.338
+  zFR 0006 +18005550006
+    alert_query_sent_at:             2016/07/12 02:58:34.566
+    alert_reply_received_at:         
+    proceed_sent_at:                 
+    on_scene_received_at:            
+    need_additional_query_sent_at:   
+    additional_reply_received_at:    
+    transporting_query_sent_at:      
+    transport_info_received_at:      
+    hospital_arrival_request_sent_at:
+    hospital_arrival_received_at:    
+    incident_summary_sent_at:        
+  zFR 0003 +18005550003
+    alert_query_sent_at:             2016/07/12 02:58:34.597
+    alert_reply_received_at:         2016/07/12 02:58:35.356
+    proceed_sent_at:                 2016/07/12 02:58:35.386
+    on_scene_received_at:            2016/07/12 02:58:35.540
+    need_additional_query_sent_at:   
+    additional_reply_received_at:    
+    transporting_query_sent_at:      2016/07/12 02:58:35.565
+    transport_info_received_at:      2016/07/12 02:58:36.035
+    hospital_arrival_request_sent_at:
+    hospital_arrival_received_at:    
+    incident_summary_sent_at:        2016/07/12 02:58:36.064
+  zFR 0004 +18005550004
+    alert_query_sent_at:             2016/07/12 02:58:34.634
+    alert_reply_received_at:         2016/07/12 02:58:35.478
+    proceed_sent_at:                 2016/07/12 02:58:35.595
+    on_scene_received_at:            2016/07/12 02:58:35.870
+    need_additional_query_sent_at:   
+    additional_reply_received_at:    
+    transporting_query_sent_at:      2016/07/12 02:58:35.901
+    transport_info_received_at:      2016/07/12 02:58:36.163
+    hospital_arrival_request_sent_at:2016/07/12 02:58:36.199
+    hospital_arrival_received_at:    2016/07/12 02:58:36.450
+    incident_summary_sent_at:        2016/07/12 02:58:36.468
+

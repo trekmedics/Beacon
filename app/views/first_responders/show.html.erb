@@ -1,0 +1,31 @@
+<h1><%= I18n.t('views.first_responder.details') %></h1>
+<p id="notice"><%= notice %></p>
+
+<% if @first_responder.present? %>
+  <p>
+    <b><%= I18n.t('activerecord.attributes.first_responder.name') %>:</b> <%= @first_responder.name %>
+  </p>
+  <p>
+    <b><%= I18n.t('activerecord.attributes.first_responder.phone_number') %>:</b> <%= @first_responder.phone_number %>
+  </p>
+  <p>
+    <b><%= I18n.t('activerecord.attributes.first_responder.locale') %>:</b> <%= @first_responder.locale %>
+  </p>
+  <p>
+    <b><%= I18n.t('activerecord.attributes.first_responder.state') %>:</b> <%= @first_responder.state %>
+  </p>
+  <p>
+    <b><%= I18n.t('activerecord.attributes.first_responder.transportation_mode') %>:</b> <%= @first_responder.transportation_mode %>
+  </p>
+  <p>
+    <b><%= I18n.t('activerecord.models.data_center.one') %>:</b> <%= @first_responder.data_center.name %>
+  </p>
+  <% if current_user.user_role.name == 'Admin' %>
+    <%= render 'performance_report' %>
+  <% end %>
+  <%= link_to I18n.t('views.labels.edit'), edit_first_responder_path(@first_responder) %> |
+<% else %>
+  <p><%= I18n.t('views.resource.not_found') %></p>
+<% end %>
+
+<%= link_to I18n.t('views.labels.back'), first_responders_path %>

@@ -1,0 +1,14 @@
+bundle
+bundle exec rake db:migrate
+bundle exec rake db:seed
+bundle exec rake websocket_rails:stop_server
+bundle exec rake websocket_rails:start_server
+bundle exec rake assets:precompile
+bundle exec foreman start
+
+# Notes:
+# The server will restart automatically when you run "sudo reboot".
+# If you run the "update_beacon" script it will start the websocket server.
+# Redis should start up automatically when you reboot.
+# Resque and Puma will start up at the end of the "update_beacon" script like you mentioned.
+

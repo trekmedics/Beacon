@@ -1,0 +1,23 @@
+<div class="user_permissions">
+  <h2><%= I18n.t('views.user.permissions.heading') %></h2>
+  <% if @user.user_role.name == 'Admin' %>
+    <p><%= I18n.t('views.user.permissions.is_admin') %></p>
+  <% else %>
+    <%= form_tag(user_set_data_center_permissions_path(@user), method: :post) do %>
+      <div class="form">
+        <% DataCenter.all.each do |data_center| %>
+          <div class="check_box">
+            <% if data_center.authorized?(@user) %>
+              <%= check_box_tag "data_center_#{data_center.id}", true, { checked: 'checked' } %>
+            <% else %>
+              <%= check_box_tag "data_center_#{data_center.id}", true %>
+            <% end %>
+          </div>
+          <%= label_tag data_center.name %>
+        <% end %>
+    <div class="clear"></div>
+        <%= submit_tag I18n.t('views.user.permissions.submit') %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

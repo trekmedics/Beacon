@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Archived Incidents</h1>
+
+<%= link_to I18n.t('views.incident.new'), new_incident_path %>
+
+<div class='incident_list'>
+<table>
+  <thead>
+    <tr>
+      <th><%= I18n.t('activerecord.attributes.incident.id') %></th>
+      <th><%= I18n.t('activerecord.attributes.incident.state') %></th>
+      <th><%= I18n.t('activerecord.attributes.incident.completion_status') %></th>
+      <th><%= I18n.t('activerecord.attributes.incident.help_message') %></th>
+      <th><%= I18n.t('activerecord.attributes.incident.location') %></th>
+      <th><%= I18n.t('activerecord.attributes.incident.reporting_party') %></th>
+      <th><%= I18n.t('activerecord.attributes.incident.incident_commander') %></th>
+      <th><%= I18n.t('activerecord.attributes.incident.created_at') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @incidents.each do |incident| %>
+      <tr>
+        <td><%= link_to incident.id, incident %></td>
+        <td><%= incident.state.titleize %></td>
+        <td><%= incident.completion_status ? I18n.t("system.completion_status." + incident.completion_status) : '' %></td>
+        <td><%= incident.help_message %></td>
+        <td><%= incident.location %></td>
+        <td><%= incident.reporting_party.try(:phone_number) %></td>
+        <td><%= incident.incident_commander.try(:name) %></td>
+        <td><%= format_datetime(incident.created_at) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+

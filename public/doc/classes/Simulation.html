@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Simulation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Simulation 
+            
+                <span class="parent">&lt; 
+                    
+                    ActiveRecord::Base
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/simulation_rb.html">app/models/simulation.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-clear_old_simulations">clear_old_simulations</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-expire_request_for_assistance_windows">expire_request_for_assistance_windows</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-first_responders_arrive_at_hospital">first_responders_arrive_at_hospital</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-first_responders_arrive_on_scene">first_responders_arrive_on_scene</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-first_responders_indicate_transport">first_responders_indicate_transport</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-first_responders_log_in">first_responders_log_in</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-first_responders_log_out">first_responders_log_out</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-first_responders_respond">first_responders_respond</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get_first_responders">get_first_responders</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-run">run</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-start_incidents">start_incidents</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-clear_old_simulations">
+            
+              <b>clear_old_simulations</b>(data_center, first_responders)
+            
+            <a href="../classes/Simulation.html#method-i-clear_old_simulations" name="method-i-clear_old_simulations" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_old_simulations_source')" id="l_method-i-clear_old_simulations_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_old_simulations_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/simulation.rb, line 36</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear_old_simulations</span>(<span class="ruby-identifier">data_center</span>, <span class="ruby-identifier">first_responders</span>)
+    <span class="ruby-identifier">first_responders</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fr</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">fr</span>.<span class="ruby-identifier">log_out!</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">incidents</span> = <span class="ruby-constant">Incident</span>.<span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-identifier">state</span><span class="ruby-operator">:</span> <span class="ruby-constant">Incident</span>.<span class="ruby-identifier">states</span>[<span class="ruby-value">:incident_complete</span>])
+    <span class="ruby-identifier">incidents</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">inc</span><span class="ruby-operator">|</span>
+<span class="ruby-comment">#       inc.cancel_incident!(:admin_cancel, &#39;message&#39;)</span>
+      <span class="ruby-identifier">inc</span>.<span class="ruby-identifier">end_incident!</span>(<span class="ruby-value">:admin_cancel</span>)
+      <span class="ruby-identifier">puts</span> <span class="ruby-identifier">inc</span>.<span class="ruby-identifier">id</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">reporting_parties</span> = <span class="ruby-constant">ReportingParty</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">is_active</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)
+    <span class="ruby-identifier">reporting_parties</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">rp</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">rp</span>.<span class="ruby-identifier">is_active</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-identifier">rp</span>.<span class="ruby-identifier">save!</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-expire_request_for_assistance_windows">
+            
+              <b>expire_request_for_assistance_windows</b>(incidents)
+            
+            <a href="../classes/Simulation.html#method-i-expire_request_for_assistance_windows" name="method-i-expire_request_for_assistance_windows" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-expire_request_for_assistance_windows_source')" id="l_method-i-expire_request_for_assistance_windows_source">show</a>
+                
+              </p>
+              <div id="method-i-expire_request_for_assistance_windows_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/simulation.rb, line 54</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">expire_request_for_assistance_windows</span>(<span class="ruby-identifier">incidents</span>)
+<span class="ruby-comment">#   Expire Assistance Request window manually</span>
+    <span class="ruby-identifier">incidents</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">incident</span><span class="ruby-operator">|</span>
+      <span class="ruby-constant">IncidentManager</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">request_for_assistance_window_expired</span>(<span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-first_responders_arrive_at_hospital">
+            
+              <b>first_responders_arrive_at_hospital</b>(incidents)
+            
+            <a href="../classes/Simulation.html#method-i-first_responders_arrive_at_hospital" name="method-i-first_responders_arrive_at_hospital" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-first_responders_arrive_at_hospital_source')" id="l_method-i-first_responders_arrive_at_hospital_source">show</a>
+                
+              </p>
+              <div id="method-i-first_responders_arrive_at_hospital_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/simulation.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">first_responders_arrive_at_hospital</span>(<span class="ruby-identifier">incidents</span>)
+  <span class="ruby-identifier">incidents</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">incident</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">assistance_requests</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">incident_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">state</span><span class="ruby-operator">:</span> <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">states</span>[<span class="ruby-value">:assigned</span>])
+    <span class="ruby-identifier">assistance_requests</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">assistance_request</span><span class="ruby-operator">|</span>
+      <span class="ruby-constant">IncomingMessageService</span>.<span class="ruby-identifier">process_message</span>(<span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-string">&#39;1&#39;</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-first_responders_arrive_on_scene">
+            
+              <b>first_responders_arrive_on_scene</b>(incidents)
+            
+            <a href="../classes/Simulation.html#method-i-first_responders_arrive_on_scene" name="method-i-first_responders_arrive_on_scene" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-first_responders_arrive_on_scene_source')" id="l_method-i-first_responders_arrive_on_scene_source">show</a>
+                
+              </p>
+              <div id="method-i-first_responders_arrive_on_scene_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/simulation.rb, line 62</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">first_responders_arrive_on_scene</span>(<span class="ruby-identifier">incidents</span>)
+<span class="ruby-comment">#   Expire Assistance Request window manually</span>
+    <span class="ruby-identifier">incidents</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">incident</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;incident.id: &#39;</span>,<span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>
+      <span class="ruby-identifier">assistance_requests</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">incident_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">state</span><span class="ruby-operator">:</span> <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">states</span>[<span class="ruby-value">:assigned</span>])
+      <span class="ruby-identifier">first</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-identifier">assistance_requests</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">assistance_request</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;first_responder.id: &#39;</span>,<span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">id</span>
+        <span class="ruby-constant">IncomingMessageService</span>.<span class="ruby-identifier">process_message</span>(<span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-string">&#39;1&#39;</span>)
+<span class="ruby-comment">#       Respond to IC query about additional resources</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">first</span>
+          <span class="ruby-constant">IncomingMessageService</span>.<span class="ruby-identifier">process_message</span>(<span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-string">&#39;0&#39;</span>)
+          <span class="ruby-identifier">first</span> = <span class="ruby-keyword">false</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-first_responders_indicate_transport">
+            
+              <b>first_responders_indicate_transport</b>(incidents)
+            
+            <a href="../classes/Simulation.html#method-i-first_responders_indicate_transport" name="method-i-first_responders_indicate_transport" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-first_responders_indicate_transport_source')" id="l_method-i-first_responders_indicate_transport_source">show</a>
+                
+              </p>
+              <div id="method-i-first_responders_indicate_transport_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/simulation.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">first_responders_indicate_transport</span>(<span class="ruby-identifier">incidents</span>)
+  <span class="ruby-identifier">incidents</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">incident</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">assistance_requests</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">incident_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">state</span><span class="ruby-operator">:</span> <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">states</span>[<span class="ruby-value">:assigned</span>])
+    <span class="ruby-identifier">assistance_requests</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">assistance_request</span><span class="ruby-operator">|</span>
+      <span class="ruby-constant">IncomingMessageService</span>.<span class="ruby-identifier">process_message</span>(<span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-string">&#39;1.2.5&#39;</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-first_responders_log_in">
+            
+              <b>first_responders_log_in</b>(data_center, first_responders)
+            
+            <a href="../classes/Simulation.html#method-i-first_responders_log_in" name="method-i-first_responders_log_in" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-first_responders_log_in_source')" id="l_method-i-first_responders_log_in_source">show</a>
+                
+              </p>
+              <div id="method-i-first_responders_log_in_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/simulation.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">first_responders_log_in</span>(<span class="ruby-identifier">data_center</span>, <span class="ruby-identifier">first_responders</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">first_responders</span>.<span class="ruby-identifier">length</span>
+    <span class="ruby-identifier">first_responders</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">log_out!</span>
+    <span class="ruby-identifier">phone_number</span> = <span class="ruby-identifier">first_responders</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">phone_number</span>
+    <span class="ruby-constant">IncomingMessageService</span>.<span class="ruby-identifier">process_message</span>(<span class="ruby-identifier">phone_number</span>, <span class="ruby-string">&#39;123&#39;</span>)
+    <span class="ruby-constant">IncomingMessageService</span>.<span class="ruby-identifier">process_message</span>(<span class="ruby-identifier">phone_number</span>, <span class="ruby-string">&#39;3&#39;</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">first_responders</span> = <span class="ruby-identifier">get_first_responders</span>(<span class="ruby-identifier">data_center</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">first_responders</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-first_responders_log_out">
+            
+              <b>first_responders_log_out</b>(first_responders)
+            
+            <a href="../classes/Simulation.html#method-i-first_responders_log_out" name="method-i-first_responders_log_out" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-first_responders_log_out_source')" id="l_method-i-first_responders_log_out_source">show</a>
+                
+              </p>
+              <div id="method-i-first_responders_log_out_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/simulation.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">first_responders_log_out</span>(<span class="ruby-identifier">first_responders</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">first_responders</span>.<span class="ruby-identifier">length</span>
+    <span class="ruby-constant">IncomingMessageService</span>.<span class="ruby-identifier">process_message</span>(<span class="ruby-identifier">first_responders</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">phone_number</span>, <span class="ruby-string">&#39;456&#39;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-first_responders_respond">
+            
+              <b>first_responders_respond</b>(first_responders, incidents)
+            
+            <a href="../classes/Simulation.html#method-i-first_responders_respond" name="method-i-first_responders_respond" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-first_responders_respond_source')" id="l_method-i-first_responders_respond_source">show</a>
+                
+              </p>
+              <div id="method-i-first_responders_respond_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/simulation.rb, line 120</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">first_responders_respond</span>(<span class="ruby-identifier">first_responders</span>, <span class="ruby-identifier">incidents</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">first_responders</span>.<span class="ruby-identifier">length</span>
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">j</span> <span class="ruby-keyword">in</span> <span class="ruby-number">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">incidents</span>.<span class="ruby-identifier">length</span>
+      <span class="ruby-identifier">message</span> = <span class="ruby-identifier">incidents</span>[<span class="ruby-identifier">j</span>].<span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;.5&#39;</span>
+      <span class="ruby-constant">IncomingMessageService</span>.<span class="ruby-identifier">process_message</span>(<span class="ruby-identifier">first_responders</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_first_responders">
+            
+              <b>get_first_responders</b>(data_center)
+            
+            <a href="../classes/Simulation.html#method-i-get_first_responders" name="method-i-get_first_responders" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_first_responders_source')" id="l_method-i-get_first_responders_source">show</a>
+                
+              </p>
+              <div id="method-i-get_first_responders_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/simulation.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_first_responders</span>(<span class="ruby-identifier">data_center</span>)
+  <span class="ruby-identifier">first_responders</span> = <span class="ruby-constant">FirstResponder</span>.<span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-identifier">state</span><span class="ruby-operator">:</span> <span class="ruby-constant">FirstResponder</span>.<span class="ruby-identifier">states</span>[<span class="ruby-value">:inactive</span>]).<span class="ruby-identifier">where</span>(<span class="ruby-identifier">data_center_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">data_center</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">order</span>(<span class="ruby-value">:name</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">first_responders</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-run">
+            
+              <b>run</b>()
+            
+            <a href="../classes/Simulation.html#method-i-run" name="method-i-run" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-run_source')" id="l_method-i-run_source">show</a>
+                
+              </p>
+              <div id="method-i-run_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/simulation.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">run</span>
+  <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;#{Time.now.utc.strftime(&#39;%Y-%m-%d %H:%M:%S.%L&#39;)}:#{File.basename(__FILE__)}:#{__LINE__}\n&quot;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-string">&quot;*********** Start simulation run ***********&quot;</span>
+  <span class="ruby-identifier">data_center</span> = <span class="ruby-constant">DataCenter</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Simulator&#39;</span>)
+  <span class="ruby-constant">ApplicationConfiguration</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">data_center</span> = <span class="ruby-identifier">data_center</span>
+
+  <span class="ruby-identifier">first_responders</span> = <span class="ruby-identifier">get_first_responders</span>(<span class="ruby-identifier">data_center</span>)
+
+  <span class="ruby-identifier">clear_old_simulations</span>(<span class="ruby-identifier">data_center</span>, <span class="ruby-identifier">first_responders</span>)
+
+  <span class="ruby-identifier">first_responders_log_in</span>(<span class="ruby-identifier">data_center</span>, <span class="ruby-identifier">first_responders</span>)
+
+  <span class="ruby-identifier">incidents</span> = <span class="ruby-identifier">start_incidents</span>(<span class="ruby-identifier">data_center</span>)
+
+  <span class="ruby-identifier">first_responders_respond</span>(<span class="ruby-identifier">first_responders</span>, <span class="ruby-identifier">incidents</span>)
+
+  <span class="ruby-identifier">expire_request_for_assistance_windows</span>(<span class="ruby-identifier">incidents</span>)
+
+  <span class="ruby-identifier">first_responders_arrive_on_scene</span>(<span class="ruby-identifier">incidents</span>)
+
+  <span class="ruby-identifier">first_responders_indicate_transport</span>(<span class="ruby-identifier">incidents</span>)
+
+  <span class="ruby-identifier">first_responders_arrive_at_hospital</span>(<span class="ruby-identifier">incidents</span>)
+
+  <span class="ruby-identifier">first_responders_log_out</span>(<span class="ruby-identifier">first_responders</span>)
+
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_incidents">
+            
+              <b>start_incidents</b>(data_center)
+            
+            <a href="../classes/Simulation.html#method-i-start_incidents" name="method-i-start_incidents" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_incidents_source')" id="l_method-i-start_incidents_source">show</a>
+                
+              </p>
+              <div id="method-i-start_incidents_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/simulation.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_incidents</span>(<span class="ruby-identifier">data_center</span>)
+  <span class="ruby-constant">ApplicationConfiguration</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">data_center</span> = <span class="ruby-identifier">data_center</span>
+  <span class="ruby-identifier">incidents</span> = []
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">9000</span><span class="ruby-operator">...</span>(<span class="ruby-number">9000</span><span class="ruby-operator">+</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">incident_count</span>)
+    <span class="ruby-identifier">digits</span> = <span class="ruby-identifier">sprintf</span>(<span class="ruby-string">&quot;%04d&quot;</span>, <span class="ruby-identifier">i</span>)
+    <span class="ruby-identifier">phone_number</span> = <span class="ruby-string">&#39;+1800555&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">digits</span>
+    <span class="ruby-identifier">help_message</span> = <span class="ruby-string">&#39;Help &#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">digits</span>
+    <span class="ruby-identifier">location</span> = <span class="ruby-string">&#39;Location &#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">digits</span>
+    <span class="ruby-constant">IncomingMessageService</span>.<span class="ruby-identifier">process_message</span>(<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">help_message</span>)
+    <span class="ruby-constant">IncomingMessageService</span>.<span class="ruby-identifier">process_message</span>(<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">location</span>)
+    <span class="ruby-identifier">reporting_party</span> = <span class="ruby-constant">ReportingParty</span>.<span class="ruby-identifier">find_by_phone_number</span>(<span class="ruby-identifier">phone_number</span>)
+    <span class="ruby-identifier">incident</span> = <span class="ruby-constant">Incident</span>.<span class="ruby-identifier">find_by_reporting_party_id</span>(<span class="ruby-identifier">reporting_party</span>.<span class="ruby-identifier">id</span>)
+    <span class="ruby-identifier">incidents</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">incident</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;incident.id: &quot;</span>, <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">incidents</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

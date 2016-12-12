@@ -1,0 +1,108 @@
+  <h1>Beacon</h1>
+  <p><%= I18n.t('views.labels.phone_number') %>: <%= ApplicationConfiguration.instance.beacon_number %></p>
+  <header>
+  </header>
+  <p class="notice"><%= notice %></p>
+<div class="dashboard">
+  <section ng-controller="FirstResponderCtrl" style="float: left; margin-right: 40px;" ng-show="firstResponders.length" ng-cloak>
+    <div class='first_responder_list'>
+      <h1><%= I18n.t('activerecord.models.first_responder.other') %></h1>
+      <!--
+      <ul>
+        <li><%= I18n.t('first_responder.instructions.log_in') %></li>
+        <li><%= I18n.t('first_responder.instructions.log_out') %></li>
+      </ul>
+      -->
+      <ul>
+        <li ng-repeat="firstResponder in firstResponders">
+          <div class="first_responder">
+            <span class="circle {{firstResponder.state}}"></span>
+            <span>{{firstResponder.name}} - {{firstResponder.phone_number}}</span>
+            <button type="button" class="log_in" ng-click="firstResponder.toggleShow()" ng-show="!firstResponder.isExpanded">+</button>
+            <button type="button" class="log_in" ng-click="firstResponder.toggleShow()" ng-show="firstResponder.isExpanded">-</button>
+            <span>
+              <button type="button" class="log_in" ng-click="firstResponder.logIn()" ng-show="!firstResponder.loggedIn()"><%= I18n.t('first_responder.actions.log_in') %></button>
+              <button type="button" class="log_in" ng-click="firstResponder.logOut()" ng-show="firstResponder.loggedIn()"><%= I18n.t('first_responder.actions.log_out') %></button>
+            </span>
+            <div ng-show="firstResponder.isExpanded">
+              <ul class="attributes_list">
+                <li><%= I18n.t('activerecord.attributes.first_responder.state') %>: {{firstResponder.state_string}}</li>
+                <li><%= I18n.t('activerecord.attributes.first_responder.transportation_mode') %>: {{firstResponder.transportation_mode}}</li>
+                <li><%= I18n.t('activerecord.attributes.first_responder.locale') %>: {{firstResponder.locale}}</li>
+              <ul>
+              <input class="message_box" placeholder="Text message." ng-model="firstResponder.message">
+              <button type="button" class="log_in" ng-click="messageFirstResponder(firstResponder)">Send</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section ng-controller="IncidentCtrl">
+    <div class="incident_list">
+      <h1><%= I18n.t('activerecord.models.incident.other') %></h1>
+      <%= link_to I18n.t('views.incident.new'), new_incident_path, class: 'new_incident_link' %>
+      <div ng-show="incidents.length">
+        <div class="incident_entry" ng-repeat="incident in incidents">
+          <div class="incident_entry_title">
+            <a href="/incidents/{{incident.id}}">{{incident.id}}</a>
+            <span class="incident_entry_state">
+              {{incident.state_string}}
+            </span>
+            <div class="entry_date_and_cancel">
+              <span class="incident_entry_date">
+                {{incident.created_at_string}}
+              </span>
+              <span class="incident_entry_cancel" ng-click="cancelIncident(incident)">
+                {{incident.state == 'incident_complete' ? ' ' :  "<%= I18n.t('views.incident.cancel') %>" }}
+                <!--<p class="cancel_mouse_over"><%= I18n.t('views.incident.cancel') %></p>-->
+              </span>
+            </div>
+          </div>
+          <div class="incident_progress">
+          </div>
+          <div class="incident_entry_info">
+            <div class="incident_entry_info_col">
+              <div class="incident_entry_info_label">
+                <%= I18n.t('activerecord.attributes.incident.location') %>
+              </div>
+              <div class="incident_entry_info_data">
+                {{incident.location}}
+              </div>
+            </div>
+            <div class="incident_entry_info_col">
+              <div class="incident_entry_info_label">
+                <%= I18n.t('activerecord.attributes.incident.help_message') %>
+              </div>
+              <div class="incident_entry_info_data">
+                {{incident.help_message}}
+              </div>
+            </div>
+            <div class="clear" />
+            <div class="incident_entry_info_col">
+              <div class="incident_entry_info_label">
+                <%= I18n.t('activerecord.attributes.incident.reporting_party') %>
+              </div>
+              <div class="incident_entry_info_data">
+                {{incident.reportingPartyString()}}
+              </div>
+            </div>
+            <div class="incident_entry_info_col">
+              <div class="incident_entry_info_label">
+                <%= I18n.t('activerecord.attributes.incident.incident_commander') %>
+              </div>
+              <div class="incident_entry_info_data">
+                {{incident.incident_commander.name}}
+              </div>
+              <div class="incident_entry_info_data_line_2">
+                {{incident.incident_commander.phone_number}}
+              </div>
+            </div>
+            <div class="clear" />
+          </div><!-- end incident_entry_info -->
+        </div><!-- end incident_entry -->
+      </div>
+      <p ng-show="!incidents.length"><%= I18n.t('views.incident.no_incidents') %></p>
+    </div>
+  </section>
+</div>

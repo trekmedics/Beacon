@@ -1,0 +1,1059 @@
+es:
+  activerecord:
+    attributes:
+      administrator:
+        email: |
+          Correo electronico
+        name: |
+          Nombre
+        phone_number: |
+          Numero de telefono
+      data_center:
+        is_simulator: |
+          Es simulador?
+        name: |
+          Nombre
+      first_responder:
+        locale: |
+          Idioma
+        name: |
+          Nombre y apellido
+        phone_number: |
+          Numero de telefono
+        state: |
+          Estado
+        transportation_mode: |
+          Estado de transportación
+      hospital:
+        name: |
+          Nombre
+      incident:
+        comment: |
+          Comentarios
+        completion_status: |
+          Estado final
+        created_at: |
+          Inicializado
+        help_message: |
+          Nombre del despachador
+        id: |
+          ID
+        incident_commander: |
+          Jefe del incidente
+        location: |
+          Ubicacion
+        number_of_frs_to_allocate: |
+          Cuantos paramedicos quiere mandar?
+        number_of_transport_vehicles_to_allocate: |
+          Cuantos vehículos quiere mandar?
+        reporting_party: |
+          Numero del despachador
+        state: |
+          Estado
+        subcategory: |
+          _subcategory
+        updated_at: |
+          Actualizado
+      incident_event_log:
+        event_time: |
+          _event_time
+        from_state: |
+          _from_state
+        to_state: |
+          _to_state
+      medical_doctor:
+        hospital: |
+          Hospital
+        name: |
+          _name
+        phone_number: |
+          _phone_number
+      message_log:
+        created_at: |
+          Hora de inicio
+        is_incoming: |
+          Entrandose
+        message: |
+          Mensaje
+        resource_id: |
+          ID del Recurso
+        resource_name: |
+          Nombre
+        resource_phone_number: |
+          Numero de telefono
+        resource_type: |
+          Tipo de recurso
+      setting:
+        description: |
+          Descripcion
+        key: |
+          Clave
+        value: |
+          Valor
+      simulation:
+        first_responder_count: |
+          _first_responder_count
+        incident_count: |
+          _incident_count
+        is_random: |
+          _is_random
+        seed_value: |
+          _seed_value
+      unregistered_party:
+        body: |
+          Mensaje
+        created_at: |
+          La Hora
+        from: |
+          De
+        to: |
+          A
+      user:
+        data_center: |
+          Centro de data
+        is_admin: |
+          Es administrador?
+        locale: |
+          Idioma
+        password: |
+          _password
+        password_confirmation: |
+          _password_confirmation
+        user_role: |
+          Rollo de Usuario
+        username: |
+          Nombre de Usuario
+      white_listed_phone_number:
+        data_center: |
+          Centro de data
+        name: |
+          Nombre
+        phone_number: |
+          Numero de Telefono
+    errors:
+      messages:
+        record_invalid: |
+          _validation_failed: %{errors}
+      models:
+        administrator:
+          attributes:
+            email:
+              format: |
+                Must be a valid email (xxx@yyy.zzz)
+            phone_number:
+              format: |
+                _phone_number_format
+              uniqueness: |
+                tener que unico en un centro de data
+        first_responder:
+          attributes:
+            data_center:
+              presence: |
+                _data_center_presence
+            locale:
+              locale_is_valid: |
+                El idioma no es valido (%{first_responder_locale}).
+            name:
+              presence: |
+                _name_presence
+            phone_number:
+              format: |
+                _phone_number_format
+              logged_out: |
+                _phone_number_logged_out
+              phone_number_used_by_whitelist: |
+                _phone_number_used_by_whitelist
+              uniqueness: |
+                _phone_number_uniqueness
+        hospital:
+          attributes:
+            data_center:
+              presence: |
+                centro de data no se puede vacio.
+            name:
+              presence: |
+                debe incluir el nombre.
+              uniqueness: |
+                no se puede tener dos hospitales con el mismo nombre.
+        incident:
+          attributes:
+            data_center:
+              presence: |
+                _data_center_presence
+          first_responder_count_must_be_greater_than_or_equal_to_vehicle_count: |
+            La entrada es invalido: Es necesario que el valor de FRs mas rapido sea mas de vehiculos requisitos.
+        medical_doctor:
+          attributes:
+            hospital:
+              presence: |
+                _hospital_presence
+            name:
+              presence: |
+                _name_presence
+            phone_number:
+              format: |
+                _phone_number_format
+        reporting_party:
+          attributes:
+            phone_number:
+              format: |
+                _phone_number_format
+              presence: |
+                _phone_number_presence
+              uniqueness: |
+                _phone_number_uniqueness
+        setting:
+          attributes:
+            data_center:
+              presence: |
+                No puede ser sin valor.
+            key:
+              presence: |
+                No puede ser sin valor.
+              uniqueness: |
+                ya existe en este Data Center
+            value:
+              presence: |
+                no puede ser sin valor.
+        user:
+          attributes:
+            data_center:
+              presence: |
+                _data_center_presence
+            password:
+              confirmation: |
+                _password_confirmation
+            username:
+              uniqueness: |
+                _username_uniqueness
+        white_listed_phone_number:
+          attributes:
+            data_center:
+              presence: |
+                no tener que blanca
+            phone_number:
+              format: |
+                tener que en el formato E.164
+              phone_number_used_by_first_responder: |
+                esta usado por un paramedico.
+              uniqueness: |
+                ya esta en la lista blanca.
+    models:
+      categories:
+        one: |
+          _category
+        other: |
+          _categories
+      data_center:
+        one: |
+          Centro de data
+        other: |
+          Centros de data
+      first_responder:
+        one: |
+          Paramedico
+        other: |
+          Paramedicos
+      hospital:
+        one: |
+          Hospital
+        other: |
+          Hospitales
+      incident:
+        one: |
+          Incidente
+        other: |
+          Incidentes
+      incident_event_log:
+        one: |
+          _incident_event_log
+      medical_doctor:
+        one: |
+          _medical_doctor
+      message_log:
+        one: |
+          Registro de Mensajes
+      setting:
+        one: |
+          Configuracion
+        other: |
+          Configuraciones
+      unregistered_party:
+        one: |
+          Participante no registrado
+        other: |
+          Participantes no registrado
+      user:
+        one: |
+          Usuario
+        other: |
+          Usuarios
+      white_listed_phone_number:
+        one: |
+          Agenda Blanca
+        other: |
+          Agenda Blanca
+    notices:
+      models:
+        administrator:
+          success:
+            create: |
+              Administrador creado exitosamente.
+            destroy: |
+              Administrador fue quitado.
+            update: |
+              Administrador fue actualizado.
+        category:
+          success:
+            create: |
+              _category.success.create
+            destroy: |
+              _category.success.destroy
+            update: |
+              _category.success.update
+        data_center:
+          success:
+            create: |
+              _success_create
+            update: |
+              _success_update
+        first_responder:
+          success:
+            create: |
+              Paramedico añadido
+            destroy: |
+              El paramedico fue borrado
+            update: |
+              Paramedico actualizado
+        hospital:
+          success:
+            create: |
+              El Hospital fue creado exitosamente.
+            destroy: |
+              El hospital fue borrado.
+            update: |
+              El Hospital fue actualizado.
+        incident:
+          success:
+            create: |
+              El evento fue creado.
+            destroy: |
+              El evento fue cancelado.
+        medical_doctor:
+          success:
+            create: |
+              El Medico fue creado.
+            destroy: |
+              El Medico fue borrado.
+            update: |
+              El Medico fue actualizado.
+        setting:
+          success:
+            update: |
+              Configuracion actualizada
+        subcategory:
+          success:
+            create: |
+              _subcategory.success.create
+            destroy: |
+              _subcategory.success.destroy
+            update: |
+              _subcategory.success.update
+        user:
+          data_center:
+            success:
+              update: |
+                El centro de data fue cambiado a "%{data_center}."
+          success:
+            create: |
+              Usuario creado.
+            destroy: |
+              El usuario fue borrado
+            permissions: |
+              Los permisos fueron actualizados.
+            update: |
+              El usuario fue actualizado.
+        white_listed_phone_number:
+          success:
+            create: |
+              El numero fue agregar a la lista blanca.
+            destroy: |
+              El numero fue borrado de la lista blanca.
+            update: |
+              El numero de lista blanca fue actualizado.
+  admin:
+    location_update_requested: |
+      Incidente: %{incident_number}
+      Paramedico: %{first_responder_name}
+      Telefono de paramedico: %{first_responder_phone_number}
+      No se puede ubicar el paciente.
+    location_update_requested_abrdgd: |
+      No se puede ubicar al paciente
+  category:
+    medical:
+      abdominal_pain: |
+        Dolor del abdomen
+      breathing: |
+        _breathing_problems
+      chest_pain: |
+        Dolor del pecho
+      fever: |
+        Fiebre
+      mental: |
+        Estado alterado de consciencia
+      name: |
+        Medical
+      obstetric: |
+        Obstetrico/el parto
+      seizure: |
+        Epilepsia
+      unresponsive: |
+        Inconsciente
+      vomit: |
+        _vomit
+    other:
+      behavioral_emergency: |
+        Psicológica
+      name: |
+        Otro
+      other: |
+        Otro
+      pediatric: |
+        Pediatrica
+      test: |
+        Prueba
+    trauma:
+      burn: |
+        Quemadura
+      fall: |
+        Caida
+      gunshot_stabbing: |
+        Disparar/Navaja
+      name: |
+        Trauma
+      road_traffic: |
+        Colision de vehiculo
+  first_responder:
+    actions:
+      log_in: |
+        Iniciar sesion
+      log_out: |
+        Cerrar sesion
+    instructions:
+      log_in: |
+        Enviar 123 para iniciar sesión.
+      log_out: |
+        Enviar 456 para cerrar sessión.
+    logged_out: |
+      Terminado. Envie 123 a login.
+    msg_additional_resources_not_available: |
+      No hay otros auxilios disponibles.
+    msg_additional_resources_not_available_abrdgd: |
+      No hay auxilios disponible
+    msg_additional_resources_request: |
+      Hay %{number_of_frs} personas
+      con %{number_of_vehicles} vehiculos en camino.
+      Tiempo hasta llegar: %{minimum_eta} min
+      Necesitas mas personas?
+      Si: #VEHICULOS
+      No: 0
+    msg_additional_resources_request_abrdgd: |
+      Necesitas mas recursos?
+      FRs: %{number_of_frs}
+      Vehiculos: %{number_of_vehicles}
+      Minutos: %{minimum_eta}
+    msg_assistance_notified: |
+      Se notifico mas ayuda
+    msg_assistance_notified_abrdgd: |
+      Se notifica mas ayuda
+    msg_confirm_arrival: |
+      Proceda al sitio: 
+      %{location}.
+      Confirme su llegada al sitio:
+      Si: 1
+      Si no se puede ubicar el paciente: 2
+      Terminar la respuesta: 0
+    msg_confirm_arrival_abrdgd: |
+      Proceda al sitio
+    msg_confirm_hospital_arrival: |
+      Confirme su llegada al hospital.
+      Si: 1
+      Se necesita ayuda: 2
+      Reportar una demora: 3.MINUTOS
+      Cancelar la respuesta: 0
+    msg_confirm_hospital_arrival_abrdgd: |
+      Notificación a llegar de hospital pedido
+      1. Confirmar
+      2. Pedir ayuda
+      3. Reportar demora
+      0. Cancelar
+    msg_confirm_transport: |
+      Confirme el transporte al hospital y 
+      cuanto minutos hasta llegar ahi.
+      %{hospital_text}No transporta?: 0
+    msg_confirm_transport_abrdgd: |
+      Necesita transporte?
+    msg_delay_notification_sent: |
+      Notificacion de una demora ha enviado.
+    msg_delay_notification_sent_abrdgd: |
+      Notificación de demora
+      %{minutes} minutos
+    msg_from_rp_do_not_reply: |
+      De persona que pida ayuda. No responda:
+      %{rp_message}
+    msg_invalid_login_message: |
+      Login mensaje no es valido:
+      %{last_message}.
+      Envie 123 a login.
+    msg_no_additional_resources_available: |
+      No confirmaron otros auxilios.
+    msg_no_additional_resources_available_abrdgd: |
+      No confirmaron otros auxilios
+    msg_patient_eta: |
+      Pacientes.Minutos a llegar
+    msg_request_additional_resources: |
+      SE NECESITA MAS AYUDA ***
+      Evento ID: %{incident_id}
+      Sitio: %{incident_location}
+      Type: %{incident_type}
+      Se responde?:
+      Si: %{incident_id}.MINUTOS
+    msg_request_additional_resources_abrdgd: |
+      Se necesita mas ayuda
+    msg_request_for_assistance: |
+      PRIMERA ALERTA ***
+      Evento ID: %{incident_id}
+      Sitio: %{incident_location}
+      Tipo: %{incident_type}
+      Se responde?:
+      Si: %{incident_id}.MINUTOS
+    msg_request_for_assistance_abrdgd: |
+      Primera Alerta
+      ID: %{incident_id}
+      Sitio: %{incident_location}
+      Tipo: %{incident_type}
+    msg_standby: |
+      Esperase por favor
+    msg_standby_available: |
+      Otras personas ya responden al sitio %{incident_id}.
+      Ahora Ud. esta disponible.
+    msg_standby_available_abrdgd: |
+      Otras ya responden
+    msg_status_available: |
+      El evento se termino.
+      Ahora Ud. esta disponible.
+      Los tiempos:
+      Responder a: %{time_start_response}
+      Llegar al sitio a: %{time_on_scene}
+      Transportar: %{time_start_transport}
+      Hospital: %{time_at_hospital}
+    msg_status_available_abrdgd: |
+      El evento se termino
+      Responder a: %{time_start_response}
+      Llegar al sitio a: %{time_on_scene}
+      Transportar: %{time_start_transport}
+      Hospital: %{time_at_hospital}
+    msg_unexpected_message: |
+      Este mensaje no fue esperado:
+      %{last_message}
+    msg_unexpected_message_abrdgd: |
+      Mensaje no esperado
+      %{last_message}
+    msg_unknown_response: |
+      Este mensaje no fue reconocido:
+      %{last_message}
+    msg_unknown_response_abrdgd: |
+      Este mensaje no fue reconocido
+      %{last_message}
+    response_vehicle: |
+      Inicio de la sesion aceptado de %{name} %{phone_number}.
+      Confirme el modo de transporté:
+      No vehiculo: 1
+      Vehiculo tipo de no transporté: 2
+      Vehiculo de transporte: 3
+    transportation_mode:
+      configured_message: |
+        Metodo de transportación es '%{transportation_mode}'.
+        Envie '456' a logout.
+      modes:
+        no_vehicle: |
+          No Vehiculo
+        non_transport_vehicle: |
+          Vehiculo sin transporte
+        not_specified: |
+          Sin especificar
+        transport_vehicle: |
+          Vehiculo de transporte
+  helpers:
+    submit:
+      create: |
+        Crear %{model}
+      update: |
+        Actualizar %{model}
+  incident_commander:
+    additional_frs_assigned: |
+      Otros recursos confirmado: %{number_added}.
+      Va a llegar en: %{eta} minutos.
+    additional_frs_assigned_abrdgd: |
+      Mas recursos confirmados:
+      Vehiculos: %{num_transports_added}
+      Minutos: %{eta}
+  oncall_md:
+    msg_assistance_request: |
+      El paramedico %{name} (%{phone_number}) demanda auxilio.
+      Llamele inmediatamente, por favor.
+    msg_assistance_request_abrdgd: |
+      Se demanda ayuda
+      Nombre: %{name}
+      Telefono: %{phone_number}
+    msg_delay_notice: |
+      Los pacientes que llegan con
+      %{name} (%{phone_number})
+      estan demorados por %{delay} minutos.
+    msg_delay_notice_abrdgd: |
+      Demora de transporte
+      Nombre: %{name}
+      Telefono: %{phone_number}
+      Demora: %{delay} minutos
+    msg_incoming_notice: |
+      ***PACIENTES ESTAN POR LLEGAR***
+      %{number_patients} paciente(s) estan en camino
+      con %{first_responder_name} (%{first_responder_number})
+      Llegan en %{minutes_to_arrival} minutos
+      Tipo: %{incident_type}.
+    msg_incoming_notice_abrdgd: |
+      Pacientes estan por llegar
+      FR: %{first_responder_name} %{first_responder_number}
+      Pacientes: %{number_patients}
+      Minutos: %{minutes_to_arrival}
+      Categoria: %{incident_type}.
+    msg_response_cancel: |
+      El evento fue cancelado por %{name} (%{phone_number}).
+    msg_response_cancel_abrdgd: |
+      Evento se cancelo
+  reporting_party:
+    fr_assigned: |
+      Vienen los auxilios.
+      Van a llegar dentro de %{eta} minutos.
+    fr_assigned_abrdgd: |
+      Vienen los auxilios (%{eta} mins)
+    incident_ended: |
+      Se acabo.
+      Reason: %{reason}
+    location_provided: |
+      Llamando a los auxilios.
+      Esperese %{time} minutos, por favor.
+    location_update_provided: |
+      Los detalles de la ubicacion han sido enviados.
+      Espere, por favor.
+    location_update_requested: |
+      No se pueden ubicarle a Ud.
+      ¿Cual es su ubicacion?
+    message_relayed: |
+      El mensaje fue enviado a todos.
+    no_fr_available: |
+      No hay auxilios disponibles, desafortunadamente.
+      Busque a los auxilios de otra forma.
+    provide_location: |
+      ¿Donde esta Ud.?
+      Para cancelar al evento, envie disregard
+  settings:
+    admin_language: |
+      Idioma utilizado por las páginas de administración [en, es, ht, sw]
+    admin_number: |
+      Numero de teléfono que reciba errores del programa de Beacon
+    beacon_number: |
+      Numero de telefono que envia y recibe mensajes de SMS.
+    config_settings: |
+      Configuraciones
+    is_data_center_on: |
+      "true": Mensajes outbound estan enviados normalmente; "false": Mensajes outbound no estan enviados. [true|false]
+    is_white_list_enabled: |
+      Los numeros del despachador deben estar enregistrados en la lista blanca.
+    message_language: |
+      Idioma de los mensajes [en, es, ht, sw]
+    minimum_number_of_frs: |
+      Nivel minimo de paramedicos. Si hay menos que el nivel elegido, el sistema avisara a la persona que pide asistencia a buscar ayuda en otra parte.
+    number_of_frs_to_allocate: |
+      Numero de los auxilios a asignar
+    number_of_transport_vehicles_to_allocate: |
+      Numero de vehiculos de transporte a asignar
+    outgoing_message_server: |
+      settings.outgoing_message_server
+    timeout_first_response_allocation: |
+      Cuantos minutos para esperar las respuestas de los paramedicos?
+    utc_offset: |
+      Diferencial de UTC (-04:00 en Nueva York;   +00:00 en Londres)
+  system:
+    ad_hoc_message:
+      overage_error: |
+        El mensaje a %{name} no fue enviado por tener %{overage} caracteres adicionales.
+      preface: |
+        No responda: 
+    cancel_message: |
+      Incidente %{incident_id} se ha cancelado por %{canceling_agent}
+    completion_status:
+      admin_cancel: |
+        Cancelado por Admin
+      fr_cancel: |
+        Cancelado por FR
+      no_addl_resources: |
+        No hay mas ayuda
+      no_frs: |
+        No hay FRs
+      normal: |
+        Normal
+      rp_cancel: |
+        Cancelado por Despachador
+    confirm_destroy: |
+      Es cierto que quisiera borrar %{name}?
+    first_responder_state:
+      available: |
+        Disponible
+      disabled: |
+        Discapaz
+      enroute_to_site: |
+        En camino al sitio
+      inactive: |
+        No disponible
+      is_incident_commander_on_site: |
+        Es el jefe del sitio
+      on_site: |
+        En el Sitio
+      setting_transport_mode: |
+        Configuracion de transporte
+      transporting: |
+        Transportando
+      waiting_for_location_update: |
+        Esperando nueva ubicación
+    incident_state:
+      additional_frs_requested: |
+        Pidiendo otros paramedicos 
+      additional_resources_assigned: |
+        Otros paramedicos confirmados
+      frs_assigned: |
+        Paramedicos confirmados
+      frs_on_scene: |
+        Paramedicos en el sitio
+      ic_on_scene: |
+        Comandante en el sitio
+      incident_complete: |
+        Incidente Completo
+      patients_at_hospital: |
+        Pacientes en el hospital
+      patients_enroute_to_hospital: |
+        _patients_enroute_to_hospital
+      request_received: |
+        _request_received
+      waiting_for_additional_resources: |
+        _waiting_for_additional_resources
+      waiting_for_fr_responses: |
+        _waiting_for_fr_responses
+      waiting_for_location: |
+        _waiting_for_location
+    not_authorized: |
+      _not_authorized
+    unrecognized_number: |
+      _unrecognized_number
+  v2:
+    alerts:
+      alert: |
+        Alerta
+    category:
+      add_category: |
+        Agrega categoría
+    dashboard:
+      active_incidents: |
+        Incidentes Corrientes
+      alerts: |
+        Alertas
+      complete: |
+        Terminado
+      next: |
+        Siguiente
+      previous: |
+        Anterior
+      recent_incidents: |
+        Incidentes Recientes
+      view_all: |
+        Ver Todo
+    dispatch:
+      add_dispatch_phone_number: |
+        Agrega numero de telefono
+    first_responder:
+      add_first_responder: |
+        Agrega Auxilio
+      assigned: |
+        Atareado
+      first_responder_list: |
+        Lista de Auxilios
+      non_motorized: |
+        Sin vehiculo
+      non_patient: |
+        No patiente
+      patient: |
+        Patiente
+    hospitals_list:
+      add_hospitals: |
+        Agrega Hospitales
+      address: |
+        Dirección
+    incident_cancellation:
+      are_you_sure: |
+        Es seguro que quieras cancelar este incidente?
+      enter: |
+        Entrar
+      go_back: |
+        Regresar
+      hide: |
+        Ocultar
+      reason: |
+        Razón
+    incidents:
+      archived_incidents: |
+        Incidentes historicos
+      dispatcher_number: |
+        Telefono de Despachador
+      emergency_type: |
+        Tipo de Urgencia
+      recent_incidents: |
+        Incidentes Recientes
+      status: |
+        Estado
+    labels:
+      create: |
+        Crear
+      save: |
+        Guardar
+    menu:
+      home: |
+        Inicio
+      resources: |
+        Recursos
+      scanner: |
+        Escáner
+    message_log:
+      late_replies: |
+        Respuestas tardes
+      ontime_replies: |
+        Respuestas a tiempo 
+      requests_for_assistance: |
+        Requisitos par Ayudantes
+      resources_confirmed: |
+        Recursos Confirmado
+      total_sent: |
+        Total Enviado
+    new_incident:
+      allocation: |
+        Asignación
+      back: |
+        Regrese a panel general
+      create: |
+        Cree incidente
+      dispatcher_name: |
+        Nombre de depachador
+      incident_registered: |
+        Su incidente ha sido registrado
+      location: |
+        Ubicación
+      new_incidents: |
+        Incidentes Nueves
+      required_text_fields: |
+        Campos de textos de rigor
+      select_emergency_type: |
+        Elige tipo de urgencia
+      thank_you: |
+        Gracias
+      view_details: |
+        Ver Detalles de los Incidentes
+    notification_list:
+      add_number: |
+        Agrega numero de telefono de notificación
+    resources:
+      additional_configuration: |
+        Mas Ajustes
+      details: |
+        Detalles
+      manage_dispatch_numbers: |
+        Maneja Numeros de Despachadores
+      manage_notification_list: |
+        Maneja la Lista de Notificación
+      new_first_responder: |
+        Nuevo auxilio
+      resolve: |
+        Resolución
+      resources: |
+        Recursos
+      status: |
+        Estado
+    unregistered_party:
+      one: |
+        Participante no registrado
+      other: |
+        Participantes no registrado
+    users:
+      add_user: |
+        Agrega usuario
+      dispatcher: |
+        Despachador
+      manager: |
+        Gerente
+      supervisor: |
+        Supervisor
+      test_sim: |
+        Test/Simulate
+  views:
+    administrator:
+      edit: |
+        Editar Administrador
+      listing: |
+        Lista de Administradores
+      new: |
+        Nuevo administrador
+    buttons:
+      send: |
+        _send
+    category:
+      listing: |
+        Lista de Categorias
+      new: |
+        _category_new
+      new_subcategory: |
+        _new_subcategory
+    data_center:
+      edit: |
+        Editar Data Center
+      listing: |
+        Lista de Data Center
+      new: |
+        Añadir Data Center
+    first_responder:
+      details: |
+        Detalles de paramédico
+    hospital:
+      actions: |
+        Acciones
+      edit: |
+        Editar Hospital
+      listing: |
+        Lista de hospitales
+      new: |
+        Nuevo hospital
+      new_medical_doctor: |
+        Nuevo medico
+      no_hospitals: |
+        No hay hospitales
+    incident:
+      cancel: |
+        Cancelar Evento
+      details: |
+        Detalles de incidente
+      first_responder_count_validation_message: |
+        La cantidad de vehiculos de transportes no puede ser mas de la cantidad de auxilios
+      incident_messages_table:
+        heading: |
+          Mensajes de Evento
+        no_messages: |
+          Aun no hay mensajes.
+      new: |
+        Nuevo incidente
+      no_incidents: |
+        No incidentes
+      pick_category: |
+        Escoja
+      request_for_assistance_table:
+        first_responders: |
+          Paramedicos
+        heading: |
+          Alertas
+        not_needed_message: |
+          Mensajes Rechazados
+        number_of_requests_text: |
+          Alertas enviadas:
+        number_of_responses_text: |
+          Respuestas recibidas:
+        request_message: |
+          Alerta Inicial
+        response_message: |
+          Confirmacion
+        simulate_action: |
+          Simular
+    incident_event_log:
+      not_found: |
+        No hay registro de eventos de incidente
+    labels:
+      back: |
+        Regresar
+      destroy: |
+        Borrar
+      edit: |
+        Editar
+      editing: |
+        Editando
+      listing: |
+        Lista
+      new: |
+        Nuevo
+      phone_number: |
+        Numero de telefono
+      show: |
+        Mostrar
+    manage_resource_link:
+      administrator: |
+        Manejar Administradores
+      data_center: |
+        Manejar Centros de Data
+      hospital: |
+        Manejar Hospitales
+      user: |
+        Manejar Usuarios
+      white_listed_phone_number: |
+        Manejar Numeros de Lista  Blanca
+    medical_doctor:
+      edit: |
+        Edite medico
+      new: |
+        Nuevo medico
+    message_log:
+      not_found: |
+        No hay registro de mensages
+    nav:
+      main: |
+        Inicio
+    placeholders:
+      simulate_message: |
+        _simulate_message
+    resource:
+      not_found: |
+        No hay recurso
+    sessions:
+      heading: |
+        Inicio del sesion
+      log_in_action: |
+        Iniciar sesion
+      log_out_action: |
+        Cerrar sesion
+    user:
+      admin: |
+        _admin_user
+      listing: |
+        _user_listing
+      new: |
+        _new_user
+      permissions:
+        heading: |
+          Permisos de Zona
+        is_admin: |
+          _permissions_is_admin
+        submit: |
+          _permissions_submit
+    white_listed_phone_number:
+      edit: |
+        _edit
+      listing: |
+        _listing
+      new: |
+        _new
+      no_resources: |
+        _no_resources
+

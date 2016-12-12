@@ -1,0 +1,53 @@
+<h1><%= I18n.t('views.incident.details') %></h1>
+<p id="notice"><%= notice %></p>
+<section ng-controller="IncidentDetailsCtrl">
+  <div class="incident_info" ng-show="incident.id">
+    <p><b><%= I18n.t('activerecord.attributes.incident.id') %>:</b> {{incident.id}}</p>
+    <p><b><%= I18n.t('activerecord.attributes.incident.state') %>:</b> {{incident.state_string}}</p>
+    <p><b><%= I18n.t('activerecord.attributes.incident.subcategory') %>:</b> {{incident.subcategory_string}}</p>
+    <p><b><%= I18n.t('activerecord.attributes.incident.help_message') %>:</b> {{incident.help_message}}</p>
+    <p><b><%= I18n.t('activerecord.attributes.incident.location') %>:</b> {{incident.location}}</p>
+    <p><b><%= I18n.t('activerecord.attributes.incident.reporting_party') %>:</b> {{incident.reportingPartyString()}}</p>
+    <p><b><%= I18n.t('activerecord.attributes.incident.incident_commander') %>:</b> {{incident.incident_commander.name}}</p>
+    <p><b><%= I18n.t('activerecord.attributes.incident.created_at') %>:</b> {{incident.created_at_string}}</p>
+    <p><b><%= I18n.t('activerecord.attributes.incident.updated_at') %>:</b> {{incident.updated_at_string}}</p>
+    <p>
+      <b><%= I18n.t('activerecord.attributes.incident.comment') %>:</b> {{incident.comment}}
+      <button type="button" class="small_button" ng-click="editComment(incident)"><%= I18n.t('views.labels.edit') %></button>
+    </p>
+    <% if Rails.env.development? %>
+      <h2><%= I18n.t('activerecord.models.incident_event_log.one') %></h2>
+      <% if @incident.present? && @incident.incident_event_log.present? %>
+        <table>
+          <thead>
+            <tr>
+              <th><%= I18n.t('activerecord.attributes.incident_event_log.from_state') %></th>
+              <th><%= I18n.t('activerecord.attributes.incident_event_log.to_state') %></th>
+              <th><%= I18n.t('activerecord.attributes.incident_event_log.event_time') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @incident.incident_event_log.each do |log_item| %>
+              <tr>
+                <td><%= I18n.t("system.incident_state.#{log_item.from_state}") %></td>
+                <td><%= I18n.t("system.incident_state.#{log_item.to_state}") %></td>
+                <td><%= format_datetime(log_item.event_time_stamp) %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <p><%= I18n.t('views.incident_event_log.not_found') %></p>
+      <% end %>
+    <% end %>
+    <h2><%= I18n.t('activerecord.models.message_log.one') %></h2>
+    <div class="incident" ng-show="incident.message_log_present()">
+      <%= render 'requests_for_assistance' %>
+      <%= render 'message_log' %>
+    </div>
+    <p ng-show="!incident.message_log_present()"><%= I18n.t('views.message_log.not_found') %></p>
+  </div>
+  <div ng-show="!incident.id">
+    <p><%= I18n.t('views.resource.not_found') %></p>
+  </div>
+</section>

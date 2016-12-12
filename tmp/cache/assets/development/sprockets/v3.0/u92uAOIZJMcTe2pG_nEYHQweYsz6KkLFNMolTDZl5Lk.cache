@@ -1,0 +1,51 @@
+I"0(function() {
+  angular.module('App').factory('FirstResponder', [
+    '$resource', '$http', function($resource, $http) {
+      var FirstResponder;
+      FirstResponder = $resource('/api/v1/first_responders/:id', {
+        id: '@id'
+      }, {
+        update: {
+          method: 'PUT'
+        }
+      });
+      FirstResponder.prototype.deletedStatus = function() {
+        if (this.state === 'disabled') {
+          return 'disabled';
+        } else {
+          return 'active';
+        }
+      };
+      FirstResponder.prototype.loggedIn = function() {
+        return this.state !== 'inactive';
+      };
+      FirstResponder.prototype.logIn = function() {
+        return $http.post("/api/v1/first_responders/" + this.id + "/log_in");
+      };
+      FirstResponder.prototype.logOut = function() {
+        return $http.post("/api/v1/first_responders/" + this.id + "/log_out");
+      };
+      FirstResponder.prototype.sendMessage = function(message) {
+        return $http.post("/api/v1/first_responders/" + this.id + "/message", {
+          message: message
+        }).success(function(data, status, headers, config) {
+          if (data.success === false) {
+            return alert(data.message);
+          }
+        });
+      };
+      FirstResponder.prototype.toggleShow = function() {
+        if (this.isExpanded == null) {
+          this.isExpanded = false;
+        }
+        return this.isExpanded = !this.isExpanded;
+      };
+      FirstResponder.prototype.expanded = function() {
+        return this.isExpanded;
+      };
+      return FirstResponder;
+    }
+  ]);
+
+}).call(this);
+:ET

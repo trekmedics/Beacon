@@ -1,0 +1,16 @@
+<div class="settings">
+  <div class="settings_heading">
+    <div class="logo floatRight"></div>
+    <div class="settings_title floatLeft">
+      <h1><%= "#{I18n.t('views.labels.editing')} #{I18n.t('activerecord.models.setting.one')}" %></h1>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <% if @setting.present? %>
+    <%= render 'form' %>
+    <%= link_to I18n.t('views.labels.show'), @setting %> |
+  <% else %>
+    <p><%= I18n.t('views.resource.not_found') %></p>
+  <% end %>
+  <%= link_to I18n.t('views.labels.back'), settings_path %>
+</div

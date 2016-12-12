@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>_forms.scss</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            _forms.scss
+        </h1>
+        <ul class="files">
+            <li>app/assets/stylesheets/bitters/_forms.scss</li>
+            <li>Last modified: 2015-05-12 10:53:15 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>fieldset {</p>
+
+<pre><code>background: lighten($base-border-color, 10);
+border: $base-border;
+margin: 0 0 ($base-spacing / 2) 0;
+padding: $base-spacing;</code></pre>
+
+<p>}</p>
+
+<p>input, label, select {</p>
+
+<pre><code>display: block;
+font-family: $form-font-family;
+font-size: $form-font-size;</code></pre>
+
+<p>}</p>
+
+<p>label {</p>
+
+<pre><code>font-weight: bold;
+margin-bottom: $base-spacing / 4;
+
+&amp;.required:after {
+  color: red;
+  content: &quot;*&quot;;
+}
+
+abbr {
+  display: none;
+}</code></pre>
+
+<p>}</p>
+
+<p>textarea, #{$all-text-inputs}, <a href="multiple=multiple">select</a> {</p>
+
+<pre><code>@include box-sizing(border-box);
+@include transition(border-color);
+background-color: white;
+border-radius: $form-border-radius;
+border: 1px solid $form-border-color;
+box-shadow: $form-box-shadow;
+font-family: $form-font-family;
+font-size: $form-font-size;
+margin-bottom: $base-spacing / 2;
+padding: ($base-spacing / 3) ($base-spacing / 3);
+width: 100%;
+
+&amp;:hover {
+  border-color: $form-border-color-hover;
+}
+
+&amp;:focus {
+  border-color: $form-border-color-focus;
+  box-shadow: $form-box-shadow-focus;
+  outline: none;
+}</code></pre>
+
+<p>}</p>
+
+<p>textarea {</p>
+
+<pre><code>resize: vertical;</code></pre>
+
+<p>}</p>
+
+<p><a href="type="search"">input</a> {</p>
+
+<pre><code>@include appearance(none);</code></pre>
+
+<p>}</p>
+
+<p><a href="type="checkbox"">input</a>, <a href="type="radio"">input</a> {</p>
+
+<pre><code>display: inline;
+margin-right: $base-spacing / 4;</code></pre>
+
+<p>}</p>
+
+<p><a href="type="file"">input</a> {</p>
+
+<pre><code>padding-bottom: $base-spacing / 2;
+width: 100%;</code></pre>
+
+<p>}</p>
+
+<p>select {</p>
+
+<pre><code>margin-bottom: $base-spacing;
+max-width: 100%;
+width: auto;</code></pre>
+
+<p>}</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+              </div>
+
+    </div>
+  </body>
+</html>

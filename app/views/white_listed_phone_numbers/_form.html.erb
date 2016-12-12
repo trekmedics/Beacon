@@ -1,0 +1,21 @@
+<%= form_for(@white_listed_phone_number) do |f| %>
+  <% if @white_listed_phone_number.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@white_listed_phone_number.errors.count, "error") %> prohibited this white_listed_phone_number from being saved:</h2>
+      <ul>
+      <% @white_listed_phone_number.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form">
+    <%= f.label :data_center %>
+    <%= f.text_field :data_center, { class: :text_field, disabled: true } %>
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number, { class: :text_field } %>
+    <%= f.label :name %>
+    <%= f.text_field :name, { class: :text_field } %>
+    <%= f.submit %>
+  </div>
+<% end %>

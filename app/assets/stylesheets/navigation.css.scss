@@ -1,0 +1,99 @@
+.navigation {
+  margin: -20px -20px 0px -20px;
+  
+  .logo-container {
+//     border-style: solid;
+//     border-width: 1px;
+//     border-color: rgb(119, 119, 119);
+    overflow: auto;
+    margin: 0 auto;
+    padding: 5px 10px 2px 10px;
+    width: 100%;
+    background-color: #aaaaaa;
+  }
+  
+  .logo {
+    height: 115px;
+    float: left;
+  }
+  
+  .menu-group {
+    margin-bottom: 20px;
+    float: left;
+    background-color: #263238;
+    width: 100%;
+    padding: 0px 0px 0px 150px;
+  }
+  
+  .data_center {
+    padding: 20px 0px 0px 0px;
+    float: right;
+    width: 500px;
+  }
+  
+  .data_center_title {
+    font-size: 1.5em;
+  }
+  
+  .data_center_selection {
+    text-align: center;
+  }
+
+  .data_center_red {
+    color: #ff0000;
+  }
+  
+  .data_center_green {
+    color: #00ff00;
+  }
+
+  .menu-item {
+    font-family: Avenir;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    width: 175px;
+    text-align: left;
+    margin: 5px;
+    display: inline-block;
+  }
+  
+  .menu-item:hover {
+    color: #9999ff;
+  }
+
+  .menu-item-current {
+    font-family: Avenir;
+    font-size: 13px;
+    font-weight: bold;
+    color: #00ff00;
+    text-transform: uppercase;
+    width: 175px;
+    text-align: left;
+    margin: 5px;
+    display: inline-block;
+  }
+
+  .user {
+    font-family: Avenir;
+    font-weight: bold;
+    padding: 30px 0px 0px 0px;
+    color: #ffffff;
+    float: right;
+  }
+    
+  .clear {
+    clear:both;
+  }
+
+  .float_right {
+    float: right;
+  }
+
+}
+
+.clear {
+  clear:both;
+}
+

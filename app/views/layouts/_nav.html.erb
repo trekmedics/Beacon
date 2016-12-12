@@ -1,0 +1,43 @@
+<nav class="navigation">
+  <div class="logo-container">
+    <div class="logo">
+      <%= image_tag 'trek-logo-fullres-250.png', class: 'logo' %>
+    </div> <!-- end logo -->
+    <div class="user">
+      <% if current_user.present? %>
+        <%= I18n.t('activerecord.models.user.one') + ":"  %> <%= current_user.username %><br />
+        <%= link_to I18n.t('views.sessions.log_out_action'), destroy_user_session_path, class: 'menu-item', method: :delete %>
+      <% end %>
+    </div> <!-- end user -->
+    <div class="data_center">
+    <% if current_user.present? %>
+      <div class="data_center_title">
+      <span class="data_center_<%= Setting.get_cached_setting(current_user.data_center, 'is_data_center_on').value == 'true' ? 'green' : 'red' %>">
+        <%= I18n.t('activerecord.models.data_center.one') %> : <%= current_user.data_center %>
+      </span>
+      </div> <!-- end data_center_title -->
+      <div class="data_center_selection">
+      <%= form_for(current_user, url: settings_set_user_data_center_path, method: :post) do |f| %>
+        <%= select_tag 'user[data_center_id]',
+          options_from_collection_for_select(DataCenter.authorized(current_user), "id", "name", current_user.data_center.id),
+          :onchange => "this.form.submit();"
+        %>
+      <% end %>
+      </div> <!-- end data-center-selection -->
+    <% end %>
+    </div> <!-- end data-center -->
+  </div> <!-- end logo-container -->
+  <div class="clear" />
+  <div class="menu-group">
+    <% css_class = request.fullpath == "/" ? "menu-item-current" : "menu-item" %>
+    <%= link_to I18n.t('views.nav.main'), root_path, class: css_class %>
+    <% css_class = request.fullpath.start_with?("/first_responders") ? "menu-item-current" : "menu-item" %>
+    <%= link_to I18n.t('activerecord.models.first_responder.other'), first_responders_path, class: css_class %>
+    <% css_class = request.fullpath.start_with?("/incidents") ? "menu-item-current" : "menu-item" %>
+    <%= link_to I18n.t('activerecord.models.incident.other'), incidents_path, class: css_class %>
+    <% css_class = request.fullpath.start_with?("/settings") ? "menu-item-current" : "menu-item" %>
+    <%= link_to I18n.t('activerecord.models.setting.other'), settings_path, class: css_class %>
+  </div> <!-- end menu-group -->
+  <div class="clear"></div>
+</nav>
+<div class="clear"></div> <!-- end navigation -->

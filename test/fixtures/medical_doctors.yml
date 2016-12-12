@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+medical_doctor_one:
+  hospital: hospital_one
+  name: Dr. Test 1
+  phone_number: +155555550010
+
+medical_doctor_two:
+  hospital: hospital_two
+  name: Dr. Test 2
+  phone_number: +155555550011

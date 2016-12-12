@@ -1,0 +1,1049 @@
+sw:
+  activerecord:
+    attributes:
+      administrator:
+        email: |
+          Email
+        name: |
+          Jina
+        phone_number: |
+          Namba ya simu
+      data_center:
+        is_simulator: |
+          Is mafanya jaribio
+        name: |
+          Jina
+      first_responder:
+        locale: |
+          Mahali
+        name: |
+          Jina
+        phone_number: |
+          Namba ya simu
+        state: |
+          Hali
+        transportation_mode: |
+          Mtindo wa kusafirisha
+      hospital:
+        name: |
+          Jina
+      incident:
+        comment: |
+          Maoni
+        completion_status: |
+          Imemalizika
+        created_at: |
+          Imetengenezwa
+        help_message: |
+          Jina la muingiza taarifa
+        id: |
+          ID
+        incident_commander: |
+          Kamanda wa tukio
+        location: |
+          Mahali
+        number_of_frs_to_allocate: |
+          Idadi ya wahudumu wa kuwapanga
+        number_of_transport_vehicles_to_allocate: |
+          Idadi ya magari ya kutuma
+        reporting_party: |
+          Namba ya muingiza taarifa
+        state: |
+          Hali
+        subcategory: |
+          Kifungu kidogo
+        updated_at: |
+          Imerekibishwa 
+      incident_event_log:
+        event_time: |
+          Muda wa tukio
+        from_state: |
+          Kutoka kwa hali
+        to_state: |
+          Kwa hali
+      medical_doctor:
+        hospital: |
+          Hospitali
+        name: |
+          Jina
+        phone_number: |
+          Namba ya simu
+      message_log:
+        created_at: |
+          Muda
+        is_incoming: |
+          Inayokuja
+        message: |
+          Ujumbe
+        resource_id: |
+          Utambulisho wa rasilimali
+        resource_name: |
+          Jina
+        resource_phone_number: |
+          Namba ya simu
+        resource_type: |
+          Aina ya rasilimali
+      setting:
+        description: |
+          Maelezo
+        key: |
+          Funguo
+        value: |
+          Thamani
+      simulation:
+        first_responder_count: |
+          Hesabu ya wahudumu
+        incident_count: |
+          Hesabu ya tukio
+        is_random: |
+          Kutawanya
+        seed_value: |
+          Thamani
+      unregistered_party:
+        body: |
+          Ujumbe
+        created_at: |
+          Muda
+        from: |
+          Kutoka
+        to: |
+          Kwa
+      user:
+        data_center: |
+          Kituo cha taarifa
+        is_admin: |
+          Ni kiongozi
+        locale: |
+          Lugha
+        password: |
+          Namba ya siri
+        password_confirmation: |
+          Uhakiki wa namba ya siri
+        user_role: |
+          User role
+        username: |
+          Jina la mtumiaji
+      white_listed_phone_number:
+        data_center: |
+          Kituo cha taarifa
+        name: |
+          Jina
+        phone_number: |
+          namba ya simu
+    errors:
+      messages:
+        record_invalid: |
+          uhakiki umeshindikana: %{errors}
+      models:
+        administrator:
+          attributes:
+            email:
+              format: |
+                Must be a valid email (xxx@yyy.zzz)
+            phone_number:
+              format: |
+                inatakiwa katika format ya E.164
+              uniqueness: |
+                inatakiwa iwe ya kipekee katika kituo cha taarifa
+        first_responder:
+          attributes:
+            data_center:
+              presence: |
+                haiwezi kuwa wazi
+            locale:
+              locale_is_valid: |
+                hapatikani (%{first_responder_locale})
+            name:
+              presence: |
+                haiwezi kuwa wazi
+            phone_number:
+              format: |
+                inatakiwa katika mtindo wa E.164
+              logged_out: |
+                inaweza kubadilishwa mhudumu akijiondoa
+              phone_number_used_by_whitelist: |
+                inatumika kama namba maalumu
+              uniqueness: |
+                namba inatumika na mhudumu mwingine
+        hospital:
+          attributes:
+            data_center:
+              presence: |
+                haiwezi kuwa wazi
+            name:
+              presence: |
+                haiwezi kuwa wazi
+              uniqueness: |
+                haiwezekani kuwa na hospitali mbili zenye majina ya kufanana
+        incident:
+          attributes:
+            data_center:
+              presence: |
+                haitakiwi kuwa wazi
+          first_responder_count_must_be_greater_than_or_equal_to_vehicle_count: |
+            umekosea:idadi ya wahudumu inatakiwa kuzidi idadi ya vyombo vya usafiri
+        medical_doctor:
+          attributes:
+            hospital:
+              presence: |
+                Haitakiwi kuwa wazi
+            name:
+              presence: |
+                Haitakiwi kuwa wazi
+            phone_number:
+              format: |
+                Inatakiwa kuwa katika mtindo wa E.164
+        reporting_party:
+          attributes:
+            phone_number:
+              format: |
+                Inatakiwa kuwa kwenye mtindo wa E.164
+              presence: |
+                Haiwezi kuwa wazi
+              uniqueness: |
+                Inatumiwa na upande mwingine wa kutoa taarifa
+        setting:
+          attributes:
+            data_center:
+              presence: |
+                Haitakiwi kuwa wazi
+            key:
+              presence: |
+                Haiwezi kuwa wazi
+              uniqueness: |
+                Ipo tayari kwenye kituo cha taarifa
+            value:
+              presence: |
+                Haitakiwi kuwa wazi
+        user:
+          attributes:
+            data_center:
+              presence: |
+                Haitakiwi kuwa wazi
+            password:
+              confirmation: |
+                Hailingani na namba ya siri
+            username:
+              uniqueness: |
+                Lazima iwe ya kipekee
+        white_listed_phone_number:
+          attributes:
+            data_center:
+              presence: |
+                Haiwezi kuwa wazi
+            phone_number:
+              format: |
+                Inatakiwe iwe kwenye mtindo wa E.164
+              phone_number_used_by_first_responder: |
+                Tayari inatumiwa na mhudumu
+              uniqueness: |
+                Tayari ni number maalumu
+    models:
+      categories:
+        one: |
+          Kifungu
+        other: |
+          Vifungu
+      data_center:
+        one: |
+          Kituo cha taarifa
+        other: |
+          Kituo cha taarifa
+      first_responder:
+        one: |
+          Mhudumu
+        other: |
+          Wahudumu
+      hospital:
+        one: |
+          Hospitali
+        other: |
+          Hospitali
+      incident:
+        one: |
+          Tukio
+        other: |
+          Matukio
+      incident_event_log:
+        one: |
+          Rekodi ya matukio
+      medical_doctor:
+        one: |
+          Daktari tabibu
+      message_log:
+        one: |
+          rekodi ya meseji
+      setting:
+        one: |
+          rekebisho
+        other: |
+          marekebisho
+      unregistered_party:
+        one: |
+          haijasajiriwa
+        other: |
+          hazijasajiriwa
+      user:
+        one: |
+          mtumiaji
+        other: |
+          watumiaji
+      white_listed_phone_number:
+        one: |
+          namba maalumu
+        other: |
+          namba maalumu
+    notices:
+      models:
+        administrator:
+          success:
+            create: |
+              Administrator was successful created
+            destroy: |
+              Administrator removed.
+            update: |
+              Administrator updated.
+        category:
+          success:
+            create: |
+              kifungu kimetengenezwa
+            destroy: |
+              kifungu kimeondolewa
+            update: |
+              kifungu kimerekebishwa
+        data_center:
+          success:
+            create: |
+              kituo cha taarifa kimetengenezwa
+            update: |
+              kituo cha taarifa kimerekebishwa
+        first_responder:
+          success:
+            create: |
+              mtoa huduma ya kwanza amewekwa
+            destroy: |
+              mtoa huduma ya kwanza ameondolewa
+            update: |
+              Mhudumu amerekebisha
+        hospital:
+          success:
+            create: |
+              Hospitali imerekebishwa
+            destroy: |
+              Hospitali imeondolewa
+            update: |
+              Hospitali imekerebishwa
+        incident:
+          success:
+            create: |
+              Tukio limetengenezwa
+            destroy: |
+              Tukio limebatirishwa
+        medical_doctor:
+          success:
+            create: |
+              activerecord.notices.models.medical_doctor.success.create
+            destroy: |
+              Daktari wa zamu ameondolewa
+            update: |
+              Marekebisho ya Daktari wa zamu yamekamilika
+        setting:
+          success:
+            update: |
+              Marekebisho yamekamilika
+        subcategory:
+          success:
+            create: |
+              Kifungu kidogo kimetengenezwa
+            destroy: |
+              Kifungu kidogo kimeondolewa
+            update: |
+              Kifungu kidogo kimerekebishwa
+        user:
+          data_center:
+            success:
+              update: |
+                Kituo cha taarifa kimebadilishwa kwenda "%{data_center}"
+          success:
+            create: |
+              Mtumiaji amerekebishwa
+            destroy: |
+              Mtumiaji amefanikiwa kuondolewa
+            permissions: |
+              Ruhusa ya mtumiaji imerekebisha
+            update: |
+              Marekebisho ya mtumiaji yamefanikiwa
+        white_listed_phone_number:
+          success:
+            create: |
+              Namba maalumu imetengenezwa
+            destroy: |
+              Namba maalumu imeondolewa
+            update: |
+              Namba maalumu imesharekebishwa
+  admin:
+    location_update_requested: |
+      Tukio: %{incident_number}
+      Mhudumu: %{first_responder_name}
+      Simu ya mhudumu: %{first_responder_phone_number}
+      Shindwa kuonyesha upande wa kutoa taarifa
+    location_update_requested_abrdgd: |
+      location_update_requested_abrdgd
+  category:
+    medical:
+      abdominal_pain: |
+        Maumivu ya tumbo
+      breathing: |
+        matatizo ya kupumua
+      chest_pain: |
+        Maumivu ya kifua
+      fever: |
+        Dalili za homa 
+      mental: |
+        Kuchanganyikiwa
+      name: |
+        tibabu
+      obstetric: |
+        uzazi na kujifungua
+      seizure: |
+        degedege
+      unresponsive: |
+        Hakuna mwitikio kwa mgonjwa
+      vomit: |
+        Kutapika/kuharisha
+    other:
+      behavioral_emergency: |
+        Dharura ya mara kwa mara
+      name: |
+        Nyingine
+      other: |
+        Nyingine
+      pediatric: |
+        Mtoto
+      test: |
+        Jaribio
+    trauma:
+      burn: |
+        Kuua
+      fall: |
+        Kuanguka
+      gunshot_stabbing: |
+        Jeraha la risasi/kuchomwa
+      name: |
+        Umia
+      road_traffic: |
+        Ajali ya Barabarani
+  first_responder:
+    actions:
+      log_in: |
+        Ingia
+      log_out: |
+        Ondoka
+    instructions:
+      log_in: |
+        Tuma '123' kuingia
+      log_out: |
+        Tuma 456 kutoka
+    logged_out: |
+      Ondoka. tuma '123' kuingia
+    msg_additional_resources_not_available: |
+      first_responder.msg_additional_resources_not_available
+    msg_additional_resources_not_available_abrdgd: |
+      msg_additional_resources_not_available_abrdgd
+    msg_additional_resources_request: |
+      Ukijibu: %{number_of_frs} Waitikiaji
+      wa kwanza na magari %{number_of_vehicles}.
+      Wakati wa kuwasili unaotarajiwa: %{minimum_eta} min
+      HITAJI RASILIMALI ZA NYONGEZA?
+      Ndiyo: #Magari
+      Hapana: 0
+    msg_additional_resources_request_abrdgd: |
+      Need additional resources?
+      FRs: %{number_of_frs}
+      Vehicles: %{number_of_vehicles}
+      ETA: %{minimum_eta} min
+    msg_assistance_notified: |
+      first_responder.msg_assistance_notified
+    msg_assistance_notified_abrdgd: |
+      msg_assistance_notified_abrdgd
+    msg_confirm_arrival: |
+      Elekea eneo la Tukio: 
+      %{location}.
+      Thibitisha kufika katika eneo:
+      Ndiyo: 1
+      Sijaweza kufika: 2
+      Futa mwitikio: 0
+    msg_confirm_arrival_abrdgd: |
+      Elekea eneo la Tukio
+    msg_confirm_hospital_arrival: |
+      Thibitisha kuwasili katika Hospitali.
+      Ndiyo: 1
+      Hitaji Msaada: 2
+      Kuchelewa: 3
+      Kufuta: 0
+    msg_confirm_hospital_arrival_abrdgd: |
+      msg_confirm_hospital_arrival_abrdgd
+      1. Confirm
+      2. Request assistance
+      3. Report delay
+      0. Cancel
+    msg_confirm_transport: |
+      Thibitisha usafiri na muda wa kuwasili unaotarajiwa.
+      %{hospital_text}Hakuna Usafiri: 0
+    msg_confirm_transport_abrdgd: |
+      msg_confirm_transport_abrdgd
+    msg_delay_notification_sent: |
+      Taarifa ya kuchelewa imetumwa
+    msg_delay_notification_sent_abrdgd: |
+      Delay update sent
+      %{minutes} minutes
+    msg_from_rp_do_not_reply: |
+      Kutoka kwa mtoa taarifa. Usijibu
+      %{rp_message}
+    msg_invalid_login_message: |
+      Umekosea kuingia
+      %{last_message}
+      Kuingia, tuma '123'
+    msg_no_additional_resources_available: |
+      Hakuna mhudumu wa ziada aliyekubali
+    msg_no_additional_resources_available_abrdgd: |
+      msg_no_additional_resources_available_abrdgd
+    msg_patient_eta: |
+      wagonjwa.dakika za kufika
+    msg_request_additional_resources: |
+      Wahudumu zaidi wanahitajika***
+      Namba ya tukio: %{incident_id}
+      Mahali: %{incident_location}
+      Aina: %{incident_type}
+      Unajibu?
+      Ndio: %{incident_id}.dakika
+    msg_request_additional_resources_abrdgd: |
+      msg_request_additional_resources_abrdgd
+    msg_request_for_assistance: |
+      TAHADHARI YA AWALI ***
+      Utambulisho wa Tukio: %{incident_id}
+      Mahali: %{incident_location}
+      Type: %{incident_type}
+      Unajibu?:
+      Ndiyo: %{incident_id}.Dakika
+    msg_request_for_assistance_abrdgd: |
+      Tahadhari ya awali
+      Tukio: %{incident_id}
+      Mahali: %{incident_location}
+      Type: %{incident_type}
+    msg_standby: |
+      kaa tayari au endelea
+    msg_standby_available: |
+      wengine wanatoa huduma kwenye tukio %{incident_id}.
+      kaa tayari subir
+    msg_standby_available_abrdgd: |
+      msg_standby_available_abrdgd
+    msg_status_available: |
+      Mwitiko umekamilika.
+      Sasa unapatikana.
+      Muda:
+      Mwitiko: %{time_start_response}
+      Eneo la tukio: %{time_on_scene}
+      Usafiri: %{time_start_transport}
+      Hospitali: %{time_at_hospital}
+    msg_status_available_abrdgd: |
+      Mwitiko umekamilika
+      Mwitiko: %{time_start_response}
+      Eneo la tukio: %{time_on_scene}
+      Usafiri: %{time_start_transport}
+      Hospitali: %{time_at_hospital}
+    msg_unexpected_message: |
+      Ujumbe usiyotegemewa:
+      %{last_message}
+    msg_unexpected_message_abrdgd: |
+      Ujumbe usiyotegemewa
+      %{last_message}
+    msg_unknown_response: |
+      ujumbe usiyo sahihi:
+      %{last_message}
+    msg_unknown_response_abrdgd: |
+      ujumbe usiyo sahihi
+      %{last_message}
+    response_vehicle: |
+      Ingia %{name} %{phone_number}umekubali
+      Tafadhari thibitisha:
+      Hakuna gari:1
+      Hakuna usafiri wa gari:2
+      Usafiri wa gari:3
+      
+    transportation_mode:
+      configured_message: |
+        namna ya usafiri '%{transportation_mode}'
+        ujumbe '456' kujitoa
+      modes:
+        no_vehicle: |
+          Hakuna gari
+        non_transport_vehicle: |
+          Usafiri usiyo gari
+        not_specified: |
+          Si maalum
+        transport_vehicle: |
+          Usafiri wa gari
+  helpers:
+    submit:
+      create: |
+        Tengeneza %{model}
+      update: |
+        Boresha %{model}
+  incident_commander:
+    additional_frs_assigned: |
+      hakiki mahitaji zaidi: %{number_added}
+      Kadirio muda wa kufika: %{eta} dakika
+    additional_frs_assigned_abrdgd: |
+      Additional resources assigned:
+      Vehicles: %{num_transports_added}
+      ETA: %{eta} minutes
+  oncall_md:
+    msg_assistance_request: |
+      oncall_md.msg_assistance_request
+    msg_assistance_request_abrdgd: |
+      Assistance requested
+      Name: %{name}
+      Phone: %{phone_number}
+    msg_delay_notice: |
+      oncall_md.msg_delay_notice
+    msg_delay_notice_abrdgd: |
+      Transport delay
+      Name: %{name}
+      Phone: %{phone_number}
+      Delay: %{delay} minutes
+    msg_incoming_notice: |
+      ***INCOMING PATIENTS (Translation needed)***
+      %{number_patients} patient(s) en route with
+      %{first_responder_name} (%{first_responder_number})
+      ETA: %{minutes_to_arrival} minutes
+      Type: %{incident_type}.
+    msg_incoming_notice_abrdgd: |
+      Incoming patients
+      FR: %{first_responder_name} %{first_responder_number}
+      Patients: %{number_patients}
+      ETA: %{minutes_to_arrival}
+      Category: %{incident_type}.
+    msg_response_cancel: |
+      oncall_md.msg_response_cancel
+    msg_response_cancel_abrdgd: |
+      msg_response_cancel_abrdgd
+  reporting_party:
+    fr_assigned: |
+      reporting_party.fr_assigned
+    fr_assigned_abrdgd: |
+      Help on the way (%{eta} mins)
+    incident_ended: |
+      reporting_party.incident_ended
+    location_provided: |
+      reporting_party.location_provided
+    location_update_provided: |
+      reporting_party.location_update_provided
+    location_update_requested: |
+      reporting_party.location_update_requested
+    message_relayed: |
+      reporting_party.message_relayed
+    no_fr_available: |
+      reporting_party.no_fr_available
+    provide_location: |
+      reporting_party.provide_location
+  settings:
+    admin_language: |
+      settings.admin_language [en, es, ht, sw]
+    admin_number: |
+      Phone number that receives Beacon program errors.
+    beacon_number: |
+      settings.beacon_number
+    config_settings: |
+      settings.config_settings
+    is_data_center_on: |
+      settings.is_data_center_on
+    is_white_list_enabled: |
+      settings.is_white_list_enabled
+    message_language: |
+      settings.message_language [en, es, ht, sw]
+    minimum_number_of_frs: |
+      settings.minimum_number_of_frs
+    number_of_frs_to_allocate: |
+      settings.number_of_frs_to_allocate
+    number_of_transport_vehicles_to_allocate: |
+      settings.number_of_transport_vehicles_to_allocate
+    outgoing_message_server: |
+      settings.outgoing_message_server
+    timeout_first_response_allocation: |
+      settings.timeout_first_response_allocation
+    utc_offset: |
+      settings.utc_offset (-04:00 Nueva York;   +01:00 Berlin)
+  system:
+    ad_hoc_message:
+      overage_error: |
+        system.ad_hoc_message.overage_error
+      preface: |
+        system.ad_hoc_message.preface
+    cancel_message: |
+      mfumo umefutwa
+    completion_status:
+      admin_cancel: |
+        Admin Cancel
+      fr_cancel: |
+        FR Cancel
+      no_addl_resources: |
+        No additional resources
+      no_frs: |
+        No FRs
+      normal: |
+        Normal
+      rp_cancel: |
+        Dispatcher Cancel
+    confirm_destroy: |
+      Are you sure you want to remove %{name}?
+    first_responder_state:
+      available: |
+        Available
+      disabled: |
+        Disabled
+      enroute_to_site: |
+        En route To Site
+      inactive: |
+        Unavailable
+      is_incident_commander_on_site: |
+        Is Incident Commander On Site
+      on_site: |
+        On Scene
+      setting_transport_mode: |
+        rekebisha namna ya usafiri
+      transporting: |
+        safirisha
+      waiting_for_location_update: |
+        subiri maelekezo ya mahali
+    incident_state:
+      additional_frs_requested: |
+        wahudumu zaidi wameobwa
+      additional_resources_assigned: |
+        watoa huduma wameongezwa
+      frs_assigned: |
+        watoa huduma wana majukumu
+      frs_on_scene: |
+        watoa huduma wapo kwenye tukio
+      ic_on_scene: |
+        yupo kwenye tukio
+      incident_complete: |
+        tukio limekamilika
+      patients_at_hospital: |
+        wagonjwa wapo hospitali
+      patients_enroute_to_hospital: |
+        mgonjwa anaelekea hospitali
+      request_received: |
+        ombi limekubaliwa
+      waiting_for_additional_resources: |
+        subiri watoa huduma zaidi
+      waiting_for_fr_responses: |
+        subiri mtoa huduma
+      waiting_for_location: |
+        subiri mwelekeo
+    not_authorized: |
+      hujaruhusiwa
+    unrecognized_number: |
+      namba haitambuliki
+  v2:
+    alerts:
+      alert: |
+        Alert
+    category:
+      add_category: |
+        v2.category.add_category
+    dashboard:
+      active_incidents: |
+        v2.dashboard.active_incidents
+      alerts: |
+        v2.dashboard.alerts
+      complete: |
+        v2.dashboard.complete
+      next: |
+        v2.dashboard.next
+      previous: |
+        v2.dashboard.previous
+      recent_incidents: |
+        v2.dashboard.recent_incidents
+      view_all: |
+        v2.dashboard.view_all
+    dispatch:
+      add_dispatch_phone_number: |
+        v2.dispatch.add_dispatch_phone_number
+    first_responder:
+      add_first_responder: |
+        Add First Responder
+      assigned: |
+        Assigned
+      first_responder_list: |
+        First Responder List
+      non_motorized: |
+        Non motorized
+      non_patient: |
+        Non patient
+      patient: |
+        Patient
+    hospitals_list:
+      add_hospitals: |
+        v2.hospitals_list.add_hospitals
+      address: |
+        v2.hospitals_list.address
+    incident_cancellation:
+      are_you_sure: |
+        Are you sure you want to cancel this incident?
+      enter: |
+        Enter
+      go_back: |
+        Go back
+      hide: |
+        Hide
+      reason: |
+        Reason
+    incidents:
+      archived_incidents: |
+        v2.incidents.archived_incidents
+      dispatcher_number: |
+        v2.incidents.dispatcher_number
+      emergency_type: |
+        v2.incidents.emergency_type
+      recent_incidents: |
+        v2.incidents.recent_incidents
+      status: |
+        v2.incidents.status
+    labels:
+      create: |
+        v2.labels.create
+      save: |
+        v2.labels.save
+    menu:
+      home: |
+        kuu
+      resources: |
+        v2.menu.resources
+      scanner: |
+        v2.menu.scanner
+    message_log:
+      late_replies: |
+        v2.message_log.late_replies
+      ontime_replies: |
+        v2.message_log.ontime_replies
+      requests_for_assistance: |
+        v2.message_log.requests_for_assistance
+      resources_confirmed: |
+        v2.message_log.resources_confirmed
+      total_sent: |
+        v2.message_log.total_sent
+    new_incident:
+      allocation: |
+        Allocation
+      back: |
+        v2.new_incident.back
+      create: |
+        v2.new_incident.create
+      dispatcher_name: |
+        v2.new_incident.dispatcher_name
+      incident_registered: |
+        v2.new_incident.incident_registered
+      location: |
+        v2.new_incident.location
+      new_incidents: |
+        v2.new_incident.new_incidents
+      required_text_fields: |
+        v2.new_incident.required_text_fields
+      select_emergency_type: |
+        v2.new_incident.select_emergency_type
+      thank_you: |
+        v2.new_incident.thank_you
+      view_details: |
+        v2.new_incident.view_details
+    notification_list:
+      add_number: |
+        v2.notification_list.add_number
+    resources:
+      additional_configuration: |
+        v2.resources.additional_configuration
+      details: |
+        v2.resources.details
+      manage_dispatch_numbers: |
+        v2.resources.manage_dispatch_numbers
+      manage_notification_list: |
+        v2.resources.manage_notification_list
+      new_first_responder: |
+        v2.resources.new_first_responder
+      resolve: |
+        v2.resources.resolve
+      resources: |
+        v2.resources.resources
+      status: |
+        v2.resources.status
+    unregistered_party:
+      one: |
+        v2.unregistered_party.one
+      other: |
+        v2.unregistered_party.other
+    users:
+      add_user: |
+        Add user
+      dispatcher: |
+        Dispatcher
+      manager: |
+        Manager
+      supervisor: |
+        Supervisor
+      test_sim: |
+        Test/Simulate
+  views:
+    administrator:
+      edit: |
+        Edit Administrator
+      listing: |
+        Administrators List
+      new: |
+        views.administrator.new
+    buttons:
+      send: |
+        tuma
+    category:
+      listing: |
+        orodha ya vifungo
+      new: |
+        kifungu kipya
+      new_subcategory: |
+        kifungu kidogo kipya
+    data_center:
+      edit: |
+        rekebisha kituo cha taarifa
+      listing: |
+        orodha ya vituo vya taarifa
+      new: |
+        kituo cha data kipya
+    first_responder:
+      details: |
+        maelezo ya mtoa huduma
+    hospital:
+      actions: |
+        vitendo
+      edit: |
+        badili hospitali
+      listing: |
+        orodha ya hospitali
+      new: |
+        hospitali mpya
+      new_medical_doctor: |
+        daktari mpya
+      no_hospitals: |
+        hakuna hospitali
+    incident:
+      cancel: |
+        katisha
+      details: |
+        maelezo ya tukio
+      first_responder_count_validation_message: |
+        idadi ya usafiri hautakiwi kuzidi idadi ya wahudumu wa kwanza
+      incident_messages_table:
+        heading: |
+          jumbe za tukio
+        no_messages: |
+          hakuna ujumbe
+      new: |
+        views.incident.new
+      no_incidents: |
+        hakuna tukio 
+      pick_category: |
+        chagua
+      request_for_assistance_table:
+        first_responders: |
+          mhusika wa kwanza
+        heading: |
+          omba msaada
+        not_needed_message: |
+          hakuna hitaji la ujumbe
+        number_of_requests_text: |
+          namba ya maombi ya msaada
+        number_of_responses_text: |
+          namba ya maombi kwa majibu ya msaada
+        request_message: |
+          omba ujumbe
+        response_message: |
+          jibu ujumbe
+        simulate_action: |
+          mfano
+    incident_event_log:
+      not_found: |
+        hakuna tukio
+    labels:
+      back: |
+        nyuma
+      destroy: |
+        views.labels.destroy
+      edit: |
+        rekebisha
+      editing: |
+        rekebisha
+      listing: |
+        orodha
+      new: |
+        mpya
+      phone_number: |
+        namba ya simu
+      show: |
+        Onyesha
+    manage_resource_link:
+      administrator: |
+        Manage Administrators
+      data_center: |
+        simamia kituo cha data
+      hospital: |
+        kusimamia hospitali
+      user: |
+        watumiaji meneja
+      white_listed_phone_number: |
+        simamia namba nyeupe
+    medical_doctor:
+      edit: |
+        badili daktari
+      new: |
+        daktari mpya
+    message_log:
+      not_found: |
+        hakuna meseji
+    nav:
+      main: |
+        kuu
+    placeholders:
+      simulate_message: |
+        meseji ya majaribio
+    resource:
+      not_found: |
+        hakuna rasilimali
+    sessions:
+      heading: |
+        Ingia
+      log_in_action: |
+        Ingia
+      log_out_action: |
+        Ondoka
+    user:
+      admin: |
+        Kiongozi
+      listing: |
+        _orodha_watumiaji
+      new: |
+        Mtumiaji mpya
+      permissions:
+        heading: |
+          Ruhusa kituo cha data
+        is_admin: |
+          anaruhusiwa kiongozi
+        submit: |
+          weka ruhusa
+    white_listed_phone_number:
+      edit: |
+        Rekebisha Namba
+      listing: |
+        Namba imeorodheshwa
+      new: |
+        Namba mpya
+      no_resources: |
+        Hakuna namba ya simu imeundwa
+

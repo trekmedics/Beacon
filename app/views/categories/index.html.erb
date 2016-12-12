@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= I18n.t('views.category.listing') %></h1>
+
+<%= link_to I18n.t('views.category.new'), new_category_path %><br>
+<%= link_to I18n.t('activerecord.models.setting.other'), settings_path %>
+
+<div class="hospital_list">
+<table>
+  <thead>
+    <tr>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr class="hospital">
+        <td>
+          <div class="cell"><%= I18n.t('category.'+category.name+'.name', default: category.name) %></div>
+        </td>
+        <td>
+          <div class="cell">
+            <%= link_to I18n.t('views.labels.edit'), edit_category_path(category) %> |
+            <%= link_to I18n.t('views.labels.destroy'), category, method: :delete, data: { confirm: 'Are you sure?' } %> |
+            <%= link_to I18n.t('views.category.new_subcategory'), new_category_subcategory_path(category) %>
+          </div>
+        </td>
+      </tr>
+      <% category.subcategories.each do |subcategory| %>
+        <tr>
+          <td>
+            <div class="cell" style="padding-left: 30px;">&bull; <%= I18n.t('category.'+category.name+'.'+subcategory.name, default: subcategory.name) %></div>
+            </td>
+          <td>
+            <div class="cell">
+              <%= link_to I18n.t('views.labels.edit'), edit_category_subcategory_path(category, subcategory) %>
+              <%= link_to I18n.t('views.labels.destroy'), category_subcategory_path(category, subcategory), method: :delete, data: { confirm: I18n.t('system.confirm_destroy', name: subcategory.name) } %>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+</div>
+

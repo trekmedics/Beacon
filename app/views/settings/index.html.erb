@@ -1,0 +1,70 @@
+<div class="settings">
+  <p id="notice"><%= notice %></p>
+
+  <div class="settings_heading">
+    <div class="settings_title floatLeft">
+      <h1><%= I18n.t('activerecord.models.setting.other') %></h1>
+    </div>
+    <div class="clear"></div>
+  </div>
+
+  <div class="settings_table">
+    <% @settings.each do |setting| %>
+      <div class="settings_line<%= setting.id%2 %>">
+         <div class="settings_link floatLeft">
+           <%= link_to I18n.t('views.labels.show'), setting %>
+        </div>
+        <div class="settings_link floatLeft">
+           <%= link_to I18n.t('views.labels.edit'), edit_setting_path(setting) %>
+        </div>
+        <div class="settings_key floatLeft">
+            <%= setting.key %>
+        </div>
+        <div class="settings_value floatLeft">
+            <%= setting.value %>
+        </div>
+        <div class="settings_description floatLeft">
+          <%= I18n.t("settings.#{setting.key}") %>
+        </div>
+        <div class="clear">
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <br />
+  <h2>Additional Configuration</h2>
+  <div class="settings_additional_configuration">
+    <% if current_user.user_role.name == 'Admin' %>
+      <%= link_to I18n.t('views.manage_resource_link.user'), users_path %><br />
+    <% end %>
+    <% if current_user.user_role.name == 'Admin' or current_user.user_role.name == 'Manager' %>
+      <%= link_to I18n.t('views.manage_resource_link.data_center'), data_centers_path %><br />
+    <% end %>
+    <%= link_to I18n.t('views.manage_resource_link.administrator'), administrators_path %><br />
+    <%= link_to I18n.t('views.manage_resource_link.hospital'), hospitals_path %><br />
+    <%= link_to I18n.t('views.manage_resource_link.white_listed_phone_number'), white_listed_phone_numbers_path %><br />
+    <%= link_to I18n.t('activerecord.models.unregistered_party.other'), unregistered_parties_path, class: 'menu-item' %><br />
+    <%= link_to I18n.t('activerecord.models.categories.other'), categories_path, class: 'menu-item' %><br />
+    <% if current_user.try(:data_center).try(:is_simulator) %>
+      <%= link_to 'Simulator', new_simulation_path, class: 'menu-item' %><br />
+    <% end %>
+    <%= link_to I18n.t('views.sessions.log_out_action'), destroy_user_session_path, method: :delete %>
+  </div>
+  <div class="settings_additional_configuration">
+    <b>Current User:</b> <%= current_user.present? ? current_user.username : 'NULL' %><br>
+    <b>Data Center:</b>
+    <%= form_for(current_user, url: settings_set_user_data_center_path, method: :post) do |f| %>
+      <% DataCenter.authorized(current_user).each do |data_center_option| %>
+        <div
+          class="<%= Setting.get_cached_setting(data_center_option, 'is_data_center_on').value == 'true' ? 'settings_green' : 'settings_red' %>"
+        >
+        <%= f.radio_button :data_center_id, data_center_option.id, { class: 'radio_button', :onchange => "this.form.submit();"}%>
+        <%= f.label :data_center, data_center_option.name %>
+        </div>
+        <div class="clear"></div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+

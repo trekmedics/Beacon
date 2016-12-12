@@ -1,0 +1,40 @@
+<h4><%= I18n.t('views.incident.request_for_assistance_table.heading') %></h4>
+<p><%= I18n.t('views.incident.request_for_assistance_table.number_of_requests_text') %> {{requestedFirstResponders.length}}</p>
+<p><%= I18n.t('views.incident.request_for_assistance_table.number_of_responses_text') %> {{assistanceResponseCount(requestedFirstResponders)}}</p>
+<div class="message_log">
+  <button type="button" ng-click="toggleShowRequestsForAssistance()" ng-show="!showRequestsForAssistance()">Show</button>
+  <button type="button" ng-click="toggleShowRequestsForAssistance()" ng-show="showRequestsForAssistance()">Hide</button>
+  <table ng-show="showRequestsForAssistance()">
+    <thead>
+      <tr>
+        <th><div class="message_cell_fr_phone"><%= I18n.t('views.incident.request_for_assistance_table.first_responders') %></div></th>
+        <th><div class="message_cell"><%= I18n.t('views.incident.request_for_assistance_table.request_message') %></div></th>
+        <th><div class="message_cell"><%= I18n.t('views.incident.request_for_assistance_table.response_message') %></div></th>
+        <th><div class="message_cell"><%= I18n.t('views.incident.request_for_assistance_table.not_needed_message') %></div></th>
+        <th ng-show="incident.canSimulate()"><div class="message_cell"><%= I18n.t('views.incident.request_for_assistance_table.simulate_action') %></div></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="log_item" ng-repeat="firstResponder in requestedFirstResponders">
+        <td><div class="message_cell_fr_phone">{{firstResponder.name}}<br />({{firstResponder.phone_number}})</div></td>
+        <td><div class="message_cell first_responder_outgoing">{{firstResponder.request_message}}</div>
+        <div class="message_cell_time">{{firstResponder.request_time | date: 'HH:mm:ss'}}</div>
+        </td>
+        <td><div class="message_cell first_responder_incoming">{{firstResponder.response}}</div>
+        <div class="message_cell_time">{{firstResponder.reply_time | date: 'HH:mm:ss'}}</div>
+        </td>
+        <td><div class="message_cell first_responder_outgoing">{{firstResponder.fr_not_needed}}</div>
+        <div class="message_cell_time">{{firstResponder.not_needed_time | date: 'HH:mm:ss'}}</div>
+        </td>
+        <td ng-show="incident.canSimulate()">
+          <div class="message_cell">
+            <span ng-show="firstResponder.canSimulate">
+              <input class="message_box" placeholder="<%= I18n.t('views.placeholders.simulate_message') %>" ng-model="firstResponder.message">
+              <button type="button" class="send_button" ng-click="messageIncidentActor(firstResponder)"><%= I18n.t('views.buttons.send') %></button>
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

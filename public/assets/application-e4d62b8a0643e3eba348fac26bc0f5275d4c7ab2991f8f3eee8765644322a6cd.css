@@ -1,0 +1,983 @@
+@charset "UTF-8";
+/* line 4, /Users/prescott/.gem/ruby/2.0.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 9, /Users/prescott/.gem/ruby/2.0.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/* Bitters 0.10.0
+ * http://bitters.bourbon.io
+ * Copyright 2013–2014 thoughtbot, inc.
+ * MIT License */
+/* line 1, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/extends/_button.scss */
+button,
+input[type="submit"] {
+  -webkit-font-smoothing: antialiased;
+  background-color: #477DCA;
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.75em 1em;
+  text-decoration: none;
+}
+/* line 13, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/extends/_button.scss */
+button:hover,
+input[type="submit"]:hover {
+  background-color: #2c5999;
+  color: white;
+}
+/* line 18, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/extends/_button.scss */
+button:disabled,
+input[type="submit"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* line 1, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_typography.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #CAE1FF;
+  color: #333;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  padding: 10px;
+}
+
+/* line 11, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_typography.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  line-height: 1.25;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+
+/* line 23, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_typography.scss */
+h1 {
+  font-size: 1.5em;
+}
+
+/* line 27, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_typography.scss */
+h2 {
+  font-size: 1.25em;
+}
+
+/* line 31, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_typography.scss */
+h3 {
+  font-size: 1.25em;
+}
+
+/* line 35, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_typography.scss */
+h4 {
+  font-size: 1em;
+}
+
+/* line 39, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_typography.scss */
+h5 {
+  font-size: 1em;
+}
+
+/* line 43, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_typography.scss */
+h6 {
+  font-size: 1em;
+}
+
+/* line 47, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_typography.scss */
+p {
+  margin: 0 0 0.75em;
+}
+
+/* line 51, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_typography.scss */
+a {
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+  color: #477DCA;
+  text-decoration: none;
+}
+/* line 56, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_typography.scss */
+a:hover {
+  color: #2c5999;
+}
+/* line 60, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_typography.scss */
+a:active, a:focus {
+  color: #2c5999;
+  outline: none;
+}
+
+/* line 66, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_typography.scss */
+hr {
+  border-bottom: 1px solid #DDD;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0;
+}
+
+/* line 74, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_typography.scss */
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+/* line 80, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_typography.scss */
+blockquote {
+  border-left: 2px solid #DDD;
+  color: #595959;
+  margin: 1.5em 0;
+  padding-left: 0.75em;
+}
+
+/* line 87, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_typography.scss */
+cite {
+  color: #737373;
+  font-style: italic;
+}
+/* line 91, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_typography.scss */
+cite:before {
+  content: "\2014 \00A0";
+}
+
+/* line 1, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_forms.scss */
+fieldset {
+  background: #f7f7f7;
+  border: 1px solid #DDD;
+  margin: 0 0 0.75em 0;
+  padding: 1.5em;
+}
+
+/* line 8, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_forms.scss */
+input,
+label,
+select {
+  display: block;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+}
+
+/* line 16, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_forms.scss */
+label {
+  font-weight: bold;
+  margin-bottom: 0.375em;
+}
+/* line 20, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_forms.scss */
+label.required:after {
+  color: red;
+  content: "*";
+}
+/* line 25, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_forms.scss */
+label abbr {
+  display: none;
+}
+
+/* line 30, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_forms.scss */
+textarea,
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], textarea,
+select[multiple=multiple] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: border-color;
+  -moz-transition: border-color;
+  transition: border-color;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid #DDD;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  padding: 0.5em 0.5em;
+  width: 100%;
+}
+/* line 45, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_forms.scss */
+textarea:hover,
+input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, textarea:hover,
+select[multiple=multiple]:hover {
+  border-color: #c4c4c4;
+}
+/* line 49, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_forms.scss */
+textarea:focus,
+input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, textarea:focus,
+select[multiple=multiple]:focus {
+  border-color: #477DCA;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
+  outline: none;
+}
+
+/* line 56, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_forms.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 60, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_forms.scss */
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+/* line 64, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: 0.375em;
+}
+
+/* line 70, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_forms.scss */
+input[type="file"] {
+  padding-bottom: 0.75em;
+  width: 100%;
+}
+
+/* line 75, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_forms.scss */
+select {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+  width: auto;
+}
+
+/* line 1, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_tables.scss */
+table {
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* line 8, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_tables.scss */
+th {
+  border-bottom: 1px solid #b7b7b7;
+  font-weight: bold;
+  padding: 0.75em 0;
+  text-align: left;
+}
+
+/* line 15, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_tables.scss */
+td {
+  border-bottom: 1px solid #DDD;
+  padding: 0.375em 0;
+}
+
+/* line 20, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_tables.scss */
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+/* line 1, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_lists.scss */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+/* line 20, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_lists.scss */
+dl {
+  margin-bottom: 0.75em;
+}
+/* line 23, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_lists.scss */
+dl dt {
+  font-weight: bold;
+  margin-top: 0.75em;
+}
+/* line 28, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_lists.scss */
+dl dd {
+  margin: 0;
+}
+
+/* line 1, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/bitters/_buttons.scss */
+button,
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* line 1, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/data_centers.css.scss */
+.data_centers_list {
+  overflow-x: auto;
+  width: auto;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+}
+
+/* line 1, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/first_responders.css.scss */
+.first_responder_list {
+  overflow-x: auto;
+  width: auto;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+}
+
+/* line 10, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/first_responders.css.scss */
+.first_responders .text_field {
+  width: 300px;
+}
+/* line 14, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/first_responders.css.scss */
+.first_responders .radio_button {
+  float: left;
+}
+
+/* line 20, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/first_responders.css.scss */
+.performance_report table {
+  max-width: 1000px;
+}
+/* line 22, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/first_responders.css.scss */
+.performance_report table th, .performance_report table td {
+  padding-right: 10px;
+}
+/* line 25, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/first_responders.css.scss */
+.performance_report table .description {
+  width: 40%;
+}
+
+/* line 1, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/hospitals.css.scss */
+.hospital_list {
+  overflow-x: auto;
+  overflow-x: auto;
+  width: auto;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+}
+/* line 9, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/hospitals.css.scss */
+.hospital_list table {
+  width: auto;
+}
+/* line 13, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/hospitals.css.scss */
+.hospital_list .cell {
+  min-width: 200px;
+  margin-right: 20px;
+}
+
+/* line 1, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident_list {
+  overflow-x: auto;
+  width: auto;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+}
+
+/* line 9, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident_info {
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+/* line 16, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .message_log {
+  overflow-x: auto;
+  width: auto;
+  padding-bottom: 0px;
+}
+/* line 22, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .message_log .log_item .reporting_party_outgoing,
+.incident .message_log .log_item .first_responder_outgoing {
+  background-color: beige;
+  width: 300px;
+  text-align: center;
+  display: block;
+  word-wrap: break-word;
+  border-radius: 10px;
+}
+/* line 32, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .message_log .log_item .reporting_party_incoming {
+  background-color: coral;
+  width: 300px;
+  text-align: center;
+  display: block;
+  word-wrap: break-word;
+  border-radius: 10px;
+}
+/* line 41, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .message_log .log_item .first_responder_incoming {
+  background-color: cyan;
+  width: 300px;
+  text-align: center;
+  display: block;
+  word-wrap: break-word;
+  border-radius: 10px;
+}
+/* line 50, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .message_log .log_item .medical_doctor_incoming,
+.incident .message_log .log_item .medical_doctor_outgoing {
+  background-color: gold;
+  width: 300px;
+  text-align: center;
+  display: block;
+  word-wrap: break-word;
+  border-radius: 10px;
+}
+/* line 60, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .message_log .log_item .administrator_outgoing {
+  background-color: darkkhaki;
+  width: 300px;
+  text-align: center;
+  display: block;
+  word-wrap: break-word;
+  border-radius: 10px;
+}
+/* line 70, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .message_log .time_cell {
+  width: 100px;
+}
+/* line 74, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .message_log .message_cell {
+  width: 300px;
+  margin: 0px 10px 0px 0px;
+  white-space: pre;
+}
+/* line 80, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .message_log .message_cell_fr_phone {
+  width: 200px;
+  margin: 0px 10px 0px 0px;
+  white-space: pre;
+}
+/* line 86, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .message_log .message_cell_input {
+  width: 300px;
+  margin: 0px 20px 0px 0px;
+}
+/* line 91, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .message_log .message_cell_time {
+  width: 300px;
+  text-align: center;
+  margin: 0px 20px 0px 0px;
+}
+/* line 97, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .message_log table {
+  width: auto;
+}
+/* line 104, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .message_log .fixed_headers {
+  border-collapse: collapse;
+}
+/* line 107, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .message_log .fixed_headers th {
+  text-decoration: underline;
+}
+/* line 108, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .message_log .fixed_headers th, .incident .message_log .fixed_headers td {
+  padding: 5px;
+  text-align: left;
+}
+/* line 113, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .message_log .fixed_headers thead {
+  background-color: #CCCCCC;
+  color: #000000;
+}
+/* line 116, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .message_log .fixed_headers thead tr {
+  display: block;
+  position: relative;
+}
+/* line 121, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .message_log .fixed_headers tbody {
+  display: block;
+  overflow-y: scroll;
+  width: 100%;
+}
+/* line 126, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .message_log .fixed_headers .with_simulator {
+  height: 75vh;
+}
+/* line 129, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .message_log .fixed_headers .without_simulator {
+  height: 85vh;
+}
+/* line 135, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident .send_button {
+  padding: 3px 6px;
+}
+/* line 139, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident h4 {
+  margin-top: 10px;
+}
+/* line 143, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/incidents.css.scss */
+.incident p {
+  margin-top: 10px;
+}
+
+/* line 1, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+body {
+  font-size: 1.0em;
+}
+
+/* line 6, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard {
+  clear: both;
+  padding-bottom: 20px;
+  /*
+      disabled: 0,                          # ie, listed in db, but no longer current, cannot login
+      inactive: 1,                          # ie: current, but not logged in
+      setting_transport_mode: 2,            # ie: login message received, but transportation not set
+      available: 3,                         # ie: logged-in, not assigned-to-any-incident
+      enroute_to_site: 4,                   # ie: assigned to incident, enroute
+      on_site: 5,                           # ie: incident request sent to field, no response yet
+      transporting: 6,                      # ie: incident request sent to field, no response yet
+  */
+}
+/* line 10, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .data {
+  float: left;
+}
+/* line 14, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .first_responder_list {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+}
+/* line 20, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .first_responder {
+  clear: both;
+}
+/* line 24, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .circle {
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  float: left;
+}
+/* line 31, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .disabled {
+  color: gray;
+  text-decoration: line-through;
+}
+/* line 35, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .inactive {
+  background-color: gray;
+}
+/* line 38, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .setting_transport_mode {
+  background-color: gray;
+}
+/* line 41, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .available {
+  background-color: green;
+}
+/* line 44, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .enroute_to_site,
+.dashboard .is_incident_commander_on_site,
+.dashboard .on_site,
+.dashboard .transporting {
+  background-color: #eefb54;
+}
+/* line 60, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .attributes_list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-left: 30px;
+}
+/* line 66, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .message_box {
+  float: left;
+  width: 300px;
+}
+/* line 71, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .log_in {
+  padding: 3px 6px;
+  margin-left: 10px;
+  float: right;
+}
+/* line 77, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .cancel_incident {
+  padding: 3px 6px;
+  background-color: red;
+}
+/* line 82, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .incident_list {
+  overflow-x: auto;
+  width: auto;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+}
+/* line 89, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .incident_list .incident_entry {
+  border: 1px solid gray;
+  border-bottom: 5px solid gray;
+  margin: 10px 0px 0px 0px;
+}
+/* line 95, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .incident_list .incident_entry_title {
+  background-color: #263238;
+  color: #ffffff;
+  padding: 3px 6px 3px 6px;
+}
+/* line 101, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .incident_list .incident_entry_title a {
+  color: #eefb54;
+  font-size: 1.5em;
+  font-style: bold;
+  font-weight: bolder;
+  padding: 3px 6px 3px 6px;
+}
+/* line 109, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .incident_list .incident_entry_title a:hover {
+  color: #aaaaaa;
+}
+/* line 113, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .incident_list .incident_entry_state {
+  font-size: 1.0em;
+}
+/* line 117, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .incident_list .entry_date_and_cancel {
+  float: right;
+}
+/* line 121, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .incident_list .incident_entry_date {
+  font-size: 1.0em;
+  padding-right: 10px;
+}
+/* line 126, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .incident_list .incident_entry_cancel {
+  font-size: 1.5em;
+  color: #ff0000;
+}
+/* line 131, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .incident_list .incident_entry_cancel:hover {
+  cursor: pointer;
+  color: #aaaaaa;
+}
+/* line 136, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .incident_list .incident_progress {
+  height: 50px;
+  background-color: #eefb54;
+}
+/* line 141, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .incident_list .incident_entry_info_col {
+  float: left;
+  padding: 3px 6px 3px 6px;
+  width: 50%;
+}
+/* line 147, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .incident_list .incident_entry_info_label {
+  font-size: 0.8em;
+  color: #888888;
+  text-transform: uppercase;
+}
+/* line 153, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .incident_list .incident_entry_info_data {
+  font-size: 1.2em;
+}
+/* line 157, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.dashboard .incident_list .incident_entry_info_data_line_2 {
+  font-size: 0.8em;
+  margin: -5px 0px 0px 0px;
+}
+
+/* line 165, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.form {
+  margin-top: 20px;
+}
+/* line 168, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.form .field {
+  margin-bottom: 15px;
+}
+/* line 172, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.form .number_field {
+  width: 100px;
+}
+/* line 176, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.form .text_field {
+  width: 300px;
+}
+/* line 180, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.form .check_box {
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 186, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.small_button {
+  padding: 3px 6px;
+  margin-left: 10px;
+}
+
+/* line 191, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.user_permissions {
+  margin-top: 20px;
+}
+
+/* line 195, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.new_incident_link {
+  padding: 2px 5px 2px 5px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #477DCA;
+  border-radius: 3px;
+}
+
+/* line 202, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.new_incident_link:hover {
+  color: #ffffff;
+  background-color: #2c5999;
+}
+
+/* line 207, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/main.css.scss */
+.clear {
+  clear: both;
+}
+
+/* line 1, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/navigation.css.scss */
+.navigation {
+  margin: -20px -20px 0px -20px;
+}
+/* line 4, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/navigation.css.scss */
+.navigation .logo-container {
+  overflow: auto;
+  margin: 0 auto;
+  padding: 5px 10px 2px 10px;
+  width: 100%;
+  background-color: #aaaaaa;
+}
+/* line 15, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/navigation.css.scss */
+.navigation .logo {
+  height: 115px;
+  float: left;
+}
+/* line 20, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/navigation.css.scss */
+.navigation .menu-group {
+  margin-bottom: 20px;
+  float: left;
+  background-color: #263238;
+  width: 100%;
+  padding: 0px 0px 0px 150px;
+}
+/* line 28, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/navigation.css.scss */
+.navigation .data_center {
+  padding: 20px 0px 0px 0px;
+  float: right;
+  width: 500px;
+}
+/* line 34, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/navigation.css.scss */
+.navigation .data_center_title {
+  font-size: 1.5em;
+}
+/* line 38, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/navigation.css.scss */
+.navigation .data_center_selection {
+  text-align: center;
+}
+/* line 42, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/navigation.css.scss */
+.navigation .data_center_red {
+  color: #ff0000;
+}
+/* line 46, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/navigation.css.scss */
+.navigation .data_center_green {
+  color: #00ff00;
+}
+/* line 50, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/navigation.css.scss */
+.navigation .menu-item {
+  font-family: Avenir;
+  font-size: 13px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  width: 175px;
+  text-align: left;
+  margin: 5px;
+  display: inline-block;
+}
+/* line 62, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/navigation.css.scss */
+.navigation .menu-item:hover {
+  color: #9999ff;
+}
+/* line 66, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/navigation.css.scss */
+.navigation .menu-item-current {
+  font-family: Avenir;
+  font-size: 13px;
+  font-weight: bold;
+  color: #00ff00;
+  text-transform: uppercase;
+  width: 175px;
+  text-align: left;
+  margin: 5px;
+  display: inline-block;
+}
+/* line 78, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/navigation.css.scss */
+.navigation .user {
+  font-family: Avenir;
+  font-weight: bold;
+  padding: 30px 0px 0px 0px;
+  color: #ffffff;
+  float: right;
+}
+/* line 86, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/navigation.css.scss */
+.navigation .clear {
+  clear: both;
+}
+/* line 90, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/navigation.css.scss */
+.navigation .float_right {
+  float: right;
+}
+
+/* line 96, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/navigation.css.scss */
+.clear {
+  clear: both;
+}
+
+/* line 1, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/sessions.css.scss */
+.sessions_list {
+  overflow-x: auto;
+  width: auto;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+}
+
+/* line 1, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/settings.css.scss */
+.settings {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+/* line 5, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/settings.css.scss */
+.settings .settings_heading {
+  vertical-align: middle;
+}
+/* line 8, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/settings.css.scss */
+.settings .logo {
+  background-image: url(/assets/trek-logo-fullres-250.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100px;
+  width: 100px;
+}
+/* line 15, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/settings.css.scss */
+.settings .settings_title h1 {
+  vertical-align: middle;
+}
+/* line 18, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/settings.css.scss */
+.settings .settings_table {
+  border: 1px black solid;
+  font-size: 1.0em;
+  margin: 10px;
+  background-color: white;
+}
+/* line 24, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/settings.css.scss */
+.settings .settings_line0 {
+  background-color: #eee;
+}
+/* line 27, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/settings.css.scss */
+.settings .settings_line1 {
+  background-color: #fff;
+}
+/* line 30, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/settings.css.scss */
+.settings .settings_key {
+  width: 300px;
+  padding: 0px 10px 0px 0px;
+}
+/* line 34, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/settings.css.scss */
+.settings .settings_value {
+  width: 120px;
+  text-align: right;
+  padding: 0px 10px 0px 0px;
+}
+/* line 39, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/settings.css.scss */
+.settings .settings_description {
+  padding: 0px 10px 0px 0px;
+  width: 400px;
+}
+/* line 43, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/settings.css.scss */
+.settings .settings_link {
+  width: 75px;
+  padding-left: 10px;
+}
+/* line 47, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/settings.css.scss */
+.settings .settings_actions {
+  padding-top: 20px;
+  padding-left: 10px;
+}
+/* line 51, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/settings.css.scss */
+.settings .settings_label {
+  width: 100px;
+}
+/* line 56, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/settings.css.scss */
+.settings .settings_red {
+  color: red;
+}
+/* line 59, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/settings.css.scss */
+.settings .settings_green {
+  color: green;
+}
+/* line 63, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/settings.css.scss */
+.settings .floatLeft {
+  float: left;
+}
+/* line 66, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/settings.css.scss */
+.settings .floatRight {
+  float: right;
+}
+/* line 69, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/settings.css.scss */
+.settings .clear {
+  clear: both;
+}
+/* line 72, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/settings.css.scss */
+.settings .radio_button {
+  float: left;
+}
+/* line 75, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/settings.css.scss */
+.settings .settings_additional_configuration {
+  float: left;
+  overflow-x: auto;
+  width: auto;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+}
+
+/* line 1, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/unregistered_parties.css.scss */
+.unregistered_parties_list {
+  overflow-x: auto;
+  width: auto;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+}
+
+/* line 1, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/users.css.scss */
+.users_list {
+  overflow-x: auto;
+  width: auto;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+}
+
+/* line 1, /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/app/assets/stylesheets/white_listed_phone_numbers.css.scss */
+.white_listed_phone_numbers_list {
+  overflow-x: auto;
+  width: auto;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+}

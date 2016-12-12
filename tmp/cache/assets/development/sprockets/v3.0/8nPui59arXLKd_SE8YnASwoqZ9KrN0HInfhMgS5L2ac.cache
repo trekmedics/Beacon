@@ -1,0 +1,52 @@
+I"Ù(function() {
+  angular.module('App').controller('IncidentCtrl', [
+    '$scope', 'Incident', 'Config', function($scope, Incident, Config) {
+      var channel, dispatcher;
+      $scope.incidents = Incident.query();
+      $scope.cancelIncident = function(incident) {
+        var cancelReason;
+        cancelReason = prompt('Are you sure you want to cancel this incident?  Reason:');
+        console.log('Cancel Reason: ', cancelReason);
+        if ((cancelReason != null) && cancelReason !== '') {
+          return incident.cancel(cancelReason);
+        }
+      };
+      dispatcher = new WebSocketRails(Config.websocket_url);
+      dispatcher.on_open = function(data) {
+        return console.log('Connection has been established (IncidentCtrl): ', data);
+      };
+      channel = dispatcher.subscribe('incident');
+      channel.bind('create', function(data) {
+        console.log('Got new incident from server: ', data);
+        return $scope.$apply(function() {
+          return $scope.incidents.unshift(new Incident(data));
+        });
+      });
+      return channel.bind('update', function(data) {
+        var i, incident, len, ref, results;
+        console.log('Got updated incident from server: ', data);
+        ref = $scope.incidents;
+        results = [];
+        for (i = 0, len = ref.length; i < len; i++) {
+          incident = ref[i];
+          if (incident.id === data.id) {
+            results.push($scope.$apply(function() {
+              incident.state = data.state;
+              incident.state_string = data.state_string;
+              incident.help_message = data.help_message;
+              incident.location = data.location;
+              incident.incident_commander = data.incident_commander;
+              incident.created_at_string = data.created_at_string;
+              return incident.updated_at_string = data.updated_at_string;
+            }));
+          } else {
+            results.push(void 0);
+          }
+        }
+        return results;
+      });
+    }
+  ]);
+
+}).call(this);
+:ET

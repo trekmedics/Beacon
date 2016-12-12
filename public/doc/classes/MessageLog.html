@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>MessageLog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            MessageLog 
+            
+                <span class="parent">&lt; 
+                    
+                    ActiveRecord::Base
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/message_log_rb.html">app/models/message_log.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-format_for_admin_interface">format_for_admin_interface</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-format_message_log">format_message_log</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-get_last_message_to_first_responder">get_last_message_to_first_responder</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-get_last_message_to_first_responder_for_incident">get_last_message_to_first_responder_for_incident</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-get_unregistered_parties">get_unregistered_parties</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-log_message">log_message</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-format_message_log">
+            
+              <b>format_message_log</b>(message_log)
+            
+            <a href="../classes/MessageLog.html#method-c-format_message_log" name="method-c-format_message_log" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-format_message_log_source')" id="l_method-c-format_message_log_source">show</a>
+                
+              </p>
+              <div id="method-c-format_message_log_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/message_log.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">format_message_log</span>(<span class="ruby-identifier">message_log</span>)
+  <span class="ruby-identifier">formatted_message_log</span> = []
+  <span class="ruby-identifier">message_log</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">log_item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">formatted_message_log</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">log_item</span>.<span class="ruby-identifier">format_for_admin_interface</span>) }
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">formatted_message_log</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-get_last_message_to_first_responder">
+            
+              <b>get_last_message_to_first_responder</b>(first_responder)
+            
+            <a href="../classes/MessageLog.html#method-c-get_last_message_to_first_responder" name="method-c-get_last_message_to_first_responder" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-get_last_message_to_first_responder_source')" id="l_method-c-get_last_message_to_first_responder_source">show</a>
+                
+              </p>
+              <div id="method-c-get_last_message_to_first_responder_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/message_log.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">get_last_message_to_first_responder</span>(<span class="ruby-identifier">first_responder</span>)
+  <span class="ruby-identifier">messages</span> = <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">resource_type</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;FirstResponder&#39;</span>, <span class="ruby-identifier">resource_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">is_incoming</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">messages</span>.<span class="ruby-identifier">last</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-get_last_message_to_first_responder_for_incident">
+            
+              <b>get_last_message_to_first_responder_for_incident</b>(incident, first_responder)
+            
+            <a href="../classes/MessageLog.html#method-c-get_last_message_to_first_responder_for_incident" name="method-c-get_last_message_to_first_responder_for_incident" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-get_last_message_to_first_responder_for_incident_source')" id="l_method-c-get_last_message_to_first_responder_for_incident_source">show</a>
+                
+              </p>
+              <div id="method-c-get_last_message_to_first_responder_for_incident_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/message_log.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">get_last_message_to_first_responder_for_incident</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>)
+  <span class="ruby-identifier">messages</span> = <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">incident_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">resource_type</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;FirstResponder&#39;</span>, <span class="ruby-identifier">resource_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">is_incoming</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">messages</span>.<span class="ruby-identifier">last</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-get_unregistered_parties">
+            
+              <b>get_unregistered_parties</b>()
+            
+            <a href="../classes/MessageLog.html#method-c-get_unregistered_parties" name="method-c-get_unregistered_parties" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-get_unregistered_parties_source')" id="l_method-c-get_unregistered_parties_source">show</a>
+                
+              </p>
+              <div id="method-c-get_unregistered_parties_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/message_log.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">get_unregistered_parties</span>
+  <span class="ruby-identifier">messages</span> = <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">resource_type</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;UnregisteredParty&#39;</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">messages</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-log_message">
+            
+              <b>log_message</b>(incident, resource, is_incoming, message, message_type = :no_message_type)
+            
+            <a href="../classes/MessageLog.html#method-c-log_message" name="method-c-log_message" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-log_message_source')" id="l_method-c-log_message_source">show</a>
+                
+              </p>
+              <div id="method-c-log_message_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/message_log.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">resource</span>, <span class="ruby-identifier">is_incoming</span>, <span class="ruby-identifier">message</span>, <span class="ruby-identifier">message_type</span> = <span class="ruby-value">:no_message_type</span>)
+  <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">create</span>(
+    <span class="ruby-identifier">incident</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>,
+    <span class="ruby-identifier">resource_type</span><span class="ruby-operator">:</span> <span class="ruby-identifier">resource</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span>,
+    <span class="ruby-identifier">resource_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">resource</span>.<span class="ruby-identifier">id</span>,
+    <span class="ruby-identifier">resource_name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">resource</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:name</span>),
+    <span class="ruby-identifier">resource_phone_number</span><span class="ruby-operator">:</span> (<span class="ruby-identifier">resource</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">ReportingParty</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:reporting_party</span>).<span class="ruby-identifier">try</span>(<span class="ruby-value">:is_admin</span>)) <span class="ruby-operator">?</span> <span class="ruby-string">&#39;Admin&#39;</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">resource</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:phone_number</span>),
+    <span class="ruby-identifier">is_incoming</span><span class="ruby-operator">:</span> <span class="ruby-identifier">is_incoming</span>,
+    <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-identifier">message</span>,
+    <span class="ruby-identifier">message_type</span><span class="ruby-operator">:</span> <span class="ruby-identifier">message_type</span>
+  )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-format_for_admin_interface">
+            
+              <b>format_for_admin_interface</b>()
+            
+            <a href="../classes/MessageLog.html#method-i-format_for_admin_interface" name="method-i-format_for_admin_interface" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-format_for_admin_interface_source')" id="l_method-i-format_for_admin_interface_source">show</a>
+                
+              </p>
+              <div id="method-i-format_for_admin_interface_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/message_log.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">format_for_admin_interface</span>
+  <span class="ruby-identifier">data_center</span> = <span class="ruby-constant">ApplicationConfiguration</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">data_center</span>
+  <span class="ruby-identifier">utc_offset</span> = <span class="ruby-constant">Setting</span>.<span class="ruby-identifier">get_cached_setting</span>(<span class="ruby-identifier">data_center</span>, <span class="ruby-string">&#39;utc_offset&#39;</span>).<span class="ruby-identifier">value</span>
+  <span class="ruby-identifier">message_log_hash</span> = {
+    <span class="ruby-identifier">time</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">created_at</span>.<span class="ruby-identifier">getlocal</span>(<span class="ruby-identifier">utc_offset</span>).<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%H:%M:%S&quot;</span>),
+    <span class="ruby-identifier">resource_id</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">resource_id</span>,
+    <span class="ruby-identifier">resource_type</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">resource_type</span>.<span class="ruby-identifier">underscore</span>,
+    <span class="ruby-identifier">resource_name</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">resource_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;ReportingParty&#39;</span> <span class="ruby-operator">?</span> <span class="ruby-string">&#39;Reporting Party&#39;</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">resource_name</span>,
+    <span class="ruby-identifier">resource_phone_number</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">resource_phone_number</span>,
+    <span class="ruby-identifier">direction</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">is_incoming</span> <span class="ruby-operator">?</span> <span class="ruby-string">&#39;incoming&#39;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&#39;outgoing&#39;</span>,
+    <span class="ruby-identifier">message_type</span><span class="ruby-operator">:</span> <span class="ruby-identifier">message_type</span>
+  }
+  <span class="ruby-identifier">message_log_hash</span>[<span class="ruby-value">:incident_id</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">incident</span>.<span class="ruby-identifier">present?</span>
+  <span class="ruby-identifier">message_log_hash</span>[<span class="ruby-value">:hash_key</span>] = <span class="ruby-node">&quot;#{self.resource_type.underscore}_#{self.resource_id}&quot;</span>
+  <span class="ruby-identifier">message_log_hash</span>[<span class="ruby-identifier">message_log_hash</span>[<span class="ruby-value">:hash_key</span>]] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">message</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">message_log_hash</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,22 @@
+<%= form_for([@hospital, @medical_doctor]) do |f| %>
+  <% if @medical_doctor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@medical_doctor.errors.count, "error") %> prohibited this medical_doctor from being saved:</h2>
+
+      <ul>
+      <% @medical_doctor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form">
+    <%= f.label :hospital %>
+    <%= f.text_field :hospital, { class: :text_field, disabled: true } %>
+    <%= f.label :name %>
+    <%= f.text_field :name, { class: :text_field } %>
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number, { class: :text_field } %>
+    <%= f.submit %>
+  </div>
+<% end %>

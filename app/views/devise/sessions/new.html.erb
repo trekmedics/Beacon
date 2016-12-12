@@ -1,0 +1,18 @@
+<h1><%= I18n.t('views.sessions.heading') %></h1>
+
+<%= render "devise/shared/links" %>
+<div class="sessions_list">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form">
+      <%= f.label :username %>
+      <%= f.text_field :username, autofocus: true, class: :text_field %>
+      <%= f.label :password %>
+      <%= f.password_field :password, autocomplete: 'off', class: :text_field %>
+      <% if devise_mapping.rememberable? -%>
+        <%= f.check_box :remember_me, class: :check_box %>
+        <%= f.label :remember_me %>
+      <% end -%>
+      <%= f.submit I18n.t('views.sessions.log_in_action') %>
+    </div>
+  <% end %>
+</div>

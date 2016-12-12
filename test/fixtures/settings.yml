@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+beacon_number:
+  data_center: data_center_one
+  key: beacon_number
+  value: N/A
+
+admin_number:
+  data_center: data_center_one
+  key: admin_number
+  value: N/A
+
+message_language:
+  data_center: data_center_one
+  key: message_language
+  value: en
+
+admin_language:
+  data_center: data_center_one
+  key: admin_language
+  value: en
+
+timeout_first_response_allocation:
+  data_center: data_center_one
+  key: timeout_first_response_allocation
+  value: '1'
+
+number_of_frs_to_allocate:
+  data_center: data_center_one
+  key: number_of_frs_to_allocate
+  value: '3'
+
+minimum_number_of_frs:
+  data_center: data_center_one
+  key: minimum_number_of_frs
+  value: '1'
+
+number_of_transport_vehicles_to_allocate:
+  data_center: data_center_one
+  key: number_of_transport_vehicles_to_allocate
+  value: '1'

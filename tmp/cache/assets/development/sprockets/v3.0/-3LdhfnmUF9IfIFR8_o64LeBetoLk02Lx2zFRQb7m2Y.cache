@@ -1,0 +1,38 @@
+I"£(function() {
+  angular.module('App').controller('FirstResponderCtrl', [
+    '$scope', 'FirstResponder', 'Config', function($scope, FirstResponder, Config) {
+      var channel, dispatcher;
+      $scope.firstResponders = FirstResponder.query();
+      $scope.messageFirstResponder = function(firstResponder) {
+        firstResponder.sendMessage(firstResponder.message);
+        return firstResponder.message = null;
+      };
+      dispatcher = new WebSocketRails(Config.websocket_url);
+      dispatcher.on_open = function(data) {
+        return console.log('Connection has been established (FirstResponderCtrl): ', data);
+      };
+      channel = dispatcher.subscribe('first_responder');
+      return channel.bind('update', function(data) {
+        var firstResponder, i, len, ref, results;
+        console.log('Got message from server: ', data);
+        ref = $scope.firstResponders;
+        results = [];
+        for (i = 0, len = ref.length; i < len; i++) {
+          firstResponder = ref[i];
+          if (firstResponder.id === data.id) {
+            results.push($scope.$apply(function() {
+              firstResponder.state = data.state;
+              firstResponder.state_string = data.state_string;
+              return firstResponder.transportation_mode = data.transportation_mode;
+            }));
+          } else {
+            results.push(void 0);
+          }
+        }
+        return results;
+      });
+    }
+  ]);
+
+}).call(this);
+:ET

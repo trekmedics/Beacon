@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+<h1><%= I18n.t('views.user.listing') %></h1>
+
+<%= link_to I18n.t('views.user.new'), new_user_path %><br>
+<%= link_to I18n.t('activerecord.models.setting.other'), settings_path %>
+
+<div class="users_list">
+  <table>
+    <thead>
+      <tr>
+        <th><%= I18n.t('activerecord.attributes.user.username') %></th>
+        <th><%= I18n.t('activerecord.attributes.user.user_role') %></th>
+        <th><%= I18n.t('activerecord.attributes.user.data_center') %></th>
+        <th><%= I18n.t('activerecord.attributes.user.locale') %></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.username %></td>
+          <td><%= user.user_role %></td>
+          <td><%= user.data_center %></td>
+          <td><%= user.locale %></td>
+          <td>
+            <%= link_to I18n.t('views.labels.edit'), edit_user_path(user) %> |
+            <%= link_to I18n.t('views.labels.destroy'), user, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

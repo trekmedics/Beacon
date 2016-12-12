@@ -1,0 +1,1852 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>FirstResponderManager</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            FirstResponderManager 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/first_responder_manager_rb.html">app/models/first_responder_manager.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-clean_assistance_requests_send_logout_message">clean_assistance_requests_send_logout_message</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-construct_and_send_hospital_text">construct_and_send_hospital_text</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-construct_and_send_status_available">construct_and_send_status_available</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-first_first_responder_on_site">first_first_responder_on_site</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-fr_needed">fr_needed</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-fr_unneeded">fr_unneeded</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get_assistance_request_and_log_message">get_assistance_request_and_log_message</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-handle_available">handle_available</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-handle_enroute_to_site">handle_enroute_to_site</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-handle_error">handle_error</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-handle_ic_response_to_addl_request">handle_ic_response_to_addl_request</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-handle_inactive">handle_inactive</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-handle_on_site">handle_on_site</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-handle_setting_transport_mode">handle_setting_transport_mode</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-handle_transporting">handle_transporting</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-handle_unknown_response">handle_unknown_response</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-ic_or_not">ic_or_not</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-process_first_responder_message">process_first_responder_message</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-send_help_request_to_first_responders">send_help_request_to_first_responders</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-send_message_to_oncall_mds">send_message_to_oncall_mds</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-send_message_to_other_frs">send_message_to_other_frs</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-validate_message-3F">validate_message?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-validate_message_no_periods-3F">validate_message_no_periods?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-was_this_last_active_first_responder-3F">was_this_last_active_first_responder?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-was_this_last_assigned_first_responder">was_this_last_assigned_first_responder</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-was_this_last_assigned_first_responder-3F">was_this_last_assigned_first_responder?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            Singleton
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-clean_assistance_requests_send_logout_message">
+            
+              <b>clean_assistance_requests_send_logout_message</b>(first_responder)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-clean_assistance_requests_send_logout_message" name="method-i-clean_assistance_requests_send_logout_message" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clean_assistance_requests_send_logout_message_source')" id="l_method-i-clean_assistance_requests_send_logout_message_source">show</a>
+                
+              </p>
+              <div id="method-i-clean_assistance_requests_send_logout_message_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 380</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clean_assistance_requests_send_logout_message</span>(<span class="ruby-identifier">first_responder</span>)
+    <span class="ruby-identifier">message_out</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.logged_out&#39;</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>)
+    <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message_out</span>)
+<span class="ruby-comment">#   If FR is involved in incidents, remove FR from them</span>
+<span class="ruby-comment">#   if it is last FR, end incident</span>
+    <span class="ruby-identifier">assistance_requests</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">find_active_by_first_responder</span>(<span class="ruby-identifier">first_responder</span>)
+    <span class="ruby-identifier">assistance_requests</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">assistance_request</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">deactivate!</span>
+      <span class="ruby-identifier">incident</span> = <span class="ruby-constant">Incident</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">incident_id</span>)
+      <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_out</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">was_this_last_active_first_responder?</span>(<span class="ruby-identifier">incident</span>)
+        <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">end_incident!</span>(<span class="ruby-value">:fr_cancel</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-comment">#   If FR is not involved in incident, just send logout response.</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">assistance_requests</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_out</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-construct_and_send_hospital_text">
+            
+              <b>construct_and_send_hospital_text</b>(first_responder, incident)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-construct_and_send_hospital_text" name="method-i-construct_and_send_hospital_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-construct_and_send_hospital_text_source')" id="l_method-i-construct_and_send_hospital_text_source">show</a>
+                
+              </p>
+              <div id="method-i-construct_and_send_hospital_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 401</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">construct_and_send_hospital_text</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-identifier">data_center</span> = <span class="ruby-constant">DataCenter</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">incident</span>.<span class="ruby-identifier">data_center_id</span>)
+  <span class="ruby-identifier">hospitals</span> = <span class="ruby-constant">Hospital</span>.<span class="ruby-identifier">find_by_data_center</span>(<span class="ruby-identifier">incident</span>.<span class="ruby-identifier">data_center</span>)
+  <span class="ruby-identifier">hospital_text</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">hospitals</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">1</span>
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-identifier">hospitals</span>.<span class="ruby-identifier">length</span>
+      <span class="ruby-identifier">hospital_text</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">hospitals</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>].<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.&quot;</span> <span class="ruby-operator">+</span>
+        <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.msg_patient_eta&#39;</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">hospital_text</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.msg_patient_eta&#39;</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">message_out</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.msg_confirm_transport&#39;</span>, <span class="ruby-identifier">hospital_text</span><span class="ruby-operator">:</span> <span class="ruby-identifier">hospital_text</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>)
+  <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message_out</span>)
+  <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_out</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-construct_and_send_status_available">
+            
+              <b>construct_and_send_status_available</b>(first_responder, incident)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-construct_and_send_status_available" name="method-i-construct_and_send_status_available" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-construct_and_send_status_available_source')" id="l_method-i-construct_and_send_status_available_source">show</a>
+                
+              </p>
+              <div id="method-i-construct_and_send_status_available_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 419</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">construct_and_send_status_available</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-identifier">data_center</span> = <span class="ruby-constant">DataCenter</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">incident</span>.<span class="ruby-identifier">data_center_id</span>)
+  <span class="ruby-identifier">utc_offset</span> = <span class="ruby-constant">Setting</span>.<span class="ruby-identifier">get_cached_setting</span>(<span class="ruby-identifier">data_center</span>, <span class="ruby-string">&#39;utc_offset&#39;</span>).<span class="ruby-identifier">value</span>
+
+  <span class="ruby-comment"># Get times for response info</span>
+  <span class="ruby-identifier">event_record</span> = <span class="ruby-constant">FirstResponderEventLog</span>.<span class="ruby-identifier">where</span>(
+    <span class="ruby-identifier">first_responder_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">id</span>,
+    <span class="ruby-identifier">incident_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>,
+    <span class="ruby-identifier">to_state</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;enroute_to_site&#39;</span>
+  ).<span class="ruby-identifier">order</span>(<span class="ruby-value">:event_time_stamp</span>).<span class="ruby-identifier">last</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">event_record</span>.<span class="ruby-identifier">present?</span>
+    <span class="ruby-identifier">tsr</span> = <span class="ruby-identifier">event_record</span>.<span class="ruby-identifier">event_time_stamp</span>.<span class="ruby-identifier">getlocal</span>(<span class="ruby-identifier">utc_offset</span>).<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%H:%M:%S&quot;</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tsr</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">event_record</span> = <span class="ruby-constant">FirstResponderEventLog</span>.<span class="ruby-identifier">where</span>(
+    <span class="ruby-identifier">first_responder_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">id</span>,
+    <span class="ruby-identifier">incident_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>,
+    <span class="ruby-identifier">to_state</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;on_site&#39;</span>
+  ).<span class="ruby-identifier">order</span>(<span class="ruby-value">:event_time_stamp</span>).<span class="ruby-identifier">last</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">event_record</span>.<span class="ruby-identifier">present?</span>
+    <span class="ruby-identifier">tos</span> = <span class="ruby-identifier">event_record</span>.<span class="ruby-identifier">event_time_stamp</span>.<span class="ruby-identifier">getlocal</span>(<span class="ruby-identifier">utc_offset</span>).<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%H:%M:%S&quot;</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tos</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">event_record</span> = <span class="ruby-constant">FirstResponderEventLog</span>.<span class="ruby-identifier">where</span>(
+    <span class="ruby-identifier">first_responder_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">id</span>,
+    <span class="ruby-identifier">incident_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>,
+    <span class="ruby-identifier">to_state</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;transporting&#39;</span>
+  ).<span class="ruby-identifier">order</span>(<span class="ruby-value">:event_time_stamp</span>).<span class="ruby-identifier">last</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">event_record</span>.<span class="ruby-identifier">present?</span>
+    <span class="ruby-identifier">tst</span> = <span class="ruby-identifier">event_record</span>.<span class="ruby-identifier">event_time_stamp</span>.<span class="ruby-identifier">getlocal</span>(<span class="ruby-identifier">utc_offset</span>).<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%H:%M:%S&quot;</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tst</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">event_record</span> = <span class="ruby-constant">FirstResponderEventLog</span>.<span class="ruby-identifier">where</span>(
+    <span class="ruby-identifier">first_responder_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">id</span>,
+    <span class="ruby-identifier">incident_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>,
+    <span class="ruby-identifier">to_state</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;available&#39;</span>
+  ).<span class="ruby-identifier">order</span>(<span class="ruby-value">:event_time_stamp</span>).<span class="ruby-identifier">last</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">event_record</span>.<span class="ruby-identifier">present?</span>
+    <span class="ruby-identifier">tah</span> = <span class="ruby-identifier">event_record</span>.<span class="ruby-identifier">event_time_stamp</span>.<span class="ruby-identifier">getlocal</span>(<span class="ruby-identifier">utc_offset</span>).<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%H:%M:%S&quot;</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tah</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">message_out</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.msg_status_available&#39;</span>,
+    <span class="ruby-comment"># Full time string: &quot;%Y-%m-%d %H:%M:%S&quot;</span>
+    <span class="ruby-identifier">time_start_response</span><span class="ruby-operator">:</span> <span class="ruby-identifier">tsr</span>,
+    <span class="ruby-identifier">time_on_scene</span><span class="ruby-operator">:</span> <span class="ruby-identifier">tos</span>,
+    <span class="ruby-identifier">time_start_transport</span><span class="ruby-operator">:</span> <span class="ruby-identifier">tst</span>,
+    <span class="ruby-identifier">time_at_hospital</span><span class="ruby-operator">:</span> <span class="ruby-identifier">tah</span>,
+    <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>)
+  <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message_out</span>)
+  <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_out</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-first_first_responder_on_site">
+            
+              <b>first_first_responder_on_site</b>(incident, first_responder)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-first_first_responder_on_site" name="method-i-first_first_responder_on_site" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-first_first_responder_on_site_source')" id="l_method-i-first_first_responder_on_site_source">show</a>
+                
+              </p>
+              <div id="method-i-first_first_responder_on_site_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 480</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">first_first_responder_on_site</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>)
+  <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">incident_commander_id</span> = <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">id</span>
+  <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-identifier">number_of_vehicles</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">number_of_frs</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">assistance_requests</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">incident_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">state</span><span class="ruby-operator">:</span> <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">states</span>[<span class="ruby-value">:assigned</span>]).<span class="ruby-identifier">order</span>(<span class="ruby-value">:eta</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">assistance_requests</span>.<span class="ruby-identifier">count</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">0</span>
+    <span class="ruby-comment"># Cannot happen</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">minutes_to_next_arrival</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">minimum_seconds</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">2100</span>).<span class="ruby-identifier">utc</span>.<span class="ruby-identifier">to_i</span>
+    <span class="ruby-identifier">assistance_requests</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">assistance_request</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">other_first_responder</span> = <span class="ruby-constant">FirstResponder</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">first_responder_id</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">other_first_responder</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">id</span>
+        <span class="ruby-identifier">number_of_vehicles</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">other_first_responder</span>.<span class="ruby-identifier">transportation_mode</span>.<span class="ruby-identifier">to_sym</span> <span class="ruby-operator">==</span> <span class="ruby-value">:transport_vehicle</span>
+        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">eta</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">minimum_seconds</span>) <span class="ruby-operator">==</span> <span class="ruby-number">-1</span>
+          <span class="ruby-identifier">minimum_seconds</span> = <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">eta</span>.<span class="ruby-identifier">to_i</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">number_of_frs</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">minimum_seconds</span> = (<span class="ruby-identifier">minimum_seconds</span> <span class="ruby-operator">-</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">utc</span>.<span class="ruby-identifier">to_i</span>)
+    <span class="ruby-identifier">minutes_to_next_arrival</span> = <span class="ruby-identifier">minimum_seconds</span><span class="ruby-operator">/</span><span class="ruby-number">60</span>.<span class="ruby-identifier">round</span>.<span class="ruby-identifier">to_i</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">ic_on_scene_event!</span>
+  <span class="ruby-keyword">return</span> [<span class="ruby-identifier">number_of_frs</span>, <span class="ruby-identifier">number_of_vehicles</span>, <span class="ruby-identifier">minutes_to_next_arrival</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-fr_needed">
+            
+              <b>fr_needed</b>(incident, assistance_request)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-fr_needed" name="method-i-fr_needed" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-fr_needed_source')" id="l_method-i-fr_needed_source">show</a>
+                
+              </p>
+              <div id="method-i-fr_needed_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 511</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">fr_needed</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">assistance_request</span>)
+  <span class="ruby-identifier">first_responder</span> = <span class="ruby-constant">FirstResponder</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">first_responder_id</span>)
+  <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">state</span> = <span class="ruby-value">:assigned</span> <span class="ruby-comment">#2</span>
+  <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">save!</span>
+  <span class="ruby-identifier">message_out</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.msg_confirm_arrival&#39;</span>, <span class="ruby-identifier">location</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">location</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>)
+  <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message_out</span>)
+  <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_out</span>)
+  <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">assigned_to_incident!</span>(<span class="ruby-identifier">incident</span>)
+  <span class="ruby-comment"># Clear all other AssistanceRequest records for this FR</span>
+  <span class="ruby-identifier">assistance_requests</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-identifier">incident_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">assistance_requests</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ar</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">ar</span>.<span class="ruby-identifier">state</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">states</span>[<span class="ruby-value">:inactive</span>]
+    <span class="ruby-identifier">ar</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-fr_unneeded">
+            
+              <b>fr_unneeded</b>(incident, assistance_request)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-fr_unneeded" name="method-i-fr_unneeded" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-fr_unneeded_source')" id="l_method-i-fr_unneeded_source">show</a>
+                
+              </p>
+              <div id="method-i-fr_unneeded_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 528</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">fr_unneeded</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">assistance_request</span>)
+  <span class="ruby-identifier">first_responder</span> = <span class="ruby-constant">FirstResponder</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">first_responder_id</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">present?</span>
+    <span class="ruby-identifier">message_out</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.msg_standby_available&#39;</span>, <span class="ruby-identifier">incident_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>)
+    <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message_out</span>)
+    <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_out</span>, <span class="ruby-value">:fr_not_needed</span>)
+    <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">state</span> = <span class="ruby-value">:inactive</span> <span class="ruby-comment">#3</span>
+    <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_assistance_request_and_log_message">
+            
+              <b>get_assistance_request_and_log_message</b>(first_responder, message)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-get_assistance_request_and_log_message" name="method-i-get_assistance_request_and_log_message" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_assistance_request_and_log_message_source')" id="l_method-i-get_assistance_request_and_log_message_source">show</a>
+                
+              </p>
+              <div id="method-i-get_assistance_request_and_log_message_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 540</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_assistance_request_and_log_message</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+  <span class="ruby-identifier">assistance_request</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">find_assigned_by_first_responder</span>(<span class="ruby-identifier">first_responder</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">incident</span> = <span class="ruby-constant">Incident</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">incident_id</span>)
+    <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">true</span>, <span class="ruby-identifier">message</span>)
+    <span class="ruby-keyword">return</span> [<span class="ruby-identifier">assistance_request</span>, <span class="ruby-identifier">incident</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">true</span>, <span class="ruby-identifier">message</span>)
+    <span class="ruby-keyword">return</span> [<span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-handle_available">
+            
+              <b>handle_available</b>(first_responder, message)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-handle_available" name="method-i-handle_available" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-handle_available_source')" id="l_method-i-handle_available_source">show</a>
+                
+              </p>
+              <div id="method-i-handle_available_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 83</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">handle_available</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+
+<span class="ruby-comment">#       Responding?:</span>
+<span class="ruby-comment">#       Yes: %{incident_id}.MINS</span>
+    <span class="ruby-identifier">message_elements</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;.&#39;</span>)
+
+    <span class="ruby-comment"># Check that incident exists:</span>
+    <span class="ruby-identifier">incident_id</span> = <span class="ruby-identifier">message_elements</span>[<span class="ruby-number">0</span>]
+    <span class="ruby-identifier">incident</span> = <span class="ruby-constant">Incident</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident_id</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">true</span>, <span class="ruby-identifier">message</span>, <span class="ruby-value">:request_for_assistance_reply</span>)
+      <span class="ruby-identifier">handle_unknown_response</span>(<span class="ruby-keyword">__LINE__</span>, <span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># Check that message has two parts and is all numbers</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">validate_message?</span>(<span class="ruby-identifier">message</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">message_elements</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">!=</span> <span class="ruby-number">2</span>
+      <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">true</span>, <span class="ruby-identifier">message</span>)
+      <span class="ruby-identifier">handle_unknown_response</span>(<span class="ruby-keyword">__LINE__</span>, <span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+
+
+    <span class="ruby-comment"># Check that current FirstResponderIncident record exists:</span>
+    <span class="ruby-identifier">assistance_request</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">find_by_first_responder_and_incident</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">true</span>, <span class="ruby-identifier">message</span>)
+      <span class="ruby-identifier">handle_unknown_response</span>(<span class="ruby-keyword">__LINE__</span>, <span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># Incident exists and there is a request for assistance: log message</span>
+    <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">true</span>, <span class="ruby-identifier">message</span>, <span class="ruby-value">:request_for_assistance_reply</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">is_accepting_first_responders</span>         <span class="ruby-comment"># Response window is open</span>
+      <span class="ruby-identifier">eta</span> = <span class="ruby-identifier">message_elements</span>[<span class="ruby-number">1</span>]
+      <span class="ruby-identifier">arrival_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">utc</span> <span class="ruby-operator">+</span> <span class="ruby-number">60</span><span class="ruby-operator">*</span><span class="ruby-identifier">eta</span>.<span class="ruby-identifier">to_i</span>
+      <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">set_eta</span>(<span class="ruby-identifier">arrival_time</span>)
+      <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">state</span> = <span class="ruby-value">:responded</span>
+      <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">save</span>
+      <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">request_for_assistance_reply</span>(<span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">eta</span>)
+    <span class="ruby-keyword">else</span>                                              <span class="ruby-comment"># Response window has closed</span>
+      <span class="ruby-identifier">fr_unneeded</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">assistance_request</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># No state change, no responses</span>
+  <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-handle_enroute_to_site">
+            
+              <b>handle_enroute_to_site</b>(first_responder, message)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-handle_enroute_to_site" name="method-i-handle_enroute_to_site" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-handle_enroute_to_site_source')" id="l_method-i-handle_enroute_to_site_source">show</a>
+                
+              </p>
+              <div id="method-i-handle_enroute_to_site_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 130</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">handle_enroute_to_site</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+    (<span class="ruby-identifier">assistance_request</span>, <span class="ruby-identifier">incident</span>) = <span class="ruby-identifier">get_assistance_request_and_log_message</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">nil?</span>
+
+<span class="ruby-comment">#       Confirm arrival on-scene:</span>
+<span class="ruby-comment">#       Yes: 1</span>
+<span class="ruby-comment">#       Unable To Locate: 2</span>
+<span class="ruby-comment">#       Cancel Response: 0</span>
+
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">message</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;0&#39;</span>  <span class="ruby-comment"># Cancel FR involvement in incident</span>
+      <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">deactivate!</span>
+      <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">make_available!</span>(<span class="ruby-identifier">incident</span>)
+      <span class="ruby-identifier">construct_and_send_status_available</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+<span class="ruby-comment">#       incident.end_incident!(:fr_cancel) if was_this_last_assigned_first_responder?(incident)</span>
+      <span class="ruby-identifier">was_this_last_assigned_first_responder</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-value">:fr_cancel</span>)
+      <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">cancel_message</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;1&#39;</span>  <span class="ruby-comment"># On site - check if first on site or not</span>
+      <span class="ruby-identifier">ic_or_not</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;2&#39;</span>  <span class="ruby-comment"># Cannot locate</span>
+      <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">reporting_party</span>.<span class="ruby-identifier">location_update_requested_event!</span>
+       <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">cannot_locate!</span>(<span class="ruby-identifier">incident</span>)
+
+      <span class="ruby-comment"># Request location update from RP</span>
+      <span class="ruby-identifier">message_out</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;reporting_party.location_update_requested&#39;</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">reporting_party</span>.<span class="ruby-identifier">locale</span>)
+      <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">incident</span>.<span class="ruby-identifier">reporting_party</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message_out</span>)
+      <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">reporting_party</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_out</span>)
+
+      <span class="ruby-comment"># Copy admin on location update request</span>
+      <span class="ruby-identifier">administrators</span> = <span class="ruby-constant">Administrator</span>.<span class="ruby-identifier">find_by_data_center</span>(<span class="ruby-identifier">incident</span>.<span class="ruby-identifier">data_center</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">administrators</span>.<span class="ruby-identifier">present?</span>
+        <span class="ruby-identifier">message_admin</span> = <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">data_center</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;admin.location_update_requested&#39;</span>,
+          <span class="ruby-identifier">incident_number</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>,
+          <span class="ruby-identifier">first_responder_name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">name</span>,
+          <span class="ruby-identifier">first_responder_phone_number</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>,
+          <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-constant">ApplicationConfiguration</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">admin_language</span>
+        )
+        <span class="ruby-identifier">administrators</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">administrator</span><span class="ruby-operator">|</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">administrator</span>.<span class="ruby-identifier">phone_number</span>.<span class="ruby-identifier">present?</span>
+            <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">administrator</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message_admin</span>)
+          <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">administrator</span>.<span class="ruby-identifier">email</span>.<span class="ruby-identifier">present?</span>
+<span class="ruby-comment">#             EmailService.send(administrator, &#39;Request for Location Update - Admin copy&#39;, message_admin)</span>
+          <span class="ruby-keyword">end</span>
+          <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">administrator</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_admin</span>)
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-comment"># Tell FR to standby and repeat confirm arrival message</span>
+      <span class="ruby-identifier">message_out</span> =
+        <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.msg_standby&#39;</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>) <span class="ruby-operator">+</span>
+        <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.msg_confirm_arrival&#39;</span>, <span class="ruby-identifier">location</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">location</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>)
+      <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message_out</span>)
+      <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_out</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">handle_unknown_response</span>(<span class="ruby-keyword">__LINE__</span>, <span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-handle_error">
+            
+              <b>handle_error</b>(first_responder, incident, message, error_message)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-handle_error" name="method-i-handle_error" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-handle_error_source')" id="l_method-i-handle_error_source">show</a>
+                
+              </p>
+              <div id="method-i-handle_error_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 751</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">handle_error</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>, <span class="ruby-identifier">message</span>, <span class="ruby-identifier">error_message</span>)
+  <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;#{Time.now.utc.strftime(&#39;%Y-%m-%d %H:%M:%S.%L&#39;)}:#{File.basename(__FILE__)}:#{__LINE__}\n\t&quot;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-node">&quot;FR id: #{first_responder.id}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;#{Time.now.utc.strftime(&#39;%Y-%m-%d %H:%M:%S.%L&#39;)}:#{File.basename(__FILE__)}:#{__LINE__}\n\t&quot;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-node">&quot;incident id: #{incident.id}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">incident</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;#{Time.now.utc.strftime(&#39;%Y-%m-%d %H:%M:%S.%L&#39;)}:#{File.basename(__FILE__)}:#{__LINE__}\n\t&quot;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-node">&quot;message: #{message}&quot;</span>  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">message</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;#{Time.now.utc.strftime(&#39;%Y-%m-%d %H:%M:%S.%L&#39;)}:#{File.basename(__FILE__)}:#{__LINE__}\n\t&quot;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-node">&quot;error_message: #{error_message}&quot;</span>  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">error_message</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-constant">ApplicationConfiguration</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">admin_number</span>, <span class="ruby-identifier">error_message</span>)
+  <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">error_message</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-handle_ic_response_to_addl_request">
+            
+              <b>handle_ic_response_to_addl_request</b>(first_responder, message)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-handle_ic_response_to_addl_request" name="method-i-handle_ic_response_to_addl_request" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-handle_ic_response_to_addl_request_source')" id="l_method-i-handle_ic_response_to_addl_request_source">show</a>
+                
+              </p>
+              <div id="method-i-handle_ic_response_to_addl_request_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 190</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">handle_ic_response_to_addl_request</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+    (<span class="ruby-identifier">assistance_request</span>, <span class="ruby-identifier">incident</span>) = <span class="ruby-identifier">get_assistance_request_and_log_message</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">nil?</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">validate_message?</span>(<span class="ruby-identifier">message</span>) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">validate_message_no_periods?</span>(<span class="ruby-identifier">message</span>)
+      <span class="ruby-identifier">handle_unknown_response</span>(<span class="ruby-keyword">__LINE__</span>, <span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+
+<span class="ruby-comment">#       Yes: #VEHICLES</span>
+<span class="ruby-comment">#       No: 0</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">message</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">construct_and_send_hospital_text</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+      <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">ic_on_site!</span>(<span class="ruby-identifier">incident</span>)
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">message</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">number_of_transport_vehicles_to_allocate</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">to_i</span>
+      <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">save</span>
+      <span class="ruby-identifier">send_help_request_to_first_responders</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-string">&#39;msg_request_additional_resources&#39;</span>)
+      <span class="ruby-identifier">construct_and_send_hospital_text</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+      <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">ic_on_site!</span>(<span class="ruby-identifier">incident</span>)
+      <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">requested_resources</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>, <span class="ruby-identifier">message</span>.<span class="ruby-identifier">to_i</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">handle_unknown_response</span>(<span class="ruby-keyword">__LINE__</span>, <span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-handle_inactive">
+            
+              <b>handle_inactive</b>(first_responder, message)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-handle_inactive" name="method-i-handle_inactive" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-handle_inactive_source')" id="l_method-i-handle_inactive_source">show</a>
+                
+              </p>
+              <div id="method-i-handle_inactive_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">handle_inactive</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+  <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">true</span>, <span class="ruby-identifier">message</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">message</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;123&#39;</span>
+    <span class="ruby-identifier">message_out</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.response_vehicle&#39;</span>,
+      <span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">name</span>,
+      <span class="ruby-identifier">phone_number</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>,
+      <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>
+    )
+    <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message_out</span>)
+    <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_out</span>)
+    <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">log_in!</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">message_out</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.msg_invalid_login_message&#39;</span>, <span class="ruby-identifier">last_message</span><span class="ruby-operator">:</span> <span class="ruby-identifier">message</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>)
+    <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message_out</span>)
+    <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_out</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-handle_on_site">
+            
+              <b>handle_on_site</b>(first_responder, message)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-handle_on_site" name="method-i-handle_on_site" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-handle_on_site_source')" id="l_method-i-handle_on_site_source">show</a>
+                
+              </p>
+              <div id="method-i-handle_on_site_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 217</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">handle_on_site</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+    (<span class="ruby-identifier">assistance_request</span>, <span class="ruby-identifier">incident</span>) = <span class="ruby-identifier">get_assistance_request_and_log_message</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">nil?</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">validate_message?</span>(<span class="ruby-identifier">message</span>)
+      <span class="ruby-identifier">handle_unknown_response</span>(<span class="ruby-keyword">__LINE__</span>, <span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+
+<span class="ruby-comment">#       Confirm Transport and ETA:</span>
+<span class="ruby-comment">#       1:.#PATIENTS.#ETA</span>
+<span class="ruby-comment">#       2:.#PATIENTS.#ETA</span>
+<span class="ruby-comment">#       No Transport: 0</span>
+    <span class="ruby-identifier">message_elements</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;.&#39;</span>)
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">message_elements</span>.<span class="ruby-identifier">length</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">1</span> <span class="ruby-comment"># No transport</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">message_elements</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+        <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">deactivate!</span>
+        <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">arrived_at_hospital!</span>
+        <span class="ruby-identifier">construct_and_send_status_available</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+<span class="ruby-comment">#         incident.end_incident!(:fr_cancel) if was_this_last_assigned_first_responder?(incident) &amp;&amp; !incident.is_accepting_first_responders</span>
+        <span class="ruby-identifier">was_this_last_assigned_first_responder</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-value">:fr_cancel</span>)
+        <span class="ruby-identifier">number_of_patients</span> = <span class="ruby-identifier">message_elements</span>[<span class="ruby-number">1</span>].<span class="ruby-identifier">to_i</span>
+        <span class="ruby-identifier">hospital_eta</span> = <span class="ruby-identifier">message_elements</span>[<span class="ruby-number">2</span>].<span class="ruby-identifier">to_i</span>
+        <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">no_transport</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">handle_unknown_response</span>(<span class="ruby-keyword">__LINE__</span>, <span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+      <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">when</span> <span class="ruby-number">2</span> <span class="ruby-comment"># Transport patients.eta, but no hospital</span>
+      <span class="ruby-identifier">hospitals</span> = <span class="ruby-constant">Hospital</span>.<span class="ruby-identifier">find_by_data_center</span>(<span class="ruby-identifier">incident</span>.<span class="ruby-identifier">data_center</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">hospitals</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+        <span class="ruby-identifier">message_out</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.msg_confirm_hospital_arrival&#39;</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>)
+        <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message_out</span>)
+        <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_out</span>)
+        <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">is_transporting!</span>(<span class="ruby-identifier">incident</span>)
+        <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">confirmed_transport</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">number_of_patients</span>, <span class="ruby-identifier">hospital_eta</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">handle_unknown_response</span>(<span class="ruby-keyword">__LINE__</span>, <span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+      <span class="ruby-keyword">end</span>
+
+
+    <span class="ruby-keyword">when</span> <span class="ruby-number">3</span> <span class="ruby-comment"># Transport hospital.patients.eta</span>
+      <span class="ruby-identifier">hospitals</span> = <span class="ruby-constant">Hospital</span>.<span class="ruby-identifier">find_by_data_center</span>(<span class="ruby-identifier">incident</span>.<span class="ruby-identifier">data_center</span>)
+      <span class="ruby-identifier">hospital_number</span> = <span class="ruby-identifier">message_elements</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">to_i</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">hospital_number</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">hospitals</span>.<span class="ruby-identifier">count</span>
+        <span class="ruby-identifier">message_out</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.msg_confirm_hospital_arrival&#39;</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>)
+        <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message_out</span>)
+        <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_out</span>)
+        <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">is_transporting!</span>(<span class="ruby-identifier">incident</span>)
+
+        <span class="ruby-identifier">number_of_patients</span> = <span class="ruby-identifier">message_elements</span>[<span class="ruby-number">1</span>].<span class="ruby-identifier">to_i</span>
+        <span class="ruby-identifier">hospital_eta</span> = <span class="ruby-identifier">message_elements</span>[<span class="ruby-number">2</span>].<span class="ruby-identifier">to_i</span>
+        <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">hospital</span> = <span class="ruby-identifier">hospitals</span>[<span class="ruby-identifier">hospital_number</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>]
+        <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">save</span>
+        <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">confirmed_transport</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>, <span class="ruby-identifier">hospitals</span>[<span class="ruby-identifier">hospital_number</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>], <span class="ruby-identifier">number_of_patients</span>, <span class="ruby-identifier">hospital_eta</span>)
+
+        <span class="ruby-identifier">message_out</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(
+          <span class="ruby-string">&#39;oncall_md.msg_incoming_notice&#39;</span>,
+          <span class="ruby-identifier">number_patients</span><span class="ruby-operator">:</span> <span class="ruby-identifier">number_of_patients</span>,
+          <span class="ruby-identifier">first_responder_name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">name</span>,
+          <span class="ruby-identifier">first_responder_number</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>,
+          <span class="ruby-identifier">minutes_to_arrival</span><span class="ruby-operator">:</span> <span class="ruby-identifier">hospital_eta</span>,
+          <span class="ruby-identifier">incident_type</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">subcategory_string</span>,
+          <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-constant">ApplicationConfiguration</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">admin_language</span>
+        )
+        <span class="ruby-identifier">send_message_to_oncall_mds</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">message_out</span>, <span class="ruby-identifier">hospitals</span>[<span class="ruby-identifier">hospital_number</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>])
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">handle_unknown_response</span>(<span class="ruby-keyword">__LINE__</span>, <span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+      <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-handle_setting_transport_mode">
+            
+              <b>handle_setting_transport_mode</b>(first_responder, message)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-handle_setting_transport_mode" name="method-i-handle_setting_transport_mode" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-handle_setting_transport_mode_source')" id="l_method-i-handle_setting_transport_mode_source">show</a>
+                
+              </p>
+              <div id="method-i-handle_setting_transport_mode_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">handle_setting_transport_mode</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+  <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">true</span>, <span class="ruby-identifier">message</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">validate_message?</span>(<span class="ruby-identifier">message</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">3</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">message</span>.<span class="ruby-identifier">to_i</span>)
+    <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">set_transportation_mode</span>(<span class="ruby-identifier">message</span>.<span class="ruby-identifier">to_i</span>)
+
+    <span class="ruby-identifier">transportation_mode</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-node">&quot;first_responder.transportation_mode.modes.#{first_responder.transportation_mode}&quot;</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>)
+    <span class="ruby-identifier">message_out</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.transportation_mode.configured_message&#39;</span>, <span class="ruby-identifier">transportation_mode</span><span class="ruby-operator">:</span> <span class="ruby-identifier">transportation_mode</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>)
+    <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message_out</span>)
+    <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_out</span>)
+    <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">set_transport_mode!</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">handle_unknown_response</span>(<span class="ruby-keyword">__LINE__</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-handle_transporting">
+            
+              <b>handle_transporting</b>(first_responder, message)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-handle_transporting" name="method-i-handle_transporting" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-handle_transporting_source')" id="l_method-i-handle_transporting_source">show</a>
+                
+              </p>
+              <div id="method-i-handle_transporting_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 292</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">handle_transporting</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+    (<span class="ruby-identifier">assistance_request</span>, <span class="ruby-identifier">incident</span>) = <span class="ruby-identifier">get_assistance_request_and_log_message</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">nil?</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">validate_message?</span>(<span class="ruby-identifier">message</span>)
+      <span class="ruby-identifier">handle_unknown_response</span>(<span class="ruby-keyword">__LINE__</span>, <span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">message_elements</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;.&#39;</span>)
+<span class="ruby-comment">#       Confirm arrival at hospital:</span>
+<span class="ruby-comment">#       Yes: 1</span>
+<span class="ruby-comment">#       Need Assistance: 2</span>
+<span class="ruby-comment">#       Delay: 3.MINS</span>
+<span class="ruby-comment">#       Cancel: 0</span>
+
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">message_elements</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">to_i</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">message_out</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;oncall_md.msg_response_cancel&#39;</span>,
+        <span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">name</span>,
+        <span class="ruby-identifier">phone_number</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>,
+        <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>
+      )
+      <span class="ruby-identifier">send_message_to_oncall_mds</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">message_out</span>, <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">hospital</span>)
+      <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">deactivate!</span>
+      <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">make_available!</span>(<span class="ruby-identifier">incident</span>)
+      <span class="ruby-identifier">construct_and_send_status_available</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+<span class="ruby-comment">#       incident.end_incident!(:fr_cancel) if was_this_last_assigned_first_responder?(incident) &amp;&amp; !incident.is_accepting_first_responders</span>
+      <span class="ruby-identifier">was_this_last_assigned_first_responder</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-value">:fr_cancel</span>)
+      <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">cancel_message</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>
+      <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">deactivate!</span>
+      <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">arrived_at_hospital!</span>(<span class="ruby-identifier">incident</span>)
+      <span class="ruby-identifier">construct_and_send_status_available</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+<span class="ruby-comment">#       incident.end_incident!(:normal) if was_this_last_assigned_first_responder?(incident) &amp;&amp; !incident.is_accepting_first_responders</span>
+      <span class="ruby-identifier">was_this_last_assigned_first_responder</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-value">:normal</span>)
+      <span class="ruby-constant">FirstResponderPerformanceDatum</span>.<span class="ruby-identifier">confirmed_arrival_at_hospital</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>
+      <span class="ruby-identifier">message_out</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;oncall_md.msg_assistance_request&#39;</span>,
+        <span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">name</span>,
+        <span class="ruby-identifier">phone_number</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>,
+        <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>
+      )
+      <span class="ruby-identifier">send_message_to_oncall_mds</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">message_out</span>, <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">hospital</span>)
+      <span class="ruby-identifier">send_message_to_other_frs</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">message_out</span>, <span class="ruby-identifier">first_responder</span>)
+      <span class="ruby-identifier">message_out</span> =
+        <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.msg_assistance_notified&#39;</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>) <span class="ruby-operator">+</span>
+        <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.msg_confirm_hospital_arrival&#39;</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>)
+      <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message_out</span>)
+      <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_out</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-number">3</span>
+      <span class="ruby-identifier">message_out</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;oncall_md.msg_delay_notice&#39;</span>,
+        <span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">name</span>,
+        <span class="ruby-identifier">phone_number</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>,
+        <span class="ruby-identifier">delay</span><span class="ruby-operator">:</span> <span class="ruby-identifier">message_elements</span>[<span class="ruby-number">1</span>],
+        <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>
+      )
+      <span class="ruby-identifier">send_message_to_oncall_mds</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">message_out</span>, <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">hospital</span>)
+      <span class="ruby-identifier">message_out</span> =
+        <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.msg_delay_notification_sent&#39;</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>) <span class="ruby-operator">+</span>
+        <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.msg_confirm_hospital_arrival&#39;</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>)
+      <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message_out</span>)
+      <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_out</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">handle_unknown_response</span>(<span class="ruby-keyword">__LINE__</span>, <span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-handle_unknown_response">
+            
+              <b>handle_unknown_response</b>(line_num, incident, first_responder, message)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-handle_unknown_response" name="method-i-handle_unknown_response" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-handle_unknown_response_source')" id="l_method-i-handle_unknown_response_source">show</a>
+                
+              </p>
+              <div id="method-i-handle_unknown_response_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 733</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">handle_unknown_response</span>(<span class="ruby-identifier">line_num</span>, <span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+  <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;#{Time.now.utc.strftime(&#39;%Y-%m-%d %H:%M:%S.%L&#39;)}:#{File.basename(__FILE__)}:#{__LINE__}\n\t&quot;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-node">&quot;Unknown response from line no.: #{line_num}&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">present?</span>
+    <span class="ruby-identifier">last_message</span> = <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">get_last_message_to_first_responder_for_incident</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">last_message</span> = <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">get_last_message_to_first_responder</span>(<span class="ruby-identifier">first_responder</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">last_message</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">message_out</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.msg_unexpected_message&#39;</span>, <span class="ruby-identifier">last_message</span><span class="ruby-operator">:</span> <span class="ruby-identifier">message</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">message_out</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.msg_unknown_response&#39;</span>, <span class="ruby-identifier">last_message</span><span class="ruby-operator">:</span> <span class="ruby-identifier">last_message</span>.<span class="ruby-identifier">message</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message_out</span>)
+  <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_out</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-ic_or_not">
+            
+              <b>ic_or_not</b>(first_responder, message)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-ic_or_not" name="method-i-ic_or_not" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-ic_or_not_source')" id="l_method-i-ic_or_not_source">show</a>
+                
+              </p>
+              <div id="method-i-ic_or_not_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 553</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">ic_or_not</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+  <span class="ruby-identifier">assistance_request</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">find_assigned_by_first_responder</span>(<span class="ruby-identifier">first_responder</span>)
+  <span class="ruby-identifier">incident</span> = <span class="ruby-constant">Incident</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">incident_id</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">state</span>.<span class="ruby-identifier">to_sym</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:frs_assigned</span>, <span class="ruby-value">:additional_resources_assigned</span>  <span class="ruby-comment"># Message goes to IC</span>
+    (<span class="ruby-identifier">number_of_frs</span>, <span class="ruby-identifier">number_of_vehicles</span>, <span class="ruby-identifier">minutes_to_next_arrival</span>) = <span class="ruby-identifier">first_first_responder_on_site</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>)
+    <span class="ruby-identifier">message_out</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.msg_additional_resources_request&#39;</span>,
+      <span class="ruby-identifier">number_of_frs</span><span class="ruby-operator">:</span> <span class="ruby-identifier">number_of_frs</span>,
+      <span class="ruby-identifier">number_of_vehicles</span><span class="ruby-operator">:</span> <span class="ruby-identifier">number_of_vehicles</span>,
+      <span class="ruby-identifier">minimum_eta</span><span class="ruby-operator">:</span> <span class="ruby-identifier">minutes_to_next_arrival</span>,
+      <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>)
+    <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message_out</span>)
+    <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_out</span>)
+    <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">first_on_site!</span>(<span class="ruby-identifier">incident</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:ic_on_scene</span> <span class="ruby-comment"># Message goes to other FRs</span>
+    <span class="ruby-identifier">construct_and_send_hospital_text</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+    <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">arrived_on_site!</span>(<span class="ruby-identifier">incident</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:waiting_for_additional_resources</span> <span class="ruby-comment"># Message goes to new IC</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_first_responder_message">
+            
+              <b>process_first_responder_message</b>(first_responder, message)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-process_first_responder_message" name="method-i-process_first_responder_message" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_first_responder_message_source')" id="l_method-i-process_first_responder_message_source">show</a>
+                
+              </p>
+              <div id="method-i-process_first_responder_message_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_first_responder_message</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+
+  <span class="ruby-comment"># Remove leading and trailing white space</span>
+  <span class="ruby-identifier">message</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">strip</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">message</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;456&#39;</span>
+    <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">true</span>, <span class="ruby-identifier">message</span>)
+    <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">log_out!</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">state</span>.<span class="ruby-identifier">to_sym</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:inactive</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">handle_inactive</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:setting_transport_mode</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">handle_setting_transport_mode</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:available</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">handle_available</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:enroute_to_site</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">handle_enroute_to_site</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:is_incident_commander_on_site</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">handle_ic_response_to_addl_request</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:on_site</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">handle_on_site</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:transporting</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">handle_transporting</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">message</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">handle_error</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">message</span>, <span class="ruby-node">&quot;[#{__LINE__}] State not handled.&quot;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-send_help_request_to_first_responders">
+            
+              <b>send_help_request_to_first_responders</b>(incident, initial_or_additional)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-send_help_request_to_first_responders" name="method-i-send_help_request_to_first_responders" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-send_help_request_to_first_responders_source')" id="l_method-i-send_help_request_to_first_responders_source">show</a>
+                
+              </p>
+              <div id="method-i-send_help_request_to_first_responders_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 575</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">send_help_request_to_first_responders</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">initial_or_additional</span>)
+    <span class="ruby-identifier">data_center</span> = <span class="ruby-constant">DataCenter</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">incident</span>.<span class="ruby-identifier">data_center_id</span>)
+    <span class="ruby-identifier">first_responders</span> = <span class="ruby-constant">FirstResponder</span>.<span class="ruby-identifier">find_available_by_data_center</span>(<span class="ruby-identifier">data_center</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_responders</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+
+      <span class="ruby-comment"># Copy admin on initial requests for assistance</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">initial_or_additional</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;msg_request_for_assistance&#39;</span>
+        <span class="ruby-identifier">message</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(
+          <span class="ruby-string">&#39;first_responder.&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">initial_or_additional</span>,
+          <span class="ruby-identifier">incident_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>,
+          <span class="ruby-identifier">incident_type</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">subcategory_string</span>,
+          <span class="ruby-identifier">incident_location</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">location</span>,
+          <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-constant">ApplicationConfiguration</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">admin_language</span>
+        )
+        <span class="ruby-identifier">administrators</span> = <span class="ruby-constant">Administrator</span>.<span class="ruby-identifier">find_by_data_center</span>(<span class="ruby-identifier">incident</span>.<span class="ruby-identifier">data_center</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">administrators</span>.<span class="ruby-identifier">present?</span>
+          <span class="ruby-identifier">message</span> = <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">data_center</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">message</span>
+          <span class="ruby-identifier">administrators</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">administrator</span><span class="ruby-operator">|</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">administrator</span>.<span class="ruby-identifier">phone_number</span>.<span class="ruby-identifier">present?</span>
+              <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">administrator</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message</span>)
+            <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">administrator</span>.<span class="ruby-identifier">email</span>.<span class="ruby-identifier">present?</span>
+<span class="ruby-comment">#               EmailService.send(administrator, &#39;Request for Assistance - Admin copy&#39;, message)</span>
+            <span class="ruby-keyword">end</span>
+            <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">administrator</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message</span>)
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span> <span class="ruby-comment"># initial_or_additional == &#39;msg_request_for_assistance&#39;</span>
+
+      <span class="ruby-comment"># Send request for assistance to FRs</span>
+      <span class="ruby-identifier">first_responders</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">first_responder</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">message</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(
+          <span class="ruby-string">&#39;first_responder.&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">initial_or_additional</span>,
+          <span class="ruby-identifier">incident_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>,
+          <span class="ruby-identifier">incident_type</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">subcategory_string</span>,
+          <span class="ruby-identifier">incident_location</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">location</span>,
+          <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>
+        )
+        <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">received_request_for_assistance!</span>(<span class="ruby-identifier">incident</span>)
+        <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message</span>)
+        <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message</span>, <span class="ruby-value">:request_for_assistance</span>)
+
+
+        <span class="ruby-comment"># Deactivate all earlier requests, then add new one.</span>
+        <span class="ruby-identifier">assistance_requests</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">incident_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">first_responder_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">id</span>)
+        <span class="ruby-identifier">assistance_requests</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ar</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">ar</span>.<span class="ruby-identifier">deactivate!</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">assistance_request</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">incident_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">first_responder_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">id</span>)
+        <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">state</span> = <span class="ruby-value">:received_request</span>
+        <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">transportation_mode</span> = <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">transportation_mode</span>
+        <span class="ruby-identifier">assistance_request</span>.<span class="ruby-identifier">save!</span>
+      <span class="ruby-keyword">end</span> <span class="ruby-comment"># first_responders.each do |first_responder|</span>
+
+      <span class="ruby-comment"># Update incident state</span>
+      <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">is_accepting_first_responders</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">initial_or_additional</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;msg_request_for_assistance&#39;</span>
+        <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">state</span> = <span class="ruby-constant">Incident</span>.<span class="ruby-identifier">states</span>[<span class="ruby-value">:waiting_for_fr_responses</span>]
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;msg_request_additional_resources&#39;</span>
+        <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">state</span> = <span class="ruby-constant">Incident</span>.<span class="ruby-identifier">states</span>[<span class="ruby-value">:waiting_for_additional_resources</span>]
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">save!</span>
+
+      <span class="ruby-constant">ResqueService</span>.<span class="ruby-identifier">schedule_request_for_assistance_window</span>(<span class="ruby-identifier">incident</span>)
+       <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;#{Time.now.utc.strftime(&#39;%Y-%m-%d %H:%M:%S.%L&#39;)}:#{File.basename(__FILE__)}:#{__LINE__}\n\t&quot;</span> <span class="ruby-operator">+</span>
+        <span class="ruby-node">&quot;Request for assistance window initiated at #{Time.zone.now.utc} &quot;</span> <span class="ruby-operator">+</span>
+        <span class="ruby-node">&quot;incident.id: #{incident.id} &quot;</span> <span class="ruby-operator">+</span>
+        <span class="ruby-node">&quot;type: #{initial_or_additional}&quot;</span>
+
+    <span class="ruby-keyword">else</span> <span class="ruby-comment"># first_responders.length = 0</span>
+      <span class="ruby-identifier">first_responder</span> = <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">incident_commander</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">present?</span>
+        <span class="ruby-identifier">message</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;first_responder.msg_no_additional_resources_available&#39;</span>, <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">locale</span>)
+        <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message</span>)
+        <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">first_responder</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message</span>)
+<span class="ruby-comment">#         incident.no_first_responders_available!(:no_frs)</span>
+      <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">end</span> <span class="ruby-comment"># first_responders.length</span>
+  <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-send_message_to_oncall_mds">
+            
+              <b>send_message_to_oncall_mds</b>(incident, message_out, hospital)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-send_message_to_oncall_mds" name="method-i-send_message_to_oncall_mds" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-send_message_to_oncall_mds_source')" id="l_method-i-send_message_to_oncall_mds_source">show</a>
+                
+              </p>
+              <div id="method-i-send_message_to_oncall_mds_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 658</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">send_message_to_oncall_mds</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">message_out</span>, <span class="ruby-identifier">hospital</span>)
+  <span class="ruby-identifier">doctors</span> = <span class="ruby-constant">MedicalDoctor</span>.<span class="ruby-identifier">find_by_hospital</span>(<span class="ruby-identifier">hospital</span>)
+  <span class="ruby-identifier">doctors</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">doctor</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">doctor</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message_out</span>)
+    <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">doctor</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_out</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-send_message_to_other_frs">
+            
+              <b>send_message_to_other_frs</b>(incident, message_out, first_responder)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-send_message_to_other_frs" name="method-i-send_message_to_other_frs" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-send_message_to_other_frs_source')" id="l_method-i-send_message_to_other_frs_source">show</a>
+                
+              </p>
+              <div id="method-i-send_message_to_other_frs_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 667</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">send_message_to_other_frs</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">message_out</span>, <span class="ruby-identifier">first_responder</span>)
+  <span class="ruby-identifier">assistance_requests</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">find_active_by_incident</span>(<span class="ruby-identifier">incident</span>)
+  <span class="ruby-identifier">assistance_requests</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ar</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">ar</span>.<span class="ruby-identifier">first_responder_id</span> <span class="ruby-operator">!=</span><span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">id</span>
+      <span class="ruby-identifier">fr</span> = <span class="ruby-constant">FirstResponder</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">ar</span>.<span class="ruby-identifier">first_responder_id</span>)
+      <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">fr</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message_out</span>)
+      <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">fr</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_out</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-validate_message-3F">
+            
+              <b>validate_message?</b>(message)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-validate_message-3F" name="method-i-validate_message-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-validate_message-3F_source')" id="l_method-i-validate_message-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-validate_message-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 707</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">validate_message?</span>(<span class="ruby-identifier">message</span>)
+  <span class="ruby-identifier">message_elements</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;.&#39;</span>)
+  <span class="ruby-identifier">message_elements</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">m</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/[^0-9]/</span>,<span class="ruby-string">&#39;&#39;</span>) <span class="ruby-comment"># Check that string contains only integers</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-validate_message_no_periods-3F">
+            
+              <b>validate_message_no_periods?</b>(message)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-validate_message_no_periods-3F" name="method-i-validate_message_no_periods-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-validate_message_no_periods-3F_source')" id="l_method-i-validate_message_no_periods-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-validate_message_no_periods-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 718</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">validate_message_no_periods?</span>(<span class="ruby-identifier">message</span>)
+  <span class="ruby-identifier">message_elements</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;.&#39;</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">message_elements</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">1</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-was_this_last_active_first_responder-3F">
+            
+              <b>was_this_last_active_first_responder?</b>(incident)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-was_this_last_active_first_responder-3F" name="method-i-was_this_last_active_first_responder-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-was_this_last_active_first_responder-3F_source')" id="l_method-i-was_this_last_active_first_responder-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-was_this_last_active_first_responder-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 728</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">was_this_last_active_first_responder?</span>(<span class="ruby-identifier">incident</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">find_active_by_incident</span>(<span class="ruby-identifier">incident</span>).<span class="ruby-identifier">count</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-was_this_last_assigned_first_responder">
+            
+              <b>was_this_last_assigned_first_responder</b>(incident, instigator)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-was_this_last_assigned_first_responder" name="method-i-was_this_last_assigned_first_responder" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-was_this_last_assigned_first_responder_source')" id="l_method-i-was_this_last_assigned_first_responder_source">show</a>
+                
+              </p>
+              <div id="method-i-was_this_last_assigned_first_responder_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 690</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">was_this_last_assigned_first_responder</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">instigator</span>)
+  <span class="ruby-identifier">assistance_requests</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">find_by_assigned_to_incident</span>(<span class="ruby-identifier">incident</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">assistance_requests</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">incident</span>.<span class="ruby-identifier">is_accepting_first_responders</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">instigator</span> <span class="ruby-operator">==</span> <span class="ruby-value">:no_addl_resources</span>
+      <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">no_first_responders_responded!</span>(<span class="ruby-value">:no_addl_resources</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">end_incident!</span>(<span class="ruby-identifier">instigator</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">message_out</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;reporting_party.incident_ended&#39;</span>,
+      <span class="ruby-identifier">reason</span><span class="ruby-operator">:</span> <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;system.completion_status.&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">instigator</span>.<span class="ruby-identifier">to_s</span>),
+      <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">reporting_party</span>.<span class="ruby-identifier">locale</span>)
+    <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-identifier">incident</span>.<span class="ruby-identifier">reporting_party</span>.<span class="ruby-identifier">phone_number</span>, <span class="ruby-identifier">message_out</span>)
+    <span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">log_message</span>(<span class="ruby-identifier">incident</span>, <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">reporting_party</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">message_out</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-was_this_last_assigned_first_responder-3F">
+            
+              <b>was_this_last_assigned_first_responder?</b>(incident)
+            
+            <a href="../classes/FirstResponderManager.html#method-i-was_this_last_assigned_first_responder-3F" name="method-i-was_this_last_assigned_first_responder-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-was_this_last_assigned_first_responder-3F_source')" id="l_method-i-was_this_last_assigned_first_responder-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-was_this_last_assigned_first_responder-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/first_responder_manager.rb, line 679</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">was_this_last_assigned_first_responder?</span>(<span class="ruby-identifier">incident</span>)
+  <span class="ruby-identifier">assistance_requests</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">find_by_assigned_to_incident</span>(<span class="ruby-identifier">incident</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">assistance_requests</span>.<span class="ruby-identifier">count</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

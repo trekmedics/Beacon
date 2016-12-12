@@ -1,0 +1,20 @@
+waiting_for_location_recent:
+  data_center: data_center_one
+  state: <%= Incident.states[:request_received] %>
+  updated_at: <%= 2.hours.ago %>
+
+waiting_for_location_old:
+  data_center: data_center_one
+  state: <%= Incident.states[:waiting_for_location] %>
+  updated_at: <%= 2.days.ago %>
+
+incident_complete_recent:
+  data_center: data_center_one
+  state: <%= Incident.states[:incident_complete] %>
+  updated_at: <%= 2.hours.ago %>
+
+incident_complete_old:
+  data_center: data_center_one
+  state: <%= Incident.states[:incident_complete] %>
+  updated_at: <%= 2.days.ago %>
+

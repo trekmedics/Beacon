@@ -1,0 +1,64 @@
+<%= form_for(@incident) do |f| %>
+  <% if @incident.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@incident.errors.count, "error") %> prohibited this incident from being saved:</h2>
+
+      <ul>
+      <% @incident.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="first_responders">
+    <%= f.label :help_message, class: 'required' %>
+    <%= f.text_field :help_message, required: true, class: 'text_field' %>
+    <%= f.label :location, class: 'required' %>
+    <%= f.text_field :location, required: true, class: 'text_field' %>
+    <%= f.label :number_of_frs_to_allocate, class: 'required' %>
+    <%= f.text_field :number_of_frs_to_allocate, required: true, class: 'text_field' %>
+    <%= f.label :number_of_transport_vehicles_to_allocate, class: 'required' %>
+    <%= f.text_field :number_of_transport_vehicles_to_allocate, required: true, class: 'text_field' %>
+    <p><%= I18n.t('views.incident.first_responder_count_validation_message') %></p>
+
+<div class="hospital_list">
+<table>
+  <thead>
+    <tr>
+      <th colspan="2"><%= I18n.t('views.incident.pick_category') %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr class="hospital">
+        <td>
+          <div class="cell"><%= I18n.t('category.'+category.name+'.name') %></div>
+        </td>
+      </tr>
+      <% category.subcategories.each do |subcategory| %>
+        <tr>
+          <td>
+            <div class="create_incident_category_list">
+              <%= f.radio_button :subcategory_id, subcategory.id %>
+              <%= f.label :subcategory_id, I18n.t('category.'+category.name+'.'+subcategory.name) %>
+            </div>
+            <div class="clear"></div>
+          </td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+</div>
+
+
+
+
+
+
+    <%= f.submit %>
+  </div>
+<% end %>

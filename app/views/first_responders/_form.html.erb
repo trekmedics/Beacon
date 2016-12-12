@@ -1,0 +1,27 @@
+<%= form_for(@first_responder) do |f| %>
+  <% if @first_responder.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@first_responder.errors.count, "error") %> prohibited this first_responder from being saved:</h2>
+
+      <ul>
+      <% @first_responder.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="first_responders">
+    <%= f.label :name %>
+    <%= f.text_field :name, { class: 'text_field' } %>
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number, { class: 'text_field' } %>
+    <%= f.label :locale %>
+    <% I18n.available_locales.each do |locale_option| %>
+      <%= f.radio_button :locale, locale_option, { class: 'radio_button' } %>
+      <%= f.label :locale, locale_option %>
+    <% end %>
+    <div class="clear"></div>
+    <%= f.submit %>
+  </div>
+<% end %>

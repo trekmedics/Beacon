@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<h1><%= I18n.t('views.data_center.listing') %></h1>
+<%= link_to I18n.t('views.data_center.new'), new_data_center_path %><br>
+<div class="data_centers_list">
+  <table>
+    <thead>
+      <tr>
+        <th><%= I18n.t('activerecord.attributes.data_center.name') %></th>
+        <th><%= I18n.t('activerecord.attributes.data_center.is_simulator') %></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @data_centers.each do |data_center| %>
+        <tr>
+          <td><%= data_center.name %></td>
+          <td><%= data_center.is_simulator %></td>
+          <td>
+            <%= link_to I18n.t('views.labels.edit'), edit_data_center_path(data_center) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

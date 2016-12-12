@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Incident</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Incident 
+            
+                <span class="parent">&lt; 
+                    
+                    ActiveRecord::Base
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/incident_rb.html">app/models/incident.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-append_comment">append_comment</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-as_json">as_json</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-fetch_active_incidents">fetch_active_incidents</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-find_by_id">find_by_id</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-find_by_reporting_party_id">find_by_reporting_party_id</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get_completion_agent">get_completion_agent</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-handle_event_error">handle_event_error</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-log_event">log_event</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-process_incident_cancel">process_incident_cancel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-publish_incident_create">publish_incident_create</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-publish_incident_update">publish_incident_update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_completion_status">set_completion_status</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_help_message">set_help_message</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_location">set_location</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_number_of_frs_to_allocate">set_number_of_frs_to_allocate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_number_of_transport_vehicles_to_allocate">set_number_of_transport_vehicles_to_allocate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-state_string">state_string</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-subcategory_string">subcategory_string</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update_comment">update_comment</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            AASM
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-fetch_active_incidents">
+            
+              <b>fetch_active_incidents</b>(data_center)
+            
+            <a href="../classes/Incident.html#method-c-fetch_active_incidents" name="method-c-fetch_active_incidents" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-fetch_active_incidents_source')" id="l_method-c-fetch_active_incidents_source">show</a>
+                
+              </p>
+              <div id="method-c-fetch_active_incidents_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/incident.rb, line 249</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">fetch_active_incidents</span>(<span class="ruby-identifier">data_center</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">Incident</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">data_center</span><span class="ruby-operator">:</span> <span class="ruby-identifier">data_center</span>)
+                 .<span class="ruby-identifier">where</span>(<span class="ruby-string">&#39;state != ? OR created_at &gt; ?&#39;</span>, <span class="ruby-constant">Incident</span>.<span class="ruby-identifier">states</span>[<span class="ruby-value">:incident_complete</span>], <span class="ruby-number">1</span>.<span class="ruby-identifier">day</span>.<span class="ruby-identifier">ago</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-as_json">
+            
+              <b>as_json</b>(options = {})
+            
+            <a href="../classes/Incident.html#method-i-as_json" name="method-i-as_json" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-as_json_source')" id="l_method-i-as_json_source">show</a>
+                
+              </p>
+              <div id="method-i-as_json_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/incident.rb, line 218</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">as_json</span>(<span class="ruby-identifier">options</span> = {})
+  <span class="ruby-constant">Jbuilder</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">incident</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">incident</span>.(<span class="ruby-keyword">self</span>, <span class="ruby-value">:id</span>, <span class="ruby-value">:state</span>, <span class="ruby-value">:help_message</span>, <span class="ruby-value">:location</span>, <span class="ruby-value">:number_of_frs_to_allocate</span>,             <span class="ruby-value">:number_of_transport_vehicles_to_allocate</span>, <span class="ruby-value">:comment</span>)
+    <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">state_string</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">state_string</span>
+    <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">reporting_party</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">reporting_party</span>, <span class="ruby-value">:id</span>, <span class="ruby-value">:phone_number</span>, <span class="ruby-value">:is_admin</span>) <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">reporting_party</span>.<span class="ruby-identifier">present?</span>
+    <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">incident_commander</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">incident_commander</span>, <span class="ruby-value">:id</span>, <span class="ruby-value">:name</span>, <span class="ruby-value">:phone_number</span>) <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">incident_commander</span>.<span class="ruby-identifier">present?</span>
+    <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">formatted_message_log</span>(<span class="ruby-constant">MessageLog</span>.<span class="ruby-identifier">format_message_log</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">message_log</span>))
+    <span class="ruby-identifier">data_center</span> = <span class="ruby-constant">ApplicationConfiguration</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">data_center</span>
+    <span class="ruby-identifier">utc_offset</span> = <span class="ruby-constant">Setting</span>.<span class="ruby-identifier">get_cached_setting</span>(<span class="ruby-identifier">data_center</span>, <span class="ruby-string">&#39;utc_offset&#39;</span>).<span class="ruby-identifier">value</span>
+    <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">created_at_string</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">created_at</span>.<span class="ruby-identifier">getlocal</span>(<span class="ruby-identifier">utc_offset</span>).<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>)
+    <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">updated_at_string</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">updated_at</span>.<span class="ruby-identifier">getlocal</span>(<span class="ruby-identifier">utc_offset</span>).<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>)
+    <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">subcategory_string</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">subcategory_string</span>
+  <span class="ruby-keyword">end</span>.<span class="ruby-identifier">attributes!</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-find_by_id">
+            
+              <b>find_by_id</b>(id)
+            
+            <a href="../classes/Incident.html#method-i-find_by_id" name="method-i-find_by_id" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-find_by_id_source')" id="l_method-i-find_by_id_source">show</a>
+                
+              </p>
+              <div id="method-i-find_by_id_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/incident.rb, line 210</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">find_by_id</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">Incident</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-find_by_reporting_party_id">
+            
+              <b>find_by_reporting_party_id</b>(reporting_party_id)
+            
+            <a href="../classes/Incident.html#method-i-find_by_reporting_party_id" name="method-i-find_by_reporting_party_id" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-find_by_reporting_party_id_source')" id="l_method-i-find_by_reporting_party_id_source">show</a>
+                
+              </p>
+              <div id="method-i-find_by_reporting_party_id_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/incident.rb, line 214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">find_by_reporting_party_id</span>(<span class="ruby-identifier">reporting_party_id</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">Incident</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-identifier">reporting_party_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">reporting_party_id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_completion_agent">
+            
+              <b>get_completion_agent</b>()
+            
+            <a href="../classes/Incident.html#method-i-get_completion_agent" name="method-i-get_completion_agent" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_completion_agent_source')" id="l_method-i-get_completion_agent_source">show</a>
+                
+              </p>
+              <div id="method-i-get_completion_agent_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/incident.rb, line 254</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_completion_agent</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">completion_status</span>.<span class="ruby-identifier">to_sym</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:normal</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-string">&#39;Normal&#39;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:admin_cancel</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-string">&#39;Admin&#39;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:rp_cancel</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-string">&#39;Reporting Party&#39;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:fr_cancel</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-string">&#39;First Responder&#39;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:no_frs</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-string">&#39;No available First Responders&#39;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;Unknown&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_help_message">
+            
+              <b>set_help_message</b>(message)
+            
+            <a href="../classes/Incident.html#method-i-set_help_message" name="method-i-set_help_message" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_help_message_source')" id="l_method-i-set_help_message_source">show</a>
+                
+              </p>
+              <div id="method-i-set_help_message_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/incident.rb, line 237</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_help_message</span>(<span class="ruby-identifier">message</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">help_message</span><span class="ruby-operator">:</span> <span class="ruby-identifier">message</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_location">
+            
+              <b>set_location</b>(message)
+            
+            <a href="../classes/Incident.html#method-i-set_location" name="method-i-set_location" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_location_source')" id="l_method-i-set_location_source">show</a>
+                
+              </p>
+              <div id="method-i-set_location_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/incident.rb, line 233</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_location</span>(<span class="ruby-identifier">message</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">location</span><span class="ruby-operator">:</span> <span class="ruby-identifier">message</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_number_of_frs_to_allocate">
+            
+              <b>set_number_of_frs_to_allocate</b>(message)
+            
+            <a href="../classes/Incident.html#method-i-set_number_of_frs_to_allocate" name="method-i-set_number_of_frs_to_allocate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_number_of_frs_to_allocate_source')" id="l_method-i-set_number_of_frs_to_allocate_source">show</a>
+                
+              </p>
+              <div id="method-i-set_number_of_frs_to_allocate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/incident.rb, line 241</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_number_of_frs_to_allocate</span>(<span class="ruby-identifier">message</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">number_of_frs_to_allocate</span><span class="ruby-operator">:</span> <span class="ruby-identifier">message</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_number_of_transport_vehicles_to_allocate">
+            
+              <b>set_number_of_transport_vehicles_to_allocate</b>(message)
+            
+            <a href="../classes/Incident.html#method-i-set_number_of_transport_vehicles_to_allocate" name="method-i-set_number_of_transport_vehicles_to_allocate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_number_of_transport_vehicles_to_allocate_source')" id="l_method-i-set_number_of_transport_vehicles_to_allocate_source">show</a>
+                
+              </p>
+              <div id="method-i-set_number_of_transport_vehicles_to_allocate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/incident.rb, line 245</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_number_of_transport_vehicles_to_allocate</span>(<span class="ruby-identifier">message</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">number_of_transport_vehicles_to_allocate</span><span class="ruby-operator">:</span> <span class="ruby-identifier">message</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-subcategory_string">
+            
+              <b>subcategory_string</b>()
+            
+            <a href="../classes/Incident.html#method-i-subcategory_string" name="method-i-subcategory_string" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-subcategory_string_source')" id="l_method-i-subcategory_string_source">show</a>
+                
+              </p>
+              <div id="method-i-subcategory_string_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/incident.rb, line 276</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">subcategory_string</span>
+  <span class="ruby-identifier">subcategory</span> = <span class="ruby-constant">Subcategory</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">subcategory_id</span>)
+  <span class="ruby-identifier">category</span> = <span class="ruby-constant">Category</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">subcategory</span>.<span class="ruby-identifier">category_id</span>) <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">subcategory</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">category</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">cname</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;category.&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">category</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;.name&#39;</span>, <span class="ruby-identifier">default</span><span class="ruby-operator">:</span> <span class="ruby-identifier">category</span>.<span class="ruby-identifier">name</span>).<span class="ruby-identifier">strip</span>
+    <span class="ruby-identifier">sname</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;category.&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">category</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;.&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">subcategory</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">default</span><span class="ruby-operator">:</span> <span class="ruby-identifier">subcategory</span>.<span class="ruby-identifier">name</span>).<span class="ruby-identifier">strip</span>
+    <span class="ruby-identifier">rtn_value</span> = <span class="ruby-identifier">cname</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;-&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">sname</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">rtn_value</span> = <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">rtn_value</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_comment">
+            
+              <b>update_comment</b>(comment)
+            
+            <a href="../classes/Incident.html#method-i-update_comment" name="method-i-update_comment" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_comment_source')" id="l_method-i-update_comment_source">show</a>
+                
+              </p>
+              <div id="method-i-update_comment_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/incident.rb, line 271</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_comment</span>(<span class="ruby-identifier">comment</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">comment</span><span class="ruby-operator">:</span> <span class="ruby-identifier">comment</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publish_incident_update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+              
+      <div class="sectiontitle">Instance Protected methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-append_comment">
+            
+              <b>append_comment</b>(comment)
+            
+            <a href="../classes/Incident.html#method-i-append_comment" name="method-i-append_comment" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-append_comment_source')" id="l_method-i-append_comment_source">show</a>
+                
+              </p>
+              <div id="method-i-append_comment_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/incident.rb, line 323</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">append_comment</span>(<span class="ruby-identifier">comment</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">comment</span>.<span class="ruby-identifier">present?</span>
+    <span class="ruby-identifier">new_comment</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">comment</span>.<span class="ruby-identifier">present?</span> <span class="ruby-operator">?</span> <span class="ruby-node">&quot;#{self.comment}  #{comment}&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">comment</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">comment</span><span class="ruby-operator">:</span> <span class="ruby-identifier">new_comment</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-handle_event_error">
+            
+              <b>handle_event_error</b>(e, label)
+            
+            <a href="../classes/Incident.html#method-i-handle_event_error" name="method-i-handle_event_error" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-handle_event_error_source')" id="l_method-i-handle_event_error_source">show</a>
+                
+              </p>
+              <div id="method-i-handle_event_error_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/incident.rb, line 308</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">handle_event_error</span>(<span class="ruby-identifier">e</span>, <span class="ruby-identifier">label</span>)
+  <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;#{Time.now.utc.strftime(&#39;%Y-%m-%d %H:%M:%S.%L&#39;)}:#{File.basename(__FILE__)}:#{__LINE__}\n\t&quot;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-node">&quot;: incident.id: #{self.id} Exception: #{e.to_s}.&quot;</span>
+  <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;#{Time.now.utc.strftime(&#39;%Y-%m-%d %H:%M:%S.%L&#39;)}:#{File.basename(__FILE__)}:#{__LINE__}\n\t&quot;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-node">&quot;: incident.id: #{self.id} Exception: #{e.backtrace}.&quot;</span>
+  <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-constant">ApplicationConfiguration</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">admin_number</span>, <span class="ruby-node">&quot;Debug: #{e.to_s}.&quot;</span>)
+  <span class="ruby-comment"># raise</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-log_event">
+            
+              <b>log_event</b>(from, to)
+            
+            <a href="../classes/Incident.html#method-i-log_event" name="method-i-log_event" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-log_event_source')" id="l_method-i-log_event_source">show</a>
+                
+              </p>
+              <div id="method-i-log_event_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/incident.rb, line 299</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">log_event</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>)
+  <span class="ruby-constant">IncidentEventLog</span>.<span class="ruby-identifier">create</span>(
+    <span class="ruby-identifier">incident_id</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">id</span>,
+    <span class="ruby-identifier">from_state</span><span class="ruby-operator">:</span> <span class="ruby-identifier">from</span>,
+    <span class="ruby-identifier">to_state</span><span class="ruby-operator">:</span> <span class="ruby-identifier">to</span>,
+    <span class="ruby-identifier">event_time_stamp</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">new</span>
+  )
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_incident_cancel">
+            
+              <b>process_incident_cancel</b>(message, cancel_comment)
+            
+            <a href="../classes/Incident.html#method-i-process_incident_cancel" name="method-i-process_incident_cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_incident_cancel_source')" id="l_method-i-process_incident_cancel_source">show</a>
+                
+              </p>
+              <div id="method-i-process_incident_cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/incident.rb, line 334</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_incident_cancel</span>(<span class="ruby-identifier">message</span>, <span class="ruby-identifier">cancel_comment</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_completion_status</span>(<span class="ruby-identifier">message</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">append_comment</span>(<span class="ruby-identifier">cancel_comment</span>)
+  <span class="ruby-ivar">@incident_manager</span>.<span class="ruby-identifier">cleanup_after_cancel</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">cancel_comment</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-publish_incident_create">
+            
+              <b>publish_incident_create</b>()
+            
+            <a href="../classes/Incident.html#method-i-publish_incident_create" name="method-i-publish_incident_create" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-publish_incident_create_source')" id="l_method-i-publish_incident_create_source">show</a>
+                
+              </p>
+              <div id="method-i-publish_incident_create_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/incident.rb, line 291</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">publish_incident_create</span>
+  <span class="ruby-constant">WebsocketRails</span>[<span class="ruby-value">:incident</span>].<span class="ruby-identifier">trigger</span>(<span class="ruby-value">:create</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">as_json</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-publish_incident_update">
+            
+              <b>publish_incident_update</b>()
+            
+            <a href="../classes/Incident.html#method-i-publish_incident_update" name="method-i-publish_incident_update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-publish_incident_update_source')" id="l_method-i-publish_incident_update_source">show</a>
+                
+              </p>
+              <div id="method-i-publish_incident_update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/incident.rb, line 295</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">publish_incident_update</span>
+  <span class="ruby-constant">WebsocketRails</span>[<span class="ruby-value">:incident</span>].<span class="ruby-identifier">trigger</span>(<span class="ruby-value">:update</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">as_json</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_completion_status">
+            
+              <b>set_completion_status</b>(message)
+            
+            <a href="../classes/Incident.html#method-i-set_completion_status" name="method-i-set_completion_status" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_completion_status_source')" id="l_method-i-set_completion_status_source">show</a>
+                
+              </p>
+              <div id="method-i-set_completion_status_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/incident.rb, line 330</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_completion_status</span>(<span class="ruby-identifier">message</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">completion_status</span><span class="ruby-operator">:</span> <span class="ruby-identifier">message</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-state_string">
+            
+              <b>state_string</b>()
+            
+            <a href="../classes/Incident.html#method-i-state_string" name="method-i-state_string" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-state_string_source')" id="l_method-i-state_string_source">show</a>
+                
+              </p>
+              <div id="method-i-state_string_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/incident.rb, line 317</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">state_string</span>
+  <span class="ruby-identifier">str</span> = <span class="ruby-node">&quot;#{I18n.t(&quot;system.incident_state.#{self.state}&quot;)}&quot;</span>
+  <span class="ruby-identifier">completion_status</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">completion_status</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;(&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&quot;system.completion_status.&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">completion_status</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;)&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">incident_complete?</span> <span class="ruby-operator">?</span> <span class="ruby-node">&quot;#{str} #{completion_status}&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">str</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

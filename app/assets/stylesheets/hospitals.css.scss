@@ -1,0 +1,17 @@
+.hospital_list {
+  overflow-x: auto;
+    overflow-x: auto;
+    width: auto;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+
+  table {
+    width: auto;
+  }
+
+  .cell {
+    min-width: 200px;
+    margin-right: 20px;
+  }
+}

@@ -1,0 +1,21 @@
+<%= form_for([@category, @subcategory]) do |f| %>
+  <% if @subcategory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@subcategory.errors.count, "error") %> prohibited this subcategory from being saved:</h2>
+
+      <ul>
+      <% @subcategory.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.label :category %>
+    <%= f.text_field :category, { class: :text_field, disabled: true } %>
+    <%= f.label :name %>
+    <%= f.text_field :name, { class: :text_field } %>
+    <%= f.submit %>
+  </div>
+<% end %>

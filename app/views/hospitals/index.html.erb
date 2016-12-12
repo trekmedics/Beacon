@@ -1,0 +1,45 @@
+<h1><%= I18n.t('views.hospital.listing') %></h1>
+
+<%= link_to I18n.t('views.hospital.new'), new_hospital_path %><br>
+<%= link_to I18n.t('activerecord.models.setting.other'), settings_path %>
+
+<% if @hospitals.size > 0 %>
+  <div class="hospital_list">
+    <table>
+      <thead>
+        <tr>
+          <th><div class="cell"></div></th>
+          <th><div class="cell"><%= I18n.t('views.hospital.actions') %></div></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @hospitals.each do |hospital| %>
+          <tr class="hospital">
+            <td><div class="cell"><%= hospital.name %></div></td>
+            <td>
+              <div class="cell">
+                <%= link_to I18n.t('views.labels.edit'), edit_hospital_path(hospital) %> |
+                <%= link_to I18n.t('views.labels.destroy'), hospital, method: :delete, data: { confirm: I18n.t('system.confirm_destroy', name: hospital.name) } %> |
+                <%= link_to I18n.t('views.hospital.new_medical_doctor'), new_hospital_medical_doctor_path(hospital) %>
+              </div>
+            </td>
+          </tr>
+          <% hospital.medical_doctors.each do |medical_doctor| %>
+            <tr>
+              <td><div class="cell" style="padding-left: 30px;">&bull; <%= medical_doctor.name %> (<%= medical_doctor.phone_number %>)</div></td>
+              <td>
+                <div class="cell">
+                  <%= link_to I18n.t('views.labels.edit'), edit_hospital_medical_doctor_path(hospital, medical_doctor) %> |
+                  <%= link_to I18n.t('views.labels.destroy'), hospital_medical_doctor_path(hospital, medical_doctor), method: :delete, data: { confirm: I18n.t('system.confirm_destroy', name: medical_doctor.name) } %>
+                </div>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% else %>
+  <p><%= I18n.t('views.hospital.no_hospitals') %></p>
+<% end %>

@@ -1,0 +1,22 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+signed_out:
+  data_center: data_center_one
+  state: 1
+  transportation_mode: 'not_specified'
+  name: 'First Responder 1'
+  phone_number: '+18005550001'
+
+signed_in:
+  data_center: data_center_one
+  state: 2
+  transportation_mode: 'not_specified'
+  name: 'First Responder 2'
+  phone_number: '+18005550002'
+
+signed_in_on_foot:
+  data_center: data_center_one
+  state: 3
+  transportation_mode: 'foot'
+  name: 'First Responder 3'
+  phone_number: '+18005550003'

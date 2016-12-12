@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+hospital_one:
+  data_center: data_center_one
+  name: Hospital One
+
+two:
+  data_center: data_center_one
+  name: Hospital Two

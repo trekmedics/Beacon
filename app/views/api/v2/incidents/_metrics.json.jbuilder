@@ -1,0 +1,7 @@
+json.metrics do
+  json.request_for_assistance_count incident.request_for_assistance_count
+  json.request_for_assistance_reply_count incident.request_for_assistance_reply_count
+  json.confirmed_no_vehicle_count incident.confirmed_no_vehicle_count
+  json.confirmed_non_transport_vehicle_count incident.confirmed_non_transport_vehicle_count
+  json.confirmed_transport_vehicle_count incident.confirmed_transport_vehicle_count
+end

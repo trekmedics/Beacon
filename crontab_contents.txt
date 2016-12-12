@@ -1,0 +1,33 @@
+# Rotate beacon logs weekly, keep last 4 weeks.
+# ---------------------------------------------
+0 0 * * * cp /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/log/development.log.2 /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/log/development.log.3 > /dev/null 2>&1
+
+0 0 * * * cp /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/log/development.log.1 /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/log/development.log.2 > /dev/null 2>&1
+
+0 0 * * * cp /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/log/development.log.0 /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/log/development.log.1 > /dev/null 2>&1
+
+0 0 * * * cp /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/log/development.log /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/log/development.log.0 > /dev/null 2>&1
+
+0 0 * * * cp /dev/null /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/log/development.log > /dev/null 2>&1
+
+# Rotate websocket logs weekly, keep last 4 weeks.
+# ------------------------------------------------
+0 0 * * * cp /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/log/websocket_rails.log.2 /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/log/websocket_rails.log.3 > /dev/null 2>&1
+
+0 0 * * * cp /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/log/websocket_rails.log.1 /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/log/websocket_rails.log.2 > /dev/null 2>&1
+
+0 0 * * * cp /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/log/websocket_rails.log.0 /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/log/websocket_rails.log.1 > /dev/null 2>&1
+
+0 0 * * * cp /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/log/websocket_rails.log /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/log/websocket_rails.log.0 > /dev/null 2>&1
+
+0 0 * * * cp /dev/null /Users/prescott/Documents/Programming/WebSites/beacon/beacon-v.2/log/websocket_rails.log > /dev/null 2>&1
+
+
+# Cheat sheet
+#          minute        0-59
+#          hour          0-23
+#          day of month  1-31
+#          month         1-12 (or names, see below)
+#          day of week   0-7 (0 or 7 is Sun, or use names)
+# 0 0 * * 0 = weekly at 00:00 Sun
+# 0 0 * * * = daily at 00:00

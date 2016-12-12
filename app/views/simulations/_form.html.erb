@@ -1,0 +1,35 @@
+<%= form_for(@simulation) do |f| %>
+  <% if @simulation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@simulation.errors.count, "error") %> prohibited this simulation from being saved:</h2>
+
+      <ul>
+      <% @simulation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form">
+    <div class="field">
+      <%= f.label :first_responder_count %>
+      <%= f.number_field :first_responder_count, { class: 'number_field' } %>
+    </div>
+    <div class="field">
+      <%= f.label :incident_count %>
+      <%= f.number_field :incident_count, { class: 'number_field' } %>
+    </div>
+    <div class="field">
+      <%= f.label :is_random %>
+      <%= f.check_box :is_random %>
+    </div>
+    <div class="field">
+      <%= f.label :seed_value %>
+      <%= f.text_field :seed_value, { class: 'text_field' } %>
+    </div>
+    <div class="field">
+      <%= f.submit %>
+    </div>
+  </div>
+<% end %>

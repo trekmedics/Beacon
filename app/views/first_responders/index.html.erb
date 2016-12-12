@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= "#{I18n.t('activerecord.models.first_responder.other')} #{I18n.t('views.labels.listing')}" %></h1>
+
+<%= link_to "#{I18n.t('views.labels.new')} #{I18n.t('activerecord.models.first_responder.one')}", new_first_responder_path %>
+
+<div class="first_responder_list">
+  <table>
+    <thead>
+      <tr>
+        <th><%= I18n.t('activerecord.attributes.first_responder.name') %></th>
+        <th><%= I18n.t('activerecord.attributes.first_responder.phone_number') %></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @first_responders.each do |first_responder| %>
+        <tr>
+          <td><%= first_responder.name %></td>
+          <td><%= first_responder.phone_number %></td>
+          <td>
+            <%= link_to I18n.t('views.labels.show'), first_responder %> |
+            <%= link_to I18n.t('views.labels.edit'), edit_first_responder_path(first_responder) %> |
+            <%= link_to I18n.t('views.labels.destroy'), first_responder, method: :delete, data: { confirm: I18n.t('system.confirm_destroy', name: first_responder.name) } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

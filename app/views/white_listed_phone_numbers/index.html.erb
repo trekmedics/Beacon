@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+<h1><%= I18n.t('views.white_listed_phone_number.listing') %></h1>
+<%= link_to I18n.t('views.white_listed_phone_number.new'), new_white_listed_phone_number_path %>
+<% if @white_listed_phone_numbers.length > 0 %>
+<div class='white_listed_phone_numbers_list'>
+  <table>
+    <thead>
+      <tr>
+        <th><%= I18n.t('activerecord.attributes.white_listed_phone_number.data_center') %></th>
+        <th><%= I18n.t('activerecord.attributes.white_listed_phone_number.phone_number') %></th>
+        <th><%= I18n.t('activerecord.attributes.white_listed_phone_number.name') %></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @white_listed_phone_numbers.each do |white_listed_phone_number| %>
+        <tr>
+          <td><%= white_listed_phone_number.data_center %></td>
+          <td><%= white_listed_phone_number.phone_number %></td>
+          <td><%= white_listed_phone_number.name %></td>
+          <td>
+            <%= link_to I18n.t('views.labels.edit'), edit_white_listed_phone_number_path(white_listed_phone_number) %> |
+            <%= link_to I18n.t('views.labels.destroy'), white_listed_phone_number, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p><%= I18n.t('views.white_listed_phone_number.no_resources') %></p>
+<% end %>
+<br>
+</div>

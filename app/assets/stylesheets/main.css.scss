@@ -1,0 +1,213 @@
+body {
+  font-size: 1.0em;
+}
+
+
+.dashboard {
+  clear: both;
+  padding-bottom: 20px;
+
+  .data {
+    float: left;
+  }
+
+  .first_responder_list {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+  }
+
+  .first_responder {
+    clear: both;
+  }
+
+  .circle {
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    float: left;
+  }
+  .disabled {
+    color: gray;
+    text-decoration: line-through;
+  }
+  .inactive {
+    background-color: gray;
+  }
+  .setting_transport_mode {
+    background-color: gray;
+  }
+  .available {
+    background-color: green;
+  }
+  .enroute_to_site,
+  .is_incident_commander_on_site,
+  .on_site,
+  .transporting {
+    background-color: #eefb54;
+  }
+
+/*
+    disabled: 0,                          # ie, listed in db, but no longer current, cannot login
+    inactive: 1,                          # ie: current, but not logged in
+    setting_transport_mode: 2,            # ie: login message received, but transportation not set
+    available: 3,                         # ie: logged-in, not assigned-to-any-incident
+    enroute_to_site: 4,                   # ie: assigned to incident, enroute
+    on_site: 5,                           # ie: incident request sent to field, no response yet
+    transporting: 6,                      # ie: incident request sent to field, no response yet
+*/
+  .attributes_list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-left: 30px;
+  }
+
+  .message_box {
+    float: left;
+    width: 300px;
+  }
+
+  .log_in {
+    padding: 3px 6px;
+    margin-left: 10px;
+    float: right;
+  }
+
+  .cancel_incident {
+    padding: 3px 6px;
+    background-color: red;
+  }
+
+  .incident_list {
+    overflow-x: auto;
+    width: auto;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+    
+    .incident_entry {
+      border: 1px solid gray;
+      border-bottom: 5px solid gray;
+      margin: 10px 0px 0px 0px;
+    }
+    
+    .incident_entry_title {
+      background-color: #263238;
+      color: #ffffff;
+      padding: 3px 6px 3px 6px;
+    }
+    
+    .incident_entry_title a {
+      color: #eefb54;
+      font-size: 1.5em;
+      font-style: bold;
+      font-weight: bolder;
+      padding: 3px 6px 3px 6px;
+    }
+    
+    .incident_entry_title a:hover {
+      color: #aaaaaa;
+    }
+    
+    .incident_entry_state {
+      font-size: 1.0em;
+    }
+
+    .entry_date_and_cancel {
+        float: right;
+    }
+    
+    .incident_entry_date {
+      font-size: 1.0em;
+      padding-right: 10px;
+    }
+                        
+    .incident_entry_cancel {
+      font-size: 1.5em;
+      color: #ff0000;
+    }
+
+    .incident_entry_cancel:hover {
+      cursor: pointer;
+      color: #aaaaaa;
+    }
+
+    .incident_progress {
+      height: 50px;
+      background-color: #eefb54
+    }
+    
+    .incident_entry_info_col {
+      float: left;
+      padding: 3px 6px 3px 6px;
+      width: 50%;
+    }
+            
+    .incident_entry_info_label {
+      font-size: 0.8em;
+      color: #888888;
+      text-transform: uppercase;      
+    }
+            
+    .incident_entry_info_data {
+      font-size: 1.2em;
+    }
+            
+    .incident_entry_info_data_line_2 {
+      font-size: 0.8em;
+      margin: -5px 0px 0px 0px;
+    }
+            
+  }
+}
+
+.form {
+  margin-top: 20px;
+
+  .field {
+    margin-bottom: 15px;
+  }
+
+  .number_field {
+    width: 100px;
+  }
+
+  .text_field {
+    width: 300px;
+  }
+
+  .check_box {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+.small_button {
+  padding: 3px 6px;
+  margin-left: 10px;
+}
+
+.user_permissions {
+  margin-top: 20px;
+}
+
+.new_incident_link {
+  padding: 2px 5px 2px 5px;
+  color: #ffffff;
+  text-align: center;
+  background-color: $base-button-color;
+  border-radius:3px;
+}
+.new_incident_link:hover {
+  color: #ffffff;
+  background-color: $hover-button-color;
+}
+
+.clear {
+  clear:both;
+}
+
+//p.notice {
+//  @extend %flash-success;
+//}

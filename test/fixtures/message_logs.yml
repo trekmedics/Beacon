@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  incident_id: 
+  resource_type: MyString
+  resource_id: 1
+  resource_name: MyString
+  resource_phone_number: MyString
+  is_incoming: false
+  message: MyString
+
+two:
+  incident_id: 
+  resource_type: MyString
+  resource_id: 1
+  resource_name: MyString
+  resource_phone_number: MyString
+  is_incoming: false
+  message: MyString

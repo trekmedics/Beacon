@@ -1,0 +1,41 @@
+<div class="settings">
+  <p id="notice"><%= notice %></p>
+
+  <div class="settings_heading">
+    <div class="logo floatRight"></div>
+    <div class="settings_title floatLeft">
+      <h1><%= I18n.t('activerecord.models.setting.one') %></h1>
+    </div>
+    <div class="clear"></div>
+  </div>
+
+  <% if @setting.present? %>
+    <div class="settings_label floatLeft">
+       Key:
+    </div>
+    <div class="settings_contents floatLeft">
+      <%= @setting.key %>
+    </div>
+    <div class="clear"></div>
+
+    <div class="settings_label floatLeft">
+       Value:
+    </div>
+    <div class="settings_contents floatLeft">
+      <%= @setting.value %>
+    </div>
+    <div class="clear"></div>
+
+    <div class="settings_label floatLeft">
+       Description:
+    </div>
+    <div class="settings_contents floatLeft">
+      <%= I18n.t("settings.#{@setting.key}") %>
+    </div>
+    <div class="clear"></div>
+    <%= link_to I18n.t('views.labels.edit'), edit_setting_path(@setting) %> |
+  <% else %>
+    <p><%= I18n.t('views.resource.not_found') %></p>
+  <% end %>
+  <%= link_to I18n.t('views.labels.back'), settings_path %>
+</div>

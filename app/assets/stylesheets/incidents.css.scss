@@ -1,0 +1,157 @@
+  .incident_list {
+    overflow-x: auto;
+    width: auto;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+}
+
+.incident_info {
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.incident {
+  .message_log {
+    overflow-x: auto;
+    width: auto;
+    padding-bottom: 0px;
+
+    .log_item {
+      .reporting_party_outgoing,
+      .first_responder_outgoing {
+        background-color: beige;
+        width:300px;
+        text-align: center;
+        display:block;
+        word-wrap: break-word;
+        border-radius:10px;
+      }
+
+      .reporting_party_incoming {
+        background-color: coral;
+        width:300px;
+        text-align: center;
+        display:block;
+        word-wrap: break-word;
+        border-radius:10px;
+      }
+
+      .first_responder_incoming {
+        background-color: cyan;
+        width:300px;
+        text-align: center;
+        display:block;
+        word-wrap: break-word;
+        border-radius:10px;
+      }
+
+      .medical_doctor_incoming,
+      .medical_doctor_outgoing {
+        background-color: gold;
+        width:300px;
+        text-align: center;
+        display:block;
+        word-wrap: break-word;
+        border-radius:10px;
+      }
+
+      .administrator_outgoing {
+        background-color: darkkhaki;
+        width:300px;
+        text-align: center;
+        display:block;
+        word-wrap: break-word;
+        border-radius:10px;
+      }
+    }
+
+    .time_cell {
+      width: 100px;
+    }
+
+    .message_cell {
+      width: 300px;
+      margin: 0px 10px 0px 0px;
+      white-space: pre;
+    }
+
+    .message_cell_fr_phone {
+      width: 200px;
+      margin: 0px 10px 0px 0px;
+      white-space: pre;
+    }
+
+    .message_cell_input {
+      width: 300px;
+      margin: 0px 20px 0px 0px;
+    }
+
+    .message_cell_time {
+      width: 300px;
+      text-align: center;
+      margin: 0px 20px 0px 0px;
+    }
+
+    table {
+      width: auto;
+    }
+
+    $header_background_color: #CCCCCC;
+    $header_text_color: #000000;
+
+    .fixed_headers {
+      border-collapse: collapse;
+
+      th { text-decoration: underline; }
+      th, td {
+        padding: 5px;
+        text-align: left;
+      }
+
+      thead {
+        background-color: $header_background_color;
+        color: $header_text_color;
+        tr {
+          display: block;
+          position: relative;
+        }
+      }
+      tbody {
+        display: block;
+        overflow-y: scroll;
+        width: 100%;
+      }
+      .with_simulator {
+        height: 75vh;
+      }
+      .without_simulator {
+        height: 85vh;
+      }
+    }
+  }
+
+  .send_button {
+    padding: 3px 6px;
+  }
+
+  h4 {
+    margin-top: 10px;
+  }
+
+  p {
+    margin-top: 10px;
+  }
+}
+.create_incident_category_list {
+  width: 600px;
+  padding-left: 20px;
+}
+.create_incident_category_list input, label{
+  font-weight: normal;
+  float: left;
+}
+.clear {
+  clear: both;
+}

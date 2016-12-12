@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>first_responder.js.coffee</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            first_responder.js.coffee
+        </h1>
+        <ul class="files">
+            <li>app/assets/javascripts/angular-app/models/first_responder.js.coffee</li>
+            <li>Last modified: 2015-05-12 10:53:15 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>angular</p>
+
+<pre><code>.module(&#39;App&#39;)
+.factory(&#39;FirstResponder&#39;, [&#39;$resource&#39;, &#39;$http&#39;, ($resource, $http) -&gt;
+  FirstResponder = $resource(&#39;/api/v1/first_responders/:id&#39;, { id: &#39;@id&#39; }, {
+    update: {
+      method: &#39;PUT&#39;
+    }
+  })
+
+  FirstResponder.prototype.deletedStatus = () -&gt;
+    if this.state == &#39;disabled&#39;
+      return &#39;disabled&#39;
+    else
+      return &#39;active&#39;
+
+  FirstResponder.prototype.loggedIn = () -&gt;
+    return this.state != &#39;inactive&#39;
+
+  FirstResponder.prototype.logIn = () -&gt;
+    $http.post(&quot;/api/v1/first_responders/#{this.id}/log_in&quot;)
+
+  FirstResponder.prototype.logOut = () -&gt;
+    $http.post(&quot;/api/v1/first_responders/#{this.id}/log_out&quot;)
+
+  FirstResponder.prototype.sendMessage = (message) -&gt;
+    $http.post(&quot;/api/v1/first_responders/#{this.id}/message&quot;, { message: message })
+      .success((data, status, headers, config) -&gt;
+        if data.success == false
+          alert(data.message)
+      )
+
+  FirstResponder.prototype.toggleShow = () -&gt;
+    this.isExpanded = false if !this.isExpanded?
+    this.isExpanded = !this.isExpanded
+
+  FirstResponder.prototype.expanded = () -&gt;
+    return this.isExpanded
+
+  return FirstResponder
+])</code></pre>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+              </div>
+
+    </div>
+  </body>
+</html>

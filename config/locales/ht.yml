@@ -1,0 +1,1050 @@
+ht:
+  activerecord:
+    attributes:
+      administrator:
+        email: |
+          Email
+        name: |
+          Nom
+        phone_number: |
+          activerecord.attributes.administrator.phone_number
+      data_center:
+        is_simulator: |
+          Se pou similasyon?
+        name: |
+          Nom
+      first_responder:
+        locale: |
+          Lang
+        name: |
+          Nom
+        phone_number: |
+          _phone_number
+        state: |
+          _state
+        transportation_mode: |
+          _transportation_mode
+      hospital:
+        name: |
+          Nom
+      incident:
+        comment: |
+          _comment
+        completion_status: |
+          _completion_status
+        created_at: |
+          activerecord.attributes.incident.created_at
+        help_message: |
+          Non Operate
+        id: |
+          _id
+        incident_commander: |
+          _incident_commander
+        location: |
+          _location
+        number_of_frs_to_allocate: |
+          _number_of_frs_to_allocate
+        number_of_transport_vehicles_to_allocate: |
+          _number_of_transport_vehicles_to_allocate
+        reporting_party: |
+          _reporting_party
+        state: |
+          _state
+        subcategory: |
+          _subcategory
+        updated_at: |
+          _updated_at
+      incident_event_log:
+        event_time: |
+          _event_time
+        from_state: |
+          _from_state
+        to_state: |
+          _to_state
+      medical_doctor:
+        hospital: |
+          _hospital
+        name: |
+          _name
+        phone_number: |
+          _phone_number
+      message_log:
+        created_at: |
+          _created_at
+        is_incoming: |
+          _is_incoming
+        message: |
+          _message
+        resource_id: |
+          _resource_id
+        resource_name: |
+          _resource_name
+        resource_phone_number: |
+          _resource_phone_number
+        resource_type: |
+          _resource_type
+      setting:
+        description: |
+          _description
+        key: |
+          _key
+        value: |
+          _value
+      simulation:
+        first_responder_count: |
+          _first_responder_count
+        incident_count: |
+          _incident_count
+        is_random: |
+          _is_random
+        seed_value: |
+          _seed_value
+      unregistered_party:
+        body: |
+          _message
+        created_at: |
+          _created_at
+        from: |
+          _from
+        to: |
+          _to
+      user:
+        data_center: |
+          _data_center
+        is_admin: |
+          Se administrate?
+        locale: |
+          _locale
+        password: |
+          _password
+        password_confirmation: |
+          _password_confirmation
+        user_role: |
+          User role
+        username: |
+          _username
+      white_listed_phone_number:
+        data_center: |
+          Data Center
+        name: |
+          Non
+        phone_number: |
+          Nimeo Telefonn
+    errors:
+      messages:
+        record_invalid: |
+          _validation_failed: %{errors}
+      models:
+        administrator:
+          attributes:
+            email:
+              format: |
+                Must be a valid email (xxx@yyy.zzz)
+            phone_number:
+              format: |
+                _phone_number_format
+              uniqueness: |
+                _phone_number_uniqueness
+        first_responder:
+          attributes:
+            data_center:
+              presence: |
+                _data_center_presence
+            locale:
+              locale_is_valid: |
+                _locale_is_valid_error (%{first_responder_locale}).
+            name:
+              presence: |
+                _name_presence
+            phone_number:
+              format: |
+                _phone_number_format
+              logged_out: |
+                _phone_number_logged_out
+              phone_number_used_by_whitelist: |
+                _phone_number_used_by_whitelist
+              uniqueness: |
+                _phone_number_uniqueness
+        hospital:
+          attributes:
+            data_center:
+              presence: |
+                _data_center_presence
+            name:
+              presence: |
+                _name_presence
+              uniqueness: |
+                _name_uniqueness
+        incident:
+          attributes:
+            data_center:
+              presence: |
+                _data_center_presence
+          first_responder_count_must_be_greater_than_or_equal_to_vehicle_count: |
+            _first_responder_count_must_be_greater_than_or_equal_to_vehicle_count
+        medical_doctor:
+          attributes:
+            hospital:
+              presence: |
+                _hospital_presence
+            name:
+              presence: |
+                _name_presence
+            phone_number:
+              format: |
+                _phone_number_format
+        reporting_party:
+          attributes:
+            phone_number:
+              format: |
+                _phone_number_format
+              presence: |
+                _phone_number_presence
+              uniqueness: |
+                _phone_number_uniqueness
+        setting:
+          attributes:
+            data_center:
+              presence: |
+                _data_center_presence
+            key:
+              presence: |
+                _key_presence
+              uniqueness: |
+                _key_uniqueness
+            value:
+              presence: |
+                _value_presence
+        user:
+          attributes:
+            data_center:
+              presence: |
+                _data_center_presence
+            password:
+              confirmation: |
+                _password_confirmation
+            username:
+              uniqueness: |
+                _username_uniqueness
+        white_listed_phone_number:
+          attributes:
+            data_center:
+              presence: |
+                _data_center_presence
+            phone_number:
+              format: |
+                _phone_number_format
+              phone_number_used_by_first_responder: |
+                _phone_number_phone_number_used_by_first_responder
+              uniqueness: |
+                _phone_number_uniqueness
+    models:
+      categories:
+        one: |
+          _category
+        other: |
+          _categories
+      data_center:
+        one: |
+          _data_center
+        other: |
+          _data_centers
+      first_responder:
+        one: |
+          _first_responder
+        other: |
+          Sekouris yo
+      hospital:
+        one: |
+          Lopital
+        other: |
+          Lopital yo
+      incident:
+        one: |
+          _incident
+        other: |
+          _incident
+      incident_event_log:
+        one: |
+          _incident_event_log
+      medical_doctor:
+        one: |
+          _medical_doctor
+      message_log:
+        one: |
+          _message_log
+      setting:
+        one: |
+          _setting
+        other: |
+          _setting
+      unregistered_party:
+        one: |
+          _unregistered_party
+        other: |
+          _unregistered_parties
+      user:
+        one: |
+          _user
+        other: |
+          _user
+      white_listed_phone_number:
+        one: |
+          Lis Nimeyo Blan
+        other: |
+          Lis Nimeyo Blan
+    notices:
+      models:
+        administrator:
+          success:
+            create: |
+              Administrator was successful created
+            destroy: |
+              Administrator removed.
+            update: |
+              Administrator updated.
+        category:
+          success:
+            create: |
+              _category.success.create
+            destroy: |
+              _category.success.destroy
+            update: |
+              _category.success.update
+        data_center:
+          success:
+            create: |
+              _success_create
+            update: |
+              _success_update
+        first_responder:
+          success:
+            create: |
+              _success_create
+            destroy: |
+              _success_destroy
+            update: |
+              _success_update
+        hospital:
+          success:
+            create: |
+              _success_create
+            destroy: |
+              _success_destroy
+            update: |
+              _success_update
+        incident:
+          success:
+            create: |
+              _success_create
+            destroy: |
+              _success_destroy
+        medical_doctor:
+          success:
+            create: |
+              _success_create
+            destroy: |
+              _success_destroy
+            update: |
+              _success_update
+        setting:
+          success:
+            update: |
+              _success_update
+        subcategory:
+          success:
+            create: |
+              _subcategory.success.create
+            destroy: |
+              _subcategory.success.destroy
+            update: |
+              _subcategory.success.update
+        user:
+          data_center:
+            success:
+              update: |
+                _success_update "%{data_center}."
+          success:
+            create: |
+              _success_create
+            destroy: |
+              _success_destroy
+            permissions: |
+              _success_permissions
+            update: |
+              _success_update
+        white_listed_phone_number:
+          success:
+            create: |
+              _success_create
+            destroy: |
+              _success_destroy
+            update: |
+              _success_update
+  admin:
+    location_update_requested: |
+      _incident: %{incident_number}
+      _first_responder: %{first_responder_name}
+      _first_responder_phone: %{first_responder_phone_number}
+      _cannot_locate
+    location_update_requested_abrdgd: |
+      location_update_requested_abrdgd
+  category:
+    medical:
+      abdominal_pain: |
+        _abdominal_pain
+      breathing: |
+        _breathing_problems
+      chest_pain: |
+        _chest_pain
+      fever: |
+        _fever
+      mental: |
+        _mental
+      name: |
+        _medical
+      obstetric: |
+        _obstetric
+      seizure: |
+        _seizure
+      unresponsive: |
+        Inkonsyant
+      vomit: |
+        _vomit
+    other:
+      behavioral_emergency: |
+         _behavioral_emergency
+      name: |
+        Lot bagay
+      other: |
+        Lot bagay
+      pediatric: |
+        Pedyatrik
+      test: |
+        Test
+    trauma:
+      burn: |
+        Boule
+      fall: |
+        Oton
+      gunshot_stabbing: |
+        _gunshot_stabbing
+      name: |
+        Blesi
+      road_traffic: |
+        Kolizyon otomobil
+  first_responder:
+    actions:
+      log_in: |
+        _log_in
+      log_out: |
+        _log_out
+    instructions:
+      log_in: |
+        _log_in 123
+      log_out: |
+        _log_out 456
+    logged_out: |
+      _logged_out. _log_in 123.
+    msg_additional_resources_not_available: |
+      Pa gen lot sekouris disponib
+    msg_additional_resources_not_available_abrdgd: |
+      msg_additional_resources_not_available_abrdgd
+    msg_additional_resources_request: |
+      Gen %{number_of_frs} lot sekouris
+      ak %{number_of_vehicles} machinn kap vin
+      jwenn ou nan %{minimum_eta} minit.
+      Eske ou bezwen plis?
+      Wi: Konbyen machinn?
+      Non: 0
+    msg_additional_resources_request_abrdgd: |
+      Need additional resources?
+      FRs: %{number_of_frs}
+      Vehicles: %{number_of_vehicles}
+      ETA: %{minimum_eta} min
+    msg_assistance_notified: |
+      _assistance_notified
+    msg_assistance_notified_abrdgd: |
+      msg_assistance_notified_abrdgd
+    msg_confirm_arrival: |
+      Ou menm ou met ale!: 
+      %{location}.
+      Eske ou rive kote ijans la ye a?
+      Wi: 1
+      M' pa jwenn li: 2
+      Pa gen ijans: 0
+    msg_confirm_arrival_abrdgd: |
+      msg_confirm_arrival_abrdgd
+    msg_confirm_hospital_arrival: |
+      Konfime le'w rive lopital.
+      Wi: 1
+      M' bezwen ed: 2
+      An reta: 3.MINIT
+      Anile: 0
+    msg_confirm_hospital_arrival_abrdgd: |
+      msg_confirm_hospital_arrival_abrdgd
+      1. Confirm
+      2. Request assistance
+      3. Report delay
+      0. Cancel
+    msg_confirm_transport: |
+      Fe nou konen le'w prale nan lopital.
+      %{hospital_text}M' pa bezwen ale lopital: 0
+    msg_confirm_transport_abrdgd: |
+      msg_confirm_transport_abrdgd
+    msg_delay_notification_sent: |
+      _delay_notification_sent
+    msg_delay_notification_sent_abrdgd: |
+      Delay update sent
+      %{minutes} minutes
+    msg_from_rp_do_not_reply: |
+      msg_from_rp_do_not_reply
+      %{rp_message}
+    msg_invalid_login_message: |
+      _invalid_login_message:
+      %{last_message}.
+      _log_in 123.
+    msg_no_additional_resources_available: |
+      _msg_no_additional_resources_available
+    msg_no_additional_resources_available_abrdgd: |
+      msg_no_additional_resources_available_abrdgd
+    msg_patient_eta: |
+      _patients.Minit
+    msg_request_additional_resources: |
+      PLIS RESOUS ***
+      Incident ID: %{incident_id}
+      nan: %{incident_location}
+      Type: %{incident_type}
+      Eske ou ka ale?
+      Wi: %{incident_id}.MINIT
+    msg_request_additional_resources_abrdgd: |
+      msg_request_additional_resources_abrdgd
+    msg_request_for_assistance: |
+      PREMYE ALÈT ***
+      Incident ID: %{incident_id}
+      nan: %{incident_location}
+      Type: %{incident_type}
+      Eske ou ka ale?
+      Wi: %{incident_id}.MINIT
+    msg_request_for_assistance_abrdgd: |
+      Premye alèt
+      ID: %{incident_id}
+      nan: %{incident_location}
+      Type: %{incident_type}
+    msg_standby: |
+      msg_standby
+    msg_standby_available: |
+      Gen lot sekouris yo ki repon deja %{incident_id}.
+      Ou disponib.
+    msg_standby_available_abrdgd: |
+      msg_standby_available_abrdgd
+    msg_status_available: |
+      Repons la ap termine:
+      Ou disponsib anko.
+      Times:
+      Response: %{time_start_response}
+      On-Scene: %{time_on_scene}
+      Transport: %{time_start_transport}
+      Hospital: %{time_at_hospital}
+    msg_status_available_abrdgd: |
+      Repons la ap termine
+      Response: %{time_start_response}
+      On-Scene: %{time_on_scene}
+      Transport: %{time_start_transport}
+      Hospital: %{time_at_hospital}
+    msg_unexpected_message: |
+      Mesaj sa a pa atann:
+      %{last_message}
+    msg_unexpected_message_abrdgd: |
+      Mesaj sa a pa atann
+      %{last_message}
+    msg_unknown_response: |
+      Sistèm nan pa konprann mensaj sa a:
+      %{last_message}
+    msg_unknown_response_abrdgd: |
+      Sistèm nan pa konprann mensaj sa a
+      %{last_message}
+    response_vehicle: |
+      Sekouris %{name} %{phone_number} sa verifye.
+      Tanpri konfime transpo ou:
+      Pa gen machin: 1
+      Machin transpò ki pa: 2
+      Machin transpò: 3
+    transportation_mode:
+      configured_message: |
+        _transportation_mode_configured_message '%{transportation_mode}'.
+        _log_out '456'
+      modes:
+        no_vehicle: |
+          no_vehicle
+        non_transport_vehicle: |
+          non_transport_vehicle
+        not_specified: |
+          _not_specified
+        transport_vehicle: |
+          transport_vehicle
+  helpers:
+    submit:
+      create: |
+        _create %{model}
+      update: |
+        _update %{model}
+  incident_commander:
+    additional_frs_assigned: |
+      Additional resources confirmed,
+      %{number_added} expected ETA %{eta} minutes.
+    additional_frs_assigned_abrdgd: |
+      Additional resources assigned:
+      Vehicles: %{num_transports_added}
+      ETA: %{eta} minutes
+  oncall_md:
+    msg_assistance_request: |
+      El salvavidas %{name} (%{phone_number}) demanda auxilio. Llamele inmediatamente, por favor.
+    msg_assistance_request_abrdgd: |
+      Assistance requested
+      Name: %{name}
+      Phone: %{phone_number}
+    msg_delay_notice: |
+      Los pacientes que llegan con %{name} (%{phone_number}) estan demorados por %{delay} minutos.
+    msg_delay_notice_abrdgd: |
+      Transport delay
+      Name: %{name}
+      Phone: %{phone_number}
+      Delay: %{delay} minutes
+    msg_incoming_notice: |
+      ***PASYAN YO AP RIVE***
+      %{number_patients} pasyan ak %{first_responder_name} (%{first_responder_number})
+      nan %{minutes_to_arrival} minit
+      Type: %{incident_type}.
+    msg_incoming_notice_abrdgd: |
+      Incoming patients
+      FR: %{first_responder_name} %{first_responder_number}
+      Patients: %{number_patients}
+      ETA: %{minutes_to_arrival}
+      Category: %{incident_type}.
+    msg_response_cancel: |
+      El evento fue cancelado por %{name} (%{phone_number}).
+    msg_response_cancel_abrdgd: |
+      msg_response_cancel_abrdgd
+  reporting_party:
+    fr_assigned: |
+      Sekouris yo ap chache ou.
+      Yo rive nan %{eta} minit.
+    fr_assigned_abrdgd: |
+      Help on the way (%{eta} mins)
+    incident_ended: |
+      _incident_ended.
+      _reason: %{reason}
+    location_provided: |
+      Nou ap cheche pou asistans %{time} minit.
+    location_update_provided: |
+      location_update_provided
+    location_update_requested: |
+      Nou gen pwoblem pou jwenn ou. Ki kote ou ye?
+    message_relayed: |
+      Mesaj voye bay tout sekouris yo.
+    no_fr_available: |
+      Desole, pa gen sekouris yo ki disponib. Cheche assistans nan lot kote.
+    provide_location: |
+      Ki kote ou ye?
+      Pou anile repons sa a, voye disregard
+  settings:
+    admin_language: |
+      Lang itilize pa paj admin [en, es, ht, sw]
+    admin_number: |
+      Phone number that receives Beacon program errors.
+    beacon_number: |
+      Number that sends and receives SMS messages
+    config_settings: |
+      Configuration settings
+    is_data_center_on: |
+      true: _send_messages; false: _do_not_send_messages. [true|false]
+    is_white_list_enabled: |
+      _is_white_list_enabled
+    message_language: |
+      Message language [en, es, ht, sw]
+    minimum_number_of_frs: |
+      _minimum_number_of_frs
+    number_of_frs_to_allocate: |
+      _number_of_frs_to_allocate
+    number_of_transport_vehicles_to_allocate: |
+      _number_of_transport_vehicles_to_allocate
+    outgoing_message_server: |
+      settings.outgoing_message_server
+    timeout_first_response_allocation: |
+      _timeout_first_response_allocation
+    utc_offset: |
+      _utc_offset (-04:00 Nueva York;   +01:00 Berlin)
+  system:
+    ad_hoc_message:
+      overage_error: |
+        _ad_hoc_message_overage_error
+      preface: |
+        _ad_hoc_message_preface
+    cancel_message: |
+      %{incident_id} cancel_message %{canceling_agent}
+    completion_status:
+      admin_cancel: |
+        _admin_cancel
+      fr_cancel: |
+        _fr_cancel
+      no_addl_resources: |
+        _no_addl_resources
+      no_frs: |
+        _no_frs
+      normal: |
+        _normal
+      rp_cancel: |
+        _rp_cancel
+    confirm_destroy: |
+      _confirm_destroy %{name}?
+    first_responder_state:
+      available: |
+        Disponib
+      disabled: |
+        _disabled
+      enroute_to_site: |
+        _enroute_to_site
+      inactive: |
+        _Unavailable
+      is_incident_commander_on_site: |
+        _is_incident_commander_on_site
+      on_site: |
+        _on_site
+      setting_transport_mode: |
+        _setting_transport_mode
+      transporting: |
+        _transporting
+      waiting_for_location_update: |
+        _waiting_for_location_update
+    incident_state:
+      additional_frs_requested: |
+        _additional_frs_requested
+      additional_resources_assigned: |
+        _additional_resources_assigned
+      frs_assigned: |
+        _frs_assigned
+      frs_on_scene: |
+        _frs_on_scene
+      ic_on_scene: |
+        _ic_on_scene
+      incident_complete: |
+        _incident_complete
+      patients_at_hospital: |
+        Pasyann yo nan lopital
+      patients_enroute_to_hospital: |
+        _patients_enroute_to_hospital
+      request_received: |
+        _request_received
+      waiting_for_additional_resources: |
+        _waiting_for_additional_resources
+      waiting_for_fr_responses: |
+        _waiting_for_fr_responses
+      waiting_for_location: |
+        _waiting_for_location
+    not_authorized: |
+      _not_authorized
+    unrecognized_number: |
+      _unrecognized_number
+  v2:
+    alerts:
+      alert: |
+        Alert
+    category:
+      add_category: |
+        v2.category.add_category
+    dashboard:
+      active_incidents: |
+        v2.dashboard.active_incidents
+      alerts: |
+        v2.dashboard.alerts
+      complete: |
+        v2.dashboard.complete
+      next: |
+        v2.dashboard.next
+      previous: |
+        v2.dashboard.previous
+      recent_incidents: |
+        v2.dashboard.recent_incidents
+      view_all: |
+        v2.dashboard.view_all
+    dispatch:
+      add_dispatch_phone_number: |
+        v2.dispatch.add_dispatch_phone_number
+    first_responder:
+      add_first_responder: |
+        Add First Responder
+      assigned: |
+        Assigned
+      first_responder_list: |
+        First Responder List
+      non_motorized: |
+        Non motorized
+      non_patient: |
+        Non patient
+      patient: |
+        Patient
+    hospitals_list:
+      add_hospitals: |
+        v2.hospitals_list.add_hospitals
+      address: |
+        v2.hospitals_list.address
+    incident_cancellation:
+      are_you_sure: |
+        Are you sure you want to cancel this incident?
+      enter: |
+        Enter
+      go_back: |
+        Go back
+      hide: |
+        Hide
+      reason: |
+        Reason
+    incidents:
+      archived_incidents: |
+        v2.incidents.archived_incidents
+      dispatcher_number: |
+        v2.incidents.dispatcher_number
+      emergency_type: |
+        v2.incidents.emergency_type
+      recent_incidents: |
+        v2.incidents.recent_incidents
+      status: |
+        v2.incidents.status
+    labels:
+      create: |
+        v2.labels.create
+      save: |
+        v2.labels.save
+    menu:
+      home: |
+        v2.menu.home
+      resources: |
+        v2.menu.resources
+      scanner: |
+        v2.menu.scanner
+    message_log:
+      late_replies: |
+        v2.message_log.late_replies
+      ontime_replies: |
+        v2.message_log.ontime_replies
+      requests_for_assistance: |
+        v2.message_log.requests_for_assistance
+      resources_confirmed: |
+        v2.message_log.resources_confirmed
+      total_sent: |
+        v2.message_log.total_sent
+    new_incident:
+      allocation: |
+        v2.new_incident.allocation
+      back: |
+        v2.new_incident.back
+      create: |
+        v2.new_incident.create
+      dispatcher_name: |
+        v2.new_incident.dispatcher_name
+      incident_registered: |
+        v2.new_incident.incident_registered
+      location: |
+        v2.new_incident.location
+      new_incidents: |
+        v2.new_incident.new_incidents
+      required_text_fields: |
+        v2.new_incident.required_text_fields
+      select_emergency_type: |
+        v2.new_incident.select_emergency_type
+      thank_you: |
+        v2.new_incident.thank_you
+      view_details: |
+        v2.new_incident.view_details
+    notification_list:
+      add_number: |
+        v2.notification_list.add_number
+    resources:
+      additional_configuration: |
+        v2.resources.additional_configuration
+      details: |
+        v2.resources.details
+      manage_dispatch_numbers: |
+        v2.resources.manage_dispatch_numbers
+      manage_notification_list: |
+        v2.resources.manage_notification_list
+      new_first_responder: |
+        v2.resources.new_first_responder
+      resolve: |
+        v2.resources.resolve
+      resources: |
+        v2.resources.resources
+      status: |
+        v2.resources.status
+    unregistered_party:
+      one: |
+        v2.unregistered_party.one
+      other: |
+        v2.unregistered_party.other
+    users:
+      add_user: |
+        Add user
+      dispatcher: |
+        Dispatcher
+      manager: |
+        Manager
+      supervisor: |
+        Supervisor
+      test_sim: |
+        Test/Simulate
+  views:
+    administrator:
+      edit: |
+        Edit Administrator
+      listing: |
+        Administrators List
+      new: |
+        views.administrator.new
+    buttons:
+      send: |
+        _send
+    category:
+      listing: |
+        _category_listing
+      new: |
+        _category_new
+      new_subcategory: |
+        _new_subcategory
+    data_center:
+      edit: |
+        _edit
+      listing: |
+        Lis Data Center
+      new: |
+        Lot Data Center
+    first_responder:
+      details: |
+        _first_responder_details
+    hospital:
+      actions: |
+        Aksyon
+      edit: |
+        Edit lopital
+      listing: |
+        Lis lopital yo
+      new: |
+        Nouvo lopital
+      new_medical_doctor: |
+        _new_medical_doctor
+      no_hospitals: |
+        _no_hospitals
+    incident:
+      cancel: |
+        _incident_cancel
+      details: |
+        _incident_details
+      first_responder_count_validation_message: |
+        _first_responder_count_validation_message
+      incident_messages_table:
+        heading: |
+          Mesaj yo
+        no_messages: |
+          Pa gen mesaj yo toujou
+      new: |
+        _incident_new
+      no_incidents: |
+        _no_incidents
+      pick_category: |
+        _pick_category
+      request_for_assistance_table:
+        first_responders: |
+          _first_responders
+        heading: |
+          Demann pou asistans
+        not_needed_message: |
+          _not_needed_message
+        number_of_requests_text: |
+          _number_of_requests_text
+        number_of_responses_text: |
+          _number_of_requests_text
+        request_message: |
+          _request_message
+        response_message: |
+          _response_message
+        simulate_action: |
+          _simulate_action
+    incident_event_log:
+      not_found: |
+        _incident_event_log_not_found
+    labels:
+      back: |
+        _back
+      destroy: |
+        _destroy
+      edit: |
+        _edit
+      editing: |
+        _editing
+      listing: |
+        Lis
+      new: |
+        Nouvo
+      phone_number: |
+        Nimeyo telefonn
+      show: |
+        Montre
+    manage_resource_link:
+      administrator: |
+        Jere Administrators
+      data_center: |
+        Jere Data Center
+      hospital: |
+        Organize lis lopital
+      user: |
+        _user
+      white_listed_phone_number: |
+        _white_listed_phone_number
+    medical_doctor:
+      edit: |
+        _medical_doctor_edit
+      new: |
+        _medical_doctor_new
+    message_log:
+      not_found: |
+        _message_log_not_found
+    nav:
+      main: |
+        _main
+    placeholders:
+      simulate_message: |
+        _simulate_message
+    resource:
+      not_found: |
+        _resource_not_found
+    sessions:
+      heading: |
+        Rejistre
+      log_in_action: |
+        _log_in_action
+      log_out_action: |
+        _log_out_action
+    user:
+      admin: |
+        _admin_user
+      listing: |
+        _user_listing
+      new: |
+        _new_user
+      permissions:
+        heading: |
+          Zon Pemisyon
+        is_admin: |
+          _permissions_is_admin
+        submit: |
+          _permissions_submit
+    white_listed_phone_number:
+      edit: |
+        _edit
+      listing: |
+        _listing
+      new: |
+        _new
+      no_resources: |
+        _no_resources
+

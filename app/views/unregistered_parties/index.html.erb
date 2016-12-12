@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= I18n.t('activerecord.models.unregistered_party.other') %></h1>
+
+<% if @unregistered_parties.size > 0 %>
+  <div class="unregistered_parties_list">
+    <table>
+      <thead>
+        <tr>
+          <th><div class="cell"><%= I18n.t('activerecord.attributes.unregistered_party.from') %></div></th>
+          <th><div class="cell"><%= I18n.t('activerecord.attributes.unregistered_party.to') %></div></th>
+          <th><div class="cell"><%= I18n.t('activerecord.attributes.unregistered_party.body') %></div></th>
+          <th><div class="cell"><%= I18n.t('activerecord.attributes.unregistered_party.created_at') %></div></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @unregistered_parties.each do |unregistered_party| %>
+          <tr class="message">
+            <td><div class="cell"><%= unregistered_party.from %></div></td>
+            <td><div class="cell"><%= unregistered_party.to %></div></td>
+            <td><div class="cell"><%= unregistered_party.body %></div></td>
+            <td><div class="cell"><%= format_datetime(unregistered_party.created_at) %></div></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% else %>
+  <p><%= I18n.t('views.unregistered_party.no_unregistered_parties') %></p>
+<% end %>

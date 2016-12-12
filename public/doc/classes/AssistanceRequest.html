@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>AssistanceRequest</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            AssistanceRequest 
+            
+                <span class="parent">&lt; 
+                    
+                    ActiveRecord::Base
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/assistance_request_rb.html">app/models/assistance_request.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-find_active_by_first_responder">find_active_by_first_responder</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-find_active_by_incident">find_active_by_incident</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-find_assigned_by_first_responder">find_assigned_by_first_responder</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-find_by_assigned_to_incident">find_by_assigned_to_incident</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-find_by_first_responder">find_by_first_responder</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-find_by_first_responder_and_incident">find_by_first_responder_and_incident</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-find_non_responding_by_incident">find_non_responding_by_incident</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-find_responding_by_incident">find_responding_by_incident</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-handle_event_error">handle_event_error</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-publish_assistance_request_update">publish_assistance_request_update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_eta">set_eta</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_transportation_mode">set_transportation_mode</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            AASM
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-find_active_by_first_responder">
+            
+              <b>find_active_by_first_responder</b>(first_responder)
+            
+            <a href="../classes/AssistanceRequest.html#method-c-find_active_by_first_responder" name="method-c-find_active_by_first_responder" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-find_active_by_first_responder_source')" id="l_method-c-find_active_by_first_responder_source">show</a>
+                
+              </p>
+              <div id="method-c-find_active_by_first_responder_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/assistance_request.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">find_active_by_first_responder</span>(<span class="ruby-identifier">first_responder</span>)
+  <span class="ruby-identifier">assistance_requests</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">id</span>).
+    <span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-identifier">state</span><span class="ruby-operator">:</span> <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">states</span>[<span class="ruby-value">:inactive</span>]
+  )
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">assistance_requests</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-find_active_by_incident">
+            
+              <b>find_active_by_incident</b>(incident)
+            
+            <a href="../classes/AssistanceRequest.html#method-c-find_active_by_incident" name="method-c-find_active_by_incident" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-find_active_by_incident_source')" id="l_method-c-find_active_by_incident_source">show</a>
+                
+              </p>
+              <div id="method-c-find_active_by_incident_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/assistance_request.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">find_active_by_incident</span>(<span class="ruby-identifier">incident</span>)
+  <span class="ruby-identifier">assistance_requests</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">incident</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>).
+    <span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-identifier">state</span><span class="ruby-operator">:</span> <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">states</span>[<span class="ruby-value">:inactive</span>]
+  )
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">assistance_requests</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-find_assigned_by_first_responder">
+            
+              <b>find_assigned_by_first_responder</b>(first_responder)
+            
+            <a href="../classes/AssistanceRequest.html#method-c-find_assigned_by_first_responder" name="method-c-find_assigned_by_first_responder" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-find_assigned_by_first_responder_source')" id="l_method-c-find_assigned_by_first_responder_source">show</a>
+                
+              </p>
+              <div id="method-c-find_assigned_by_first_responder_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/assistance_request.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">find_assigned_by_first_responder</span>(<span class="ruby-identifier">first_responder</span>)
+  <span class="ruby-identifier">assistance_requests</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">id</span>,
+    <span class="ruby-identifier">state</span><span class="ruby-operator">:</span> <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">states</span>[<span class="ruby-value">:assigned</span>]
+  )
+  <span class="ruby-comment"># There should only be one record</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">assistance_requests</span>.<span class="ruby-identifier">count</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">assistance_requests</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-find_by_assigned_to_incident">
+            
+              <b>find_by_assigned_to_incident</b>(incident)
+            
+            <a href="../classes/AssistanceRequest.html#method-c-find_by_assigned_to_incident" name="method-c-find_by_assigned_to_incident" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-find_by_assigned_to_incident_source')" id="l_method-c-find_by_assigned_to_incident_source">show</a>
+                
+              </p>
+              <div id="method-c-find_by_assigned_to_incident_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/assistance_request.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">find_by_assigned_to_incident</span>(<span class="ruby-identifier">incident</span>)
+  <span class="ruby-identifier">assistance_requests</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">incident_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>,
+    <span class="ruby-identifier">state</span><span class="ruby-operator">:</span> <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">states</span>[<span class="ruby-value">:assigned</span>]
+  )
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">assistance_requests</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-find_by_first_responder">
+            
+              <b>find_by_first_responder</b>(first_responder)
+            
+            <a href="../classes/AssistanceRequest.html#method-c-find_by_first_responder" name="method-c-find_by_first_responder" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-find_by_first_responder_source')" id="l_method-c-find_by_first_responder_source">show</a>
+                
+              </p>
+              <div id="method-c-find_by_first_responder_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/assistance_request.rb, line 120</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">find_by_first_responder</span>(<span class="ruby-identifier">first_responder</span>)
+  <span class="ruby-identifier">assistance_requests</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">first_responder_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">assistance_requests</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-find_by_first_responder_and_incident">
+            
+              <b>find_by_first_responder_and_incident</b>(first_responder, incident)
+            
+            <a href="../classes/AssistanceRequest.html#method-c-find_by_first_responder_and_incident" name="method-c-find_by_first_responder_and_incident" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-find_by_first_responder_and_incident_source')" id="l_method-c-find_by_first_responder_and_incident_source">show</a>
+                
+              </p>
+              <div id="method-c-find_by_first_responder_and_incident_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/assistance_request.rb, line 126</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">find_by_first_responder_and_incident</span>(<span class="ruby-identifier">first_responder</span>, <span class="ruby-identifier">incident</span>)
+  <span class="ruby-identifier">assistance_requests</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">incident_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>,
+    <span class="ruby-identifier">first_responder_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">first_responder</span>.<span class="ruby-identifier">id</span>,
+    <span class="ruby-identifier">state</span><span class="ruby-operator">:</span> <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">states</span>[<span class="ruby-value">:received_request</span>]
+  )
+  <span class="ruby-comment"># There should only be one record</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">assistance_requests</span>.<span class="ruby-identifier">count</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">assistance_requests</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-find_non_responding_by_incident">
+            
+              <b>find_non_responding_by_incident</b>(incident)
+            
+            <a href="../classes/AssistanceRequest.html#method-c-find_non_responding_by_incident" name="method-c-find_non_responding_by_incident" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-find_non_responding_by_incident_source')" id="l_method-c-find_non_responding_by_incident_source">show</a>
+                
+              </p>
+              <div id="method-c-find_non_responding_by_incident_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/assistance_request.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">find_non_responding_by_incident</span>(<span class="ruby-identifier">incident</span>)
+  <span class="ruby-identifier">assistance_requests</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">incident_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>).
+    <span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-identifier">state</span><span class="ruby-operator">:</span> <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">states</span>[<span class="ruby-value">:responded</span>]
+  )
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">assistance_requests</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-find_responding_by_incident">
+            
+              <b>find_responding_by_incident</b>(incident)
+            
+            <a href="../classes/AssistanceRequest.html#method-c-find_responding_by_incident" name="method-c-find_responding_by_incident" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-find_responding_by_incident_source')" id="l_method-c-find_responding_by_incident_source">show</a>
+                
+              </p>
+              <div id="method-c-find_responding_by_incident_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/assistance_request.rb, line 167</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">find_responding_by_incident</span>(<span class="ruby-identifier">incident</span>)
+  <span class="ruby-identifier">assistance_requests</span> = <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">incident_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">incident</span>.<span class="ruby-identifier">id</span>,
+    <span class="ruby-identifier">state</span><span class="ruby-operator">:</span> <span class="ruby-constant">AssistanceRequest</span>.<span class="ruby-identifier">states</span>[<span class="ruby-value">:responded</span>]
+  ).<span class="ruby-identifier">order</span>(<span class="ruby-value">:eta</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">assistance_requests</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-set_eta">
+            
+              <b>set_eta</b>(parameter)
+            
+            <a href="../classes/AssistanceRequest.html#method-i-set_eta" name="method-i-set_eta" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_eta_source')" id="l_method-i-set_eta_source">show</a>
+                
+              </p>
+              <div id="method-i-set_eta_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/assistance_request.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_eta</span>(<span class="ruby-identifier">parameter</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">eta</span> = <span class="ruby-identifier">parameter</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">eta_changed?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">save</span>
+      <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;#{Time.now.utc.strftime(&#39;%Y-%m-%d %H:%M:%S.%L&#39;)}:#{File.basename(__FILE__)}:#{__LINE__}\n\t&quot;</span> <span class="ruby-operator">+</span>
+        <span class="ruby-node">&quot;Error setting eta to (#{parameter}).&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_transportation_mode">
+            
+              <b>set_transportation_mode</b>(parameter)
+            
+            <a href="../classes/AssistanceRequest.html#method-i-set_transportation_mode" name="method-i-set_transportation_mode" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p> ########################################################################################</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_transportation_mode_source')" id="l_method-i-set_transportation_mode_source">show</a>
+                
+              </p>
+              <div id="method-i-set_transportation_mode_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/assistance_request.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_transportation_mode</span>(<span class="ruby-identifier">parameter</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">transportation_mode</span> = <span class="ruby-identifier">parameter</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">transportation_mode_changed?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">save</span>
+      <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;#{Time.now.utc.strftime(&#39;%Y-%m-%d %H:%M:%S.%L&#39;)}:#{File.basename(__FILE__)}:#{__LINE__}\n\t&quot;</span> <span class="ruby-operator">+</span>
+        <span class="ruby-node">&quot;Error setting transportation mode to (#{parameter}).&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+              
+      <div class="sectiontitle">Instance Protected methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-handle_event_error">
+            
+              <b>handle_event_error</b>(e, label)
+            
+            <a href="../classes/AssistanceRequest.html#method-i-handle_event_error" name="method-i-handle_event_error" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-handle_event_error_source')" id="l_method-i-handle_event_error_source">show</a>
+                
+              </p>
+              <div id="method-i-handle_event_error_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/assistance_request.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">handle_event_error</span>(<span class="ruby-identifier">e</span>, <span class="ruby-identifier">label</span>)
+  <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;#{Time.now.utc.strftime(&#39;%Y-%m-%d %H:%M:%S.%L&#39;)}:#{File.basename(__FILE__)}:#{__LINE__}\n\t&quot;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-node">&quot;#{label}: Exception: #{e.inspect}.&quot;</span>
+  <span class="ruby-constant">OutgoingMessageService</span>.<span class="ruby-identifier">send_text</span>(<span class="ruby-constant">ApplicationConfiguration</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">admin_number</span>, <span class="ruby-node">&quot;Debug: #{e.inspect}.&quot;</span>)
+  <span class="ruby-comment"># raise</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-publish_assistance_request_update">
+            
+              <b>publish_assistance_request_update</b>()
+            
+            <a href="../classes/AssistanceRequest.html#method-i-publish_assistance_request_update" name="method-i-publish_assistance_request_update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-publish_assistance_request_update_source')" id="l_method-i-publish_assistance_request_update_source">show</a>
+                
+              </p>
+              <div id="method-i-publish_assistance_request_update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/assistance_request.rb, line 176</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">publish_assistance_request_update</span>
+  <span class="ruby-identifier">obj</span> = { <span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">state</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">state</span> }
+  <span class="ruby-constant">WebsocketRails</span>[<span class="ruby-value">:request_for_assistance</span>].<span class="ruby-identifier">trigger</span>(<span class="ruby-value">:update</span>, <span class="ruby-identifier">obj</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    
